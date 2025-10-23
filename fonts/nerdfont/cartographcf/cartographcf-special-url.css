@@ -1,0 +1,270 @@
+/*	•·•·•·•··•·••·•	font-style: italic;					*/
+
+@font-face {
+	font-family:'Cartograph CF';
+	src: local('Cartograph CF Thin Italic'), 
+		local('CartographCF-ThinItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ThinItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ThinItalic.woff') format('woff');
+	font-style: italic;
+	font-weight: 100;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+@font-face {
+	font-family:'Cartograph CF Extra';
+	src: local('Cartograph CF Extra Light Italic'), 
+		local('CartographCF-ExtraLightItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraLightItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraLightItalic.woff') format('woff');
+	font-style: italic;
+	font-weight: 200;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+@font-face {
+	font-family:'Cartograph CF';
+	src: local('Cartograph CF Light Italic'), 
+		local('CartographCF-LightItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-LightItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-LightItalic.woff') format('woff');
+	font-style: italic;
+	font-weight: 300;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+@font-face {
+	font-family:'Cartograph CF';
+	src: local('Cartograph CF Regular Italic'), 
+		local('CartographCF-RegularItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-RegularItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-RegularItalic.woff') format('woff');
+	font-style: italic;
+	font-weight: normal;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+@font-face {
+	font-family:'Cartograph CF Demi';
+	src: local('Cartograph CF Demi Bold Italic'), 
+		local('CartographCF-DemiBoldItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-DemiBoldItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-DemiBoldItalic.woff') format('woff');
+	font-style: italic;
+	font-weight: 600;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+@font-face {
+	font-family:'Cartograph CF';
+	src: local('Cartograph CF Bold Italic'), 
+		local('CartographCF-BoldItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-BoldItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-BoldItalic.woff') format('woff');
+	font-style: italic;
+	font-weight: bold;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+@font-face {
+	font-family:'Cartograph CF Extra';
+	src: local('Cartograph CF Extra Bold Italic'), 
+		local('CartographCF-ExtraBoldItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraBoldItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraBoldItalic.woff') format('woff');
+	font-style: italic;
+	font-weight: 800;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+@font-face {
+	font-family:'Cartograph CF';
+	src: local('Cartograph CF Heavy Italic'), 
+		local('CartographCF-HeavyItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-HeavyItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-HeavyItalic.woff') format('woff');
+	font-style: italic;
+	font-weight: 900;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+
+/*	•·•·•·•··•·••·•	font-style: normal;					*/
+
+
+@font-face {
+	font-family:'Cartograph CF';
+	src: local('Cartograph CF Thin'), 
+		local('CartographCF-Thin'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Thin.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Thin.woff') format('woff');
+	font-style: normal;
+	font-weight: 100;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+@font-face {
+	font-family:'Cartograph CF Extra';
+	src: local('Cartograph CF Extra Light'), 
+		local('CartographCF-ExtraLight'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraLight.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraLight.woff') format('woff');
+	font-style: normal;
+	font-weight: 200;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+@font-face {
+	font-family:'Cartograph CF';
+	src: local('Cartograph CF Light'), 
+		local('CartographCF-Light'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Light.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Light.woff') format('woff');
+	font-style: normal;
+	font-weight: 300;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+@font-face {
+	font-family:'Cartograph CF';
+	src: local('Cartograph CF Regular'), 
+		local('CartographCF-Regular'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Regular.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Regular.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family:'Cartograph CF Demi';
+	src: local('Cartograph CF Demi Bold'), 
+		local('CartographCF-DemiBold'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-DemiBold.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-DemiBold.woff') format('woff');
+	font-style: normal;
+	font-weight: 600;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family:'Cartograph CF';
+	src: local('Cartograph CF Bold'), 
+		local('CartographCF-Bold'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Bold.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Bold.woff') format('woff');
+	font-style: normal;
+	font-weight: bold;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+@font-face {
+	font-family:'Cartograph CF Extra';
+	src: local('Cartograph CF Extra Bold'), 
+		local('CartographCF-ExtraBold'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraBold.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraBold.woff') format('woff');
+	font-style: normal;
+	font-weight: 800;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+@font-face {
+	font-family:'Cartograph CF';
+	src: local('Cartograph CF Heavy'), 
+		local('CartographCF-Heavy'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Heavy.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Heavy.woff') format('woff');
+	font-style: normal;
+	font-weight: 900;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+/*
+\n	font-feature-settings:'liga';\n	font-variant-alternates:'salt' 2, 'salt' 5;\n	font-variant-ligatures: common-ligatures;\n	font-feature-settings:'ss05', 'ss02';\n	-moz-font-feature-settings:'ss05', 'ss02';\n	-webkit-font-feature-settings:'ss05', 'ss02';\n	font-display: swap;
+}
+*/

@@ -1,0 +1,271 @@
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Thin Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-Thin'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-Thin.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Thin Italic Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-ThinItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-ThinItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-ThinItalic.woff') format('woff');
+	font-weight: 100;
+	font-style: italic;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Extra Light Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-ExtraLight'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-ExtraLight.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Extra Light Italic Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-ExtraLightItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-ExtraLightItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-ExtraLightItalic.woff') format('woff');
+	font-weight: 200;
+	font-style: italic;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Light Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-Light'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-Light.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Light Italic Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-LightItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-LightItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Regular Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-Regular'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-Regular.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Regular Italic Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-RegularItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-RegularItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-RegularItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Demi Bold Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-DemiBold'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-DemiBold.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-DemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Demi Bold Italic Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-DemiBoldItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-DemiBoldItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-DemiBoldItalic.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Bold Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-Bold'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-Bold.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Bold Italic Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-BoldItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-BoldItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-BoldItalic.woff') format('woff');
+	font-weight: 700;
+	font-style: italic;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Extra Bold Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-ExtraBold'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-ExtraBold.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Extra Bold Italic Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-ExtraBoldItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-ExtraBoldItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-ExtraBoldItalic.woff') format('woff');
+	font-weight: 800;
+	font-style: italic;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Heavy Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-Heavy'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-Heavy.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-Heavy.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CartographCF Nerd Font';
+	src: local('Cartograph CF Heavy Italic Nerd Font Complete'), 
+		local('CartographCFNerdFontComplete-HeavyItalic'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-HeavyItalic.woff2') format('woff2'),
+		url('https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/cartograph-nerd-fonts-woff/CartographCFNerdFontComplete-HeavyItalic.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+	font-feature-settings:'liga';
+	font-variant-alternates:'salt' 2, 'salt' 5;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:'ss05', 'ss02';
+	-moz-font-feature-settings:'ss05', 'ss02';
+	-webkit-font-feature-settings:'ss05', 'ss02';
+	font-display: swap;
+}

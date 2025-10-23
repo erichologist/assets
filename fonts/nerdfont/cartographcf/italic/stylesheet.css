@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'CartographCF Nerd Font';
+    src: local('Cartograph CF Extra Light Italic Nerd Font Complete'), local('CartographCFNerdFontComplete-ExtraLightItalic'),
+        url('CartographCFNerdFontComplete-ExtraLightItalic.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CartographCF Nerd Font';
+    src: local('Cartograph CF Regular Italic Nerd Font Complete'), local('CartographCFNerdFontComplete-RegularItalic'),
+        url('CartographCFNerdFontComplete-RegularItalic.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CartographCF Nerd Font';
+    src: local('Cartograph CF Thin Italic Nerd Font Complete'), local('CartographCFNerdFontComplete-ThinItalic'),
+        url('CartographCFNerdFontComplete-ThinItalic.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CartographCF Nerd Font';
+    src: local('Cartograph CF Light Italic Nerd Font Complete'), local('CartographCFNerdFontComplete-LightItalic'),
+        url('CartographCFNerdFontComplete-LightItalic.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CartographCFNerdFontComplete-Light';
+    src: local('CartographCFNerdFontComplete-Light'), local('CartographCFNerdFontComplete-LightItalic'),
+        url('CartographCFNerdFontComplete-LightItalic.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CartographCFNerdFontComplete-Regular';
+    src: local('CartographCFNerdFontComplete-Regular'), local('CartographCFNerdFontComplete-LightItalic'),
+        url('CartographCFNerdFontComplete-LightItalic.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-LightItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'CartographCFNerdFontComplete-DemiBold';
+    src: local('CartographCFNerdFontComplete-DemiBold'), local('CartographCFNerdFontComplete-DemiBold'),
+        url('CartographCFNerdFontComplete-LightItalic.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-LightItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CartographCFNerdFontComplete-Light';
+    src: local('CartographCFNerdFontComplete-Light'), local('CartographCFNerdFontComplete-Light');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CartographCFNerdFontComplete-Regular';
+    src: local('CartographCFNerdFontComplete-Regular'), local('CartographCFNerdFontComplete-Regular');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'CartographCFNerdFontComplete-DemiBold';
+    src: local('CartographCFNerdFontComplete-DemiBold'), local('CartographCFNerdFontComplete-DemiBold');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}

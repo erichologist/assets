@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'CartographCF Nerd Font';
+    src: local('Cartograph CF Regular Nerd Font Complete'), local('CartographCFNerdFontComplete-Regular'),
+        url('CartographCFNerdFontComplete-Regular.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CartographCF Nerd Font';
+    src: local('Cartograph CF Light Italic Nerd Font Complete'), local('CartographCFNerdFontComplete-LightItalic'),
+        url('CartographCFNerdFontComplete-LightItalic.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CartographCF Nerd Font';
+    src: local('Cartograph CF Regular Italic Nerd Font Complete'), local('CartographCFNerdFontComplete-RegularItalic'),
+        url('CartographCFNerdFontComplete-RegularItalic.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CartographCF Nerd Font';
+    src: local('Cartograph CF Demi Bold Nerd Font Complete'), local('CartographCFNerdFontComplete-DemiBold'),
+        url('CartographCFNerdFontComplete-DemiBold.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-DemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CartographCF Nerd Font';
+    src: local('Cartograph CF Demi Bold Italic Nerd Font Complete'), local('CartographCFNerdFontComplete-DemiBoldItalic'),
+        url('CartographCFNerdFontComplete-DemiBoldItalic.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-DemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CartographCF Nerd Font';
+    src: local('Cartograph CF Light Nerd Font Complete'), local('CartographCFNerdFontComplete-Light'),
+        url('CartographCFNerdFontComplete-Light.woff2') format('woff2'),
+        url('CartographCFNerdFontComplete-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
