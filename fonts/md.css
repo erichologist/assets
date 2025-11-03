@@ -1,0 +1,719 @@
+/* ▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
+
+https://macromates.com/manual/en/snippets
+Local Files/#Textastic/markdown_head.html
+Local Files/#Textastic/markdown.css
+
+
+
+BBStylish – Attractive Markdown Preview CSS for BBEdit
+ <https://nostodnayr.net/projects/bbstylish>
+
+ Made by Ryan Dotson – rd@nostodnayr.net
+
+ Version 2
+ 22 January 2022
+
+ New customisations in this version:
+ * Font for headings
+ * Background colour for quotation blocks
+
+ Style changes:
+ * Added line height for headings H1–6
+ * Added rule to keep images from overflowing the
+ text column (thanks, Wayne!)
+ * Added some padding to quotation blocks
+ * Links are underlined by default
+
+
+ BBStylish is a stylesheet for BBEdit’s Preview window that offers attractive defaults, but can be customised without knowing CSS.
+
+ ·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·
+ FILE DIRECTORY 
+ ·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·
+ · 0. Instructions for use ·
+ · 1. Fonts ·
+ · 2. Text Zoom ·
+ · 3. Colours ·
+ · 4. Link Underlining ·
+ · 5. Line Height / Spacing ·
+ · 6. Text Width ·
+ · 7. Margin / Centring ·
+ · 8. Header and Footer Space ·
+ ·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·
+
+▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
+
+/* 0. I N S T R U C T I O N S F O R U S E
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ INSTALLATION
+ ------------
+ Install the file in the ‘Preview CSS’ folder of your
+ BBEdit Application Support folder. (It’s easily opened
+ from the menu bar: BBEdit › Folders › Preview CSS.)
+
+ If you want all Markdown previews to use this style
+ automatically, then keep this file’s name as it is:
+
+ DefaultCSS_Markdown.css
+
+ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+ EDITING
+ -------
+ Obviously the best way to edit this file is using
+ BBEdit itself. You can get to it any time using
+ the Folders menu, as detailed above.
+
+ If you’ve got a Preview window open, you can also open
+ this file from the ‘CSS:’ pop-up menu by holding down
+ the option (⌥) key when you choose this file from
+ the menu.
+
+ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+ HOW THE SETTINGS WORK
+ ---------------------
+ You can customise this file to better suit your preferences. Out of necessity, it requires some
+ precision, but I’ve tried to make it approachable if
+ you’re not familiar or comfortable with CSS.
+ Explanations and examples are given for each of the
+ ‘settings’.
+
+ The setting (variable) is preceded by two hyphens and
+ ends with a colon, like so:
+
+   --text-font:
+
+ Your setting goes after the colon, followed by a
+ *semicolon*. Thus a full setting line looks like this:
+
+   --text-font: "New York";
+
+ This bears repeating:
+
+ ░▒▓█ The line must end with a semicolon. █▓▒░
+
+ Otherwise, spaces and tabs are ignored, except
+ between quotation marks. 
+
+ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+ ‘HOT’ UPDATING
+ --------------
+ You can get an (almost) live preview of your settings by keeping a BBEdit Preview window open as you edit this file. When the file is saved, the Preview window will refresh automatically, showing the updated settings.
+
+ This way, you can easily confirm or undo any changes
+ you make.
+
+ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+ TROUBLESHOOTING
+ ---------------
+ If something doesn’t look as you expect, first check
+ for misplaced spaces, semicolons, quotation marks and other punctuation. In almost every case, these will result in unexpected behaviour.
+
+ If you need, you can download a fresh copy of this
+ file from:
+
+ <https://nostodnayr.net/projects/bbstylish/>
+
+▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴*/
+:root { /* Do not remove this line */
+
+/* 1. F O N T S
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+ You can customise the typeface/font used for the preview by changing the values here.
+
+ Apple’s default system font, San Francisco, can be
+ invoked using a special syntax:
+
+ -apple-system
+
+ Any font on your Mac can be used when previewing in BBEdit. Enter its name surrounded by quotation marks:
+
+ "Gill Sans"
+
+ In some cases you may need to specify the weight (e.g. book, regular, bold) in addition to the typeface’s name. Try it without first, though.
+
+ You can specify a fallback font if your first choice isn’t available, like you’re on a different Mac than usual. If you haven’t installed Apple’s code font, SF Mono, then the Preview will skip over it and use Monaco instead. */
+
+   --text-font: "ConcourseT2Tab", "ConcourseT3", 
+"ConcourseT4", "Avenir-Book","EBGaramond-Regular", "FilosofiaRegular", "Amiri", serif, -apple-system;
+   --heading-font: "ConcourseT4", "ConcourseT2Tab",
+"ConcourseT3", "Avenir-Book","EBGaramond-Regular", "FilosofiaRegular", "SpectralSC-Regular", "AlegreyaSC-Regular", serif;
+   --heading: "ConcourseT4", "ConcourseT2Tab",
+"ConcourseT3", "Avenir-Book","EBGaramond-Regular", "FilosofiaRegular", "SpectralSC-Regular", "AlegreyaSC-Regular", serif;
+   --code-font: "CartographCFNerdFontComplete-LightItalic", "CartographCFNerdFontComplete-RegularItalic", "CartographCFNerdFontComplete-ThinItalic", "CartographCF-RegularItalic","CartographCF-LightItalic", "SymbolsNFM", "DankMono-Italic", "DankMonoNerdFontNerdFontCompleteM-Italic", "DicoMono-Script", "OperatorMono-BookItalic", "OperatorMono-LightItalic", "OperatorMono-MediumItalic", "Operator Mono", "SF Mono", "Monaco";
+   --code: "CartographCFNerdFontComplete-LightItalic", "CartographCFNerdFontComplete-RegularItalic", "CartographCFNerdFontComplete-ThinItalic", "CartographCF-RegularItalic","CartographCF-LightItalic", "SymbolsNFM", "DankMono-Italic", "DankMonoNerdFontNerdFontCompleteM-Italic", "DicoMono-Script", "OperatorMono-BookItalic", "OperatorMono-LightItalic", "OperatorMono-MediumItalic", "Operator Mono", "SF Mono", "Monaco";
+   --olf: "ConcourseIndexRegular", "Concourse Index",  "CombiNumerals Ltd", "CombiNumeralsLtd";
+   --ol-alt1: "CombiNumerals Ltd", "CombiNumeralsLtd";
+   --ol-alt2: "Concourse Index",  "ConcourseIndexRegular";
+   --linkf: "ConcourseC4", "EquityCapsA";
+   --fluro-yellow-rgb: 255, 255, 0;
+   --fluro-pink-rgb: 255, 0, 255;
+   --fluro-purple-rgb: 200, 0, 255;
+   --fluro-coral-rgb: 240, 128, 128;
+   --fluro-blue-rgb: 0, 255, 255;
+   --fluro-green-rgb: 0, 255, 0;
+   --text-highlight-yellow: var(--fluro-yellow-rgb);
+   --text-highlight-pink: var(--fluro-pink-rgb);
+   --text-highlight-coral: var(--fluro-coral-rgb);
+   --text-highlight-green: var(--fluro-green-rgb);
+   --text-highlight-blue: var(--fluro-blue-rgb);
+   --text-highlight-purple: var(--fluro-purple-rgb);
+mark.yellow {
+   --text-highlight-rgb: var(--fluro-yellow-rgb);
+}
+mark.purple {
+   --text-highlight-rgb: var(--fluro-purple-rgb);
+}
+mark.blue {
+   --text-highlight-rgb: var(--fluro-blue-rgb);
+}
+mark.green {
+   --text-highlight-rgb: var(--fluro-green-rgb);
+}
+mark.coral {
+   --text-highlight-rgb: var(--fluro-coral-rgb);
+}
+mark.pink {
+   --text-highlight-rgb: var(--fluro-pink-rgb);
+}
+
+/* 2. T E X T Z O O M
+ ■■■■■■■■■■■■■■■■■■■■■■■■
+Text zoom is a percentage of the default size,  similar to the BBEdit ‘Text Zoom’ feature.
+ Because some ‘code’ fonts can appear larger than other text, its zoom can be set separately.
+ You don’t need to enter the % sign for these settings.
+ Just enter a number. 
+   --text-zoom: 120;
+   --code-text-zoom: 85; */
+   --text-zoom: 100;
+   --code-text-zoom: 85;
+
+/* 3. C O L O U R C U S T O M I S A T I O N
+ ■■■■■■■■■■■■■■■■■■■■■■■■
+ ● There are four colours that can be customised using these settings.
+      They are:
+ - text: Colour for ‘body’ text.
+ - text-header: Colour for h1..6 header text.
+ - text-code: Colour for ‘code’ text. Some prefer this to be a lighter colour.
+ - background: Colour for the page background.
+ - link: Colour for links.
+ - link-hover: Colour for when the pointer is hovering over a link.
+
+ ⚬ There is no colour for visited links because BBEdit doesn’t ‘know about’ what links have been visited in Safari or other browsers.
+
+ ⚬ To change these colours, it’s convenient to use the colour picker in BBEdit. Select the colour code you want to change (e.g. #000000), then open the colour picker palette by choosing: Window → Palettes → Colours
+
+
+ ● When you click on a new colour it should replace what’s already selected. */
+
+/* ──────────● light ●──────────*/
+   --light-mode-text: #D6D6D6;
+   --light-mode-headers: #D6D6D6;
+   --light-mode-code: #D6D6D6;
+   --light-mode-background: #1E1E1E;
+   --light-mode-quote-background: #2a2a2a;
+   --light-mode-link: #9493C8;
+   --light-mode-link-hover: #6867AA;
+
+/*──────────● dark ●──────────*/
+   --dark-mode-text: #D6D6D6;
+   --dark-mode-headers: #D6D6D6;
+   --dark-mode-code: #D6D6D6;
+   --dark-mode-background: #1E1E1E;
+   --dark-mode-quote-background: #2a2a2a;
+   --dark-mode-link: #25FDFF;
+   --dark-mode-link-hover: #6867AA;
+
+/* 4. L I N K U N D E R L I N I N G
+ ■■■■■■■■■■■■■■■■■■■■■■■■
+ ● You can hide link underlines by specifying: none To show underlines, enter: underline
+ More esoteric options like `overline` and `line-through` are supported by Safari, and thus BBEdit, but use at your own discretion. More modern options like `wavy` or `dotted` are not currently Supported in Safari. */
+   /*--link-underline: underline;*/
+
+/* When the pointer is hovering over a link, you can use a different style decoration.*/
+   /* --link-underline-hover: underline; */
+
+/* 5. L I N E H E I G H T / S P A C I N G
+ ■■■■■■■■■■■■■■■■■■■■■■■■
+ ● The line height effectively sets how much space comes between each line. For example, you could change this setting to 2 to make the text double-spaced. */
+   --line-height: 1.55;
+
+/* 6. T E X T W I D T H
+ ■■■■■■■■■■■■■■■■■■■■■■■■
+  ●  ●  ●  ●  ●  ●  ●  ●  ●  ●  ●  ●  ●  ●    ●  ●  ●  ●  ●  ●  ●  ●  ●  
+ The text-width and max-width settings control how wide the column of text will appear in the Preview
+ window.
+ These settings have been slightly overwrought in the
+ interest of making the system more flexible. Ideally,  the defaults, perhaps with minor adjustment, will serve
+ you well. 
+ The two settings work in tandem. For narrow windows,  the text-width setting of 80% wins, keeping the lines
+ of text at a comfortably readable length.
+
+ ╔════════════════╗
+ ║ ●●● Narrow Width Preview ●●●║
+ ╠════════════════╣
+ ║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+ ║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+ ║ ░░░░░░░░░░░░80%░░░░░░░░░░░░ ║
+ ║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+ ║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+ ╚════════════════╝
+
+ This 80% is of the window’s width. If the window were exceptionally wide, though, using this setting alone could result in a very long, hard to read, line of text.
+
+ ╔═════════════════════╗
+ ║ ●●● Wide Width Preview ●●●║
+ ╠═════════════════════╣
+ ║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+ ║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+ ║ ░░░░░░░░░░░░░░░ 80% ░░░░░░░░░░░░░░░░ ║
+ ║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+ ║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+ ╚═════════════════════╝
+
+ For that case, the max-width setting steps in to hem in the line length. Again, in order to produce a text that’s comfortably readable.
+
+╔═════════════════╗
+║ ●●●●● Wide Width Preview ●●●●●║
+╠═════════════════╣
+║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+║ ░░░░░░ Max-restricted ░░░░░░░ ║
+║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+╚═════════════════╝
+ ~ ~~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
+/* The text-width is a percentage of the Preview window’s width. Enter a number – no % sign is needed. */
+
+   --text-width: 80;
+
+/* The line-length will restrict the width specified above and is an *approximate* maximum number of characters that should appear on one line. Depending on the font and text zoom factor, this number may become completely disconnected from the number of characters per line. */
+   --line-length: 62;
+
+/* 7. M A R G I N / C E N T R I N G
+ ■■■■■■■■■■■■■■■■■■■■■■■■
+The default settings centre the text column by setting the left and right margin to `auto`. If you would prefer the text be left-justified, you can change this to 0.*/
+   --margin: auto;
+
+/* The code indentation is an additional margin added to
+ code blocks. If you don’t want it, change it to 0. */
+
+   --code-indent: 2;
+
+/* Block quotes are usually indented, but if you don't want that, change this to 0. */
+
+   --blockquote-indent: 1;
+
+/* 8. H E A D E R & F O O T E R S P A C E
+ ■■■■■■■■■■■■■■■■■■■■■■■■
+To give the text a bit of breathing room at the top and bottom of the window, this file adds some padding there. If your preview window is close to the bottom of your screen, you may appreciate having a little extra space there. This setting can be adjusted using a plain number,  positive or negative, to increase or decrease the amount of space, respectively. */
+   --header-space: 0;
+   --footer-space: 1.5;
+
+/*
+ ░░▒▒▓▓█████████████████████████████████████▓
+ ░░▒▒▓▓█████████████████▓▒░ End of Settings ▓
+ ░░▒▒▓▓█████████████████████████████████████▓
+
+/* */
+/* There's no need to edit */
+/* anything beyond this point. */
+/* */
+/* Good bye! */
+}
+/* :root */
+
+/* Now, to do something with all those variables. */
+
+/* I’ll use the line-height as vertical spacing,  so rather than fight the system, reset it and help
+ keep things consistent. */
+*, body {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+/*  then make the default spacing between elements equal to the line-height, in rem. */
+* + * {
+	margin-top: calc(var(--line-height) * 1rem);
+}
+/* lists don’t need the vertical spacing */
+li + li, li ul, li ol {
+	font-family: var(--olf);
+	margin-top: 0;
+}
+/* !!! This is a shim to make paragraphs inside lists get appropriate padding */
+li p:last-of-type {
+	margin-bottom: calc(var(--line-height) * 1rem);
+}
+/* nor paragraphs coming after lower headings */
+h3 + p, h4 + p, h5 + p, h6 + p {
+	font-family: var(--heading);
+	margin-top: 0;
+}
+/* and headings get a little extra */
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--heading);
+	margin-top: calc(var(--line-height) * 2rem);
+	color: var(--dark-mode-headers);
+}
+/* unless two big ones are touching */
+h1 + h2, h2 + h3, h1 + h3 {
+	font-family: var(--heading);
+	margin-top: calc(var(--line-height) * 1rem);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Avenir-Book","EBGaramond-Regular", "FilosofiaRegular", "SpectralSC-Regular", "FilosofiaOT", "FilosofiaGrandOT", "AlegreyaSC-Regular", serif;
+	line-height: 120%;
+}
+body {
+	font-family: var(--text-font);
+	font-size: calc(var(--text-zoom) * 1%);
+ /* weight and alignment not implemented in settings */
+	font-weight: var(--text-weight);
+	text-align: var(--alignment);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	line-height: var(--line-height);
+	overflow-wrap: break-word;
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+	/* add the input, converted to rem, to my default */
+	margin-top: calc( (var(--line-height) * 2.5rem) + (var(--header-space) * 1rem) );
+	margin-bottom: calc( (var(--line-height) * 3rem) + (var(--footer-space) * 1rem) );
+	/* convert input to percentage */
+	width: calc(var(--text-width) * 1%);
+
+ /* tried to be clever and make the max-width more
+ precise. 0.5em works moderately well so that if
+   --max-width is 55, a line is approximately 55
+ characters long. */
+	max-width: calc(var(--line-length) * 0.5em);
+	color: var(--dark-mode-text);
+	background-color: var(--dark-mode-background);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Avenir-Book","EBGaramond-Regular", "FilosofiaRegular", "SpectralSC-Regular", "FilosofiaOT", "FilosofiaGrandOT", "AlegreyaSC-Regular", serif;
+	font-family: var(--heading-font);
+}
+blockquote {
+	font-size: 95%;
+	line-height: calc(var(--line-height) * 0.95);
+	background-color: var(--dark-mode-quote-background);
+	padding: 0.5rem 0.75rem;
+	margin-left: calc(var(--blockquote-indent) * 1rem);
+	margin-right: calc(var(--blockquote-indent) * 1rem);
+}
+a {
+    /*font-family: "Avenir-Book","EBGaramond-Regular", "FilosofiaRegular", "SpectralSC-Regular", "FilosofiaOT", "FilosofiaGrandOT", "AlegreyaSC-Regular", serif;*/
+	font-family: var(--linkf);
+	text-decoration: var(--link-underline);
+	color: var(--dark-mode-link);
+}
+a:hover {
+	text-decoration: var(--link-underline-hover);
+	color: var(--dark-mode-link-hover);
+}
+pre, pre code, code {
+	font-family: var(--code);
+	font-size: calc(var(--code-text-zoom) * 1%);
+	color: var(--dark-mode-code);
+	font-variant-alternates: 'salt' 2, 'salt' 5;
+	font-feature-settings: 'ss05', 'ss02' !important;
+	-moz-font-feature-settings: 'ss05', 'ss02' !important; 
+	-webkit-font-feature-settings: 'ss05', 'ss02' !important;
+   background-color: #00000000 !important;
+   background: #00000000 !important;
+}
+pre {
+	margin-left: calc(var(--code-indent) * 1rem);
+	margin-right: calc(var(--code-indent) * 1rem);
+   background-color: #00000000 !important;
+   background: #00000000 !important;
+}
+img {
+	max-width: 80%;
+}
+/* Override rules for dark appearance */
+@media (prefers-color-scheme: dark) {
+
+body {
+	color: var(--dark-mode-text);
+	background-color: var(--dark-mode-background);
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+blockquote {
+	 background-color: var(--dark-mode-quote-background);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--text-font);
+    color: var(--dark-mode-headers);
+}
+a {
+	font-family: var(--linkf);
+	color: var(--dark-mode-link);
+}
+a:hover {
+	color: var(--dark-mode-link-hover);
+}
+pre, code {
+	color: var(--dark-mode-code);
+}
+/* @group Pre-formatted and Code */
+
+pre {
+	overflow: auto;
+	margin: .75rem 0;
+	padding: .5rem;
+	font-size: .875em;
+	white-space: pre;
+	background-color: rgba(20, 20, 25, 0.8);
+	border: 1px solid #00000000;
+	border-radius: 3px;
+	background-color: #00000000 !important;
+	background: #00000000 !important;
+	border: 1px solid #00000000;
+}
+code {
+	padding: 0 .25em;
+	white-space: pre;
+	font-family: var(--code-font);
+	font-size: calc(var(--code-text-zoom) * 1%);
+	color: var(--dark-mode-code);
+	font-variant-alternates: 'salt' 2, 'salt' 5;
+	font-feature-settings: 'ss05', 'ss02' !important;
+	-moz-font-feature-settings: 'ss05', 'ss02' !important; 
+	-webkit-font-feature-settings: 'ss05', 'ss02' !important;
+	border-radius: 3px;
+	background-color: #00000000 !important;
+	background: #00000000 !important;
+	border: 1px solid #00000000;
+}
+pre code {
+	padding: 0;
+	word-wrap: normal;
+	white-space: pre-wrap;
+}
+pre code, pre tt {
+	background-color: #00000000 !important;
+	background: #00000000 !important;
+	border: none;
+}
+
+/* @group Tables */
+table thead tr th {
+	text-align: left;
+	border-bottom: 1px solid #000;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+}
+/* @group Tables */
+table {
+	margin: 0.75em;
+	padding: 0px;
+	border-collapse: collapse;
+}
+table tr {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #000;
+	background-color: rgb(20, 20, 25);
+}
+table tr:nth-child(2n) {
+	background-color: rgb(30, 30, 35);
+}
+table tr th {
+	margin: 0;
+	padding: .35em .75em;
+	font-weight: bold;
+	text-align: left;
+	border: 1px solid #000;
+}
+table tr td {
+	margin: 0;
+	padding: .35em .75em;
+	text-align: left;
+	border: 1px solid #000;
+}
+table tr th :first-child, table tr td :first-child {
+	margin-top: 0;
+}
+table tr th :last-child, table tr td :last-child {
+	margin-bottom: 0;
+}
+/* @end */
+/* Make tables width same as default note width */
+/* @end */
+
+img { max-width: 80%; }
+/*body, span { margin-left: -3em; }*/
+
+table {
+	border: 1px solid var(--main-border-color) !important;
+	background-color: #3d3b63 !important;
+	border-collapse: collapse !important;
+	border-radius: 12px !important;
+	/*font-size: 1em !important;*/
+	color: #cdcdcd !important;
+	overflow: hidden !important;
+	/*width: auto !important;*/
+	max-width: 90% !important;*/
+	margin: 1em !important;
+	margin-left: -2em !important;
+}
+th {
+	padding: .25em .5em !important;
+	background-image: linear-gradient(to left bottom, #181a1b, #004c53, #00846d, #00bb5c, #a8eb12) !important;
+	background: var(--alternate-bg-color) !important;
+	border: 1px solid rgba(0, 0, 0, 0.25) !important;
+}
+ td {
+	padding: .25em .5em !important;
+	border: 1px solid rgba(0, 0, 0, 0.25) !important;
+}
+ thead {
+	background-color: #2B3037 !important;
+	color: #cdcdcd !important;
+	font-weight: 800 !important;
+}
+ th {
+	letter-spacing: 0.3px !important;
+	text-shadow: 0 1px 1px #2b2a466b !important;
+}
+ table > thead > tr > th { border: 1px solid rgba(0, 0, 0, 0.25) !important; }
+ td {
+	background-color: #3d3b63 !important;
+	color: #cdcdcd !important;
+}
+ td strong { color: #efefef !important; }
+ td, th {
+	border: 1px solid rgba(0, 0, 0, 0.25) !important;
+	padding: 11px !important;
+}
+ thead th:hover, thead tr:hover td, th:hover { background-color: rgba(244, 14, 83, 0.45) !important; }
+ tbody tr:hover td, tbody tr:hover td a {
+	/*background-color: rgba(179, 0, 74, 0.35) !important;*/
+	color: white !important;
+	font-weight: 700 !important;
+}
+ table tbody th:hover, table tbody tr:hover, table tbody tr:hover td, tr:hover {
+	letter-spacing: 0.3px !important;
+	background-color: rgba(179, 0, 74, 0.35) !important;
+	color: white !important;
+	font-weight: 700 !important;
+}
+/* 1st column */
+table tr td:first-child + td { white-space: nowrap !important; }
+/*table tr td:first-child + td {
+    white-space: nowrap !important;
+} */
+
+/*2nd column*/
+
+/*table table td:nth-child(2) {
+    white-space: nowrap !important; }*/
+/* 1st column */
+.pre1st table tr td:first-child { white-space: pre !important; }
+/* 1st column */
+.preline1st table tr td:first-child { white-space: pre-line !important; }
+/* 1st column */
+.prewrap1st table tr td:first-child { white-space: pre-wrap !important; }
+/* 1st column */
+.wide1st table tr td:first-child { white-space: nowrap !important; }
+/* 2nd column */
+.wide2nd table tr td:first-child + td { white-space: nowrap !important; }
+/*3rd column */
+.wide3rd table tr td:first-child + td + td { white-space: nowrap !important; }
+/* 4th column*/
+.wide4th table tr td:first-child + td + td + td { white-space: nowrap !important; }
+/* 5th column*/
+.wide5th table tr td:first-child + td + td + td +td { white-space: nowrap !important; }
+
+
+#cart, div.cart, .cart span, span.cart {
+	font-family: 'CartographCF-RegularItalic', 'CartographCF-LightItalic';
+	font-variant-alternates: 'salt' 2, 'salt' 5;
+	font-feature-settings: 'ss05', 'ss02' !important;
+	-moz-font-feature-settings: 'ss05', 'ss02' !important; 
+	-webkit-font-feature-settings: 'ss05', 'ss02' !important;
+}
+/* @font-face {
+	font-family: "Concourse Index";*/
+/*.circledol*/  
+ul {
+	list-style-type: circle;
+}
+/*.circledol*/ 
+ol {
+	padding-inline-start: 36px !important;
+	counter-reset: foobar;
+}
+./*.circledol*/  ol > li {
+	list-style: none;
+	margin-left: 0;
+}
+/*.circledol*/ 
+ol > li:before {
+	counter-increment: foobar;
+	content: counter(foobar);
+	font-size: 1.01rem !important;
+	position: absolute; !important
+	margin-left: -2.3rem !important;
+	font-family: var(--olf) !important;
+	font-variant-ligatures: common-ligatures !important;
+}
+/*.mod-top-left-space */
+ol li:before {
+	font-size: 1.02em !important;
+}
+
+
+
+mark, #mark, #highlight, .highlight, .mark,
+.markdown-preview-view mark, .markdown-preview mark,
+.cm-s-obsidian span.cm-highlight {
+  color: inherit;
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    105deg,
+    transparent 0,
+    transparent 0.3em,
+    rgba(var(--text-highlight-rgb), 0.7) 0.5em,
+    rgba(var(--text-highlight-rgb), 0.4) 1.6em,
+    rgba(var(--text-highlight-rgb), 0.4) calc(100% - 1.4em),
+    rgba(var(--text-highlight-rgb), 0.7) calc(100% - 0.5em),
+    transparent calc(100% - 0.3em),
+    transparent 100%
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  text-shadow: 0 0 0.75em var(--background-primary-alt);
+}
+
+.cm-s-obsidian span.cm-formatting-highlight {
+  background-image: none;
+}
+.cm-s-obsidian .cm-highlight + span.cm-formatting-highlight {
+  background-image: none;
+}
+/* Lists END */
+/* table { margin:.75rem 0;padding:0;border-collapse:collapse;border-left:2px solid #000;} table tr { margin:0;padding:0;border-top:1px solid #000;background-color:rgb(20,20,25);border-top:2px solid #000;} table tr:nth-child(2n) { background-color:rgb(30,30,35);} table tr th { margin:0;padding:.35em .75em;font-weight:bold;text-align:left;border:1px solid #000;border-bottom:2px solid #000;border-top:2px solid #000;border-left:2px solid #000;border-right:2px solid #000;} table tr td { margin:0;padding:.35em .75em;text-align:left;border:1px solid #000;border-left:2px solid #000;} table tr th :first-child,table tr td :first-child { border-bottom:2px solid #000;border-top:2px solid #000;border-left:2px solid #000;border-right:2px solid #000;margin-top:0;} table tr th :last-child,table tr td :last-child { border-bottom:2px solid #000;border-top:2px solid #000;border-left:2px solid #000;border-right:2px solid #000;margin-bottom:0;} */
+ /* th,td { text-align:left; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:2px solid #000;border-left:2px solid #000;border-right:2px solid #000;} th,td { text-align:left; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:2px solid #000;border-left:2px solid #000;border-right:2px solid #000;} th,td { text-align:left; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:2px solid #000;border-left:2px solid #000;border-right:2px solid #000;}
+ th { text-align:left; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:2px solid #000;border-left:2px solid #000;border-right:2px solid #000;} td { text-align:left; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:2px solid #000;border-left:2px solid #000;border-right:2px solid #000;} tbody tr:hover td,tbody tr:hover td strong,tbody tr:hover td a { background-color:rgba(105,0,105,0.4);background-color:rgba(255,255,255,0.2);color:#0FB;font-family:"Avenir-Book","EBGaramond-Regular","FilosofiaRegular","SpectralSC-Regular","FilosofiaOT","FilosofiaGrandOT","AlegreyaSC-Regular",serif;} tbody tr:hover td,tbody tr:hover td strong,tbody tr:hover td a { background-color:rgba(105,0,105,0.4);background-color:rgba(255,255,255,0.2);color:#0FB;font-family:"Avenir-Book","EBGaramond-Regular","FilosofiaRegular","SpectralSC-Regular","FilosofiaOT","FilosofiaGrandOT","AlegreyaSC-Regular",serif;} tbody tr:hover td { background-color:rgba(105,0,105,0.4);background-color:rgba(255,255,255,0.2);color:#0FB;font-family:"Avenir-Book","EBGaramond-Regular","FilosofiaRegular","SpectralSC-Regular","FilosofiaOT","FilosofiaGrandOT","AlegreyaSC-Regular",serif;} tbody tr:hover td strong { background-color:rgba(105,0,105,0.4);background-color:rgba(255,255,255,0.2);color:#0FB;font-family:"Avenir-Book","EBGaramond-Regular","FilosofiaRegular","SpectralSC-Regular","FilosofiaOT","FilosofiaGrandOT","AlegreyaSC-Regular",serif;} tbody tr:hover td a { background-color:rgba(105,0,105,0.4);background-color:rgba(255,255,255,0.2);color:#0FB;font-family:"Avenir-Book","EBGaramond-Regular","FilosofiaRegular","SpectralSC-Regular","FilosofiaOT","FilosofiaGrandOT","AlegreyaSC-Regular",serif;}
+/* 1st cell short text,2nd th bigger text fixedFc c1smallc2big*/
+ /* tr th:first-child,tr td:first-child { width:8em;min-width:10em; /* max-width:8em;word-break:break-all; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:none;border-right:none;} */
+ /* tr td:first-child { /* width:8em;min-width:10em; /* max-width:8em;word-break:break-all; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:none;border-right:none;} tr th:first-child,.tr td:first-child { /* width:8em;min-width:10em; /* max-width:8em;word-break:break-all;border-bottom:2px solid #000;border-top:1px solid #000;border-left:none;border-right:none;} tr th:first-child { /* width:8em;min-width:10em; /* max-width:8em;word-break:break-all;border-bottom:2px solid #000;border-top:1px solid #000;border-left:none;border-right:none;} tr td:first-child { /* width:8em;min-width:10em; /* max-width:8em;word-break:break-all;border-bottom:2px solid #000;border-top:1px solid #000;border-left:none;border-right:none;} thead tr th:first-child { /* width:8em;min-width:10em; /* max-width:8em;word-break:break-all; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:2px solid #000;border-right:none;} tbody tr td:first-child { /* width:8em;min-width:10em; /* max-width:8em;word-break:break-all; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:2px solid #000;border-right:none;} thead tr th:first-child,.tbody tr td:first-child { /* width:8em;min-width:10em; /* max-width:8em;word-break:break-all; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:none;border-right:none;} tbody tr td:first-child { /* width:8em;min-width:10em; /* max-width:8em;word-break:break-all; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:none;border-right:none;} th:nth-child(2) { padding:9px 20px;font-size:21px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:none;border-right:none;} th:nth-child(2) { padding:9px 20px;font-size:21px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:none;border-right:none;} td:nth-child(2) { /* white-space:nowrap;overflow:hidden; /* text-overflow:ellipsis; /* width:12em; /* max-width:14em;min-width:17em; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:1px solid #141419;border-right:2px solid #000;} tr > td:last-of-type { /* white-space:nowrap;overflow:hidden; /* text-overflow:ellipsis; /* width:12em; /* max-width:14em;min-width:17em; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:1px solid #141419;border-right:2px solid #000;} td:nth-child(2),tr > td:last-of-type { /* white-space:nowrap;overflow:hidden; /* text-overflow:ellipsis; /* width:12em; /* max-width:14em;min-width:17em; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:1px solid #141419;border-right:2px solid #000;}
+/* 1st cell big text,2nd small. wideFc c1BigC2Small*/
+ /* td:nth-child(1),tr > td:last-of-type { /* white-space:nowrap;overflow:hidden !importanttext-overflow:ellipsis; /* width:12em; /* max-width:14em;min-width:17em; /* padding-top:20px 20px 20px 20px;*/
+ /* margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:1px solid #141419;border-right:2px solid #000;} /* td:nth-child(1),.tr > td:last-of-type { white-space:nowrap;overflow:hidden;text-overflow:ellipsis; /* width:12em; /* max-width:14em;min-width:17em; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:1px solid #141419;border-right:2px solid #000;} td:nth-child(1) { /* white-space:nowrap;overflow:hidden;text-overflow:ellipsis; /* width:12em; /* max-width:14em;min-width:17em; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:1px solid #141419;border-right:2px solid #000;} tr > td:last-of-type { /* white-space:nowrap;overflow:hidden;text-overflow:ellipsis; /* width:12em; /* max-width:14em;min-width:17em; /* padding-top:20px 20px 20px 20px;margin-top:20px 20px 20px 20px;border-bottom:2px solid #000;border-top:1px solid #000;border-left:1px solid #141419;border-right:2px solid #000;} 
+ /* @group Tables*/
+ /* table { margin:0.75em;padding:0px;border-collapse:collapse;} table tr { margin:0;padding:0;border-top:1px solid #000;background-color:rgb(20,20,25);} table tr:nth-child(2n) { background-color:rgb(30,30,35);} table tr th { margin:0;padding:.35em .75em;font-weight:bold;text-align:left;border:1px solid #000;} table tr td { margin:0;padding:.35em .75em;text-align:left;border:1px solid #000;} table tr th :first-child,table tr td :first-child { margin-top:0;} table tr th :last-child,table tr td :last-child { margin-bottom:0;} */
