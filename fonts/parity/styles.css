@@ -1,0 +1,178 @@
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
+audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+a{background-color:transparent}a:active,a:hover{outline-width:0}
+abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}
+small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
+button,input,select,textarea,optgroup{font:inherit;margin:0}optgroup{font-weight:bold}
+button,input{overflow:visible}button,select{text-transform:none}
+button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}
+button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+[type=checkbox],[type=radio]{padding:0}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+/* End extract */
+@font-face {
+    font-family: 'Parity Sans Extra';
+    src: local('Parity Sans Extra Bold'), local('ParitySansExtraBold'),
+        url('https://github.com/erichologist/SVGs/raw/refs/heads/main/assets/ParitySansExtraBold.woff2') format('woff2'),
+        url('https://github.com/erichologist/SVGs/raw/refs/heads/main/assets/ParitySansExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Parity Sans';
+    src: local('Parity Sans Medium'), local('ParitySansMedium'),
+        url('https://github.com/erichologist/SVGs/raw/refs/heads/main/assets/ParitySansMedium.woff2') format('woff2'),
+        url('https://github.com/erichologist/SVGs/raw/refs/heads/main/assets/ParitySansMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Parity Sans';
+    src: local('Parity Sans Regular'), local('ParitySansRegular'),
+        url('https://github.com/erichologist/SVGs/raw/refs/heads/main/assets/ParitySansRegular.woff2') format('woff2'),
+        url('https://github.com/erichologist/SVGs/raw/refs/heads/main/assets/ParitySansRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+:root {
+   --bg:#212120;
+   --txt:#EFEFEF;
+   --bgalt:#282828;
+   --bgalt2:#191919;
+   --txtalt:#CDCDCD;
+   --purple:#3D3B63;
+   --tablebg:#282828;
+   --coral:#FA4251;
+   --coral90:#FA4251E6;
+   --coral80:#FA4251CC;
+   --coral60:#FA425199;
+   --link:#00E9EE;
+   --szthead:1.3em;
+   --szbold:1.2em;
+   --szem:1.2em;
+   --szname:1.5em;
+   --szimg:80%;
+   --border1:1px solid rgba(0,0,0,0);
+   --border2:1px solid rgb(0,0,0);
+   --tshadow:-2px 2px 6px rgba(0,0,0,1);
+   --bordersh:3px solid rgba(0,0,0,1);
+   --boxshadow:0px 0px 2px rgba(0,0,0,1), 2px -2px 4px rgba(0,0,0,1), -2px 2px 5px rgba(0,0,0,1), 0px 0px 6x rgba(0,0,0,1);
+   --borderblur:10px;
+   --hover1:rgba(179,0,74,0.25);
+   --hover2:rgba(244,14,83,0.35);
+   --lttrsp:0.3px;
+   --link-color:#00E9EE;
+   --bimbo:'BimboPro-Regular', 'BimboPro-Sharpie', 'HandsomePro-Bold', 'HandsomePro', 'Professor', 'SymbolsNF';
+   --bimbobold:'BimboPro-Sharpie','BimboPro-Regular','HandsomeProExtraBold','HandsomePro-Bold','HandsomePro','Professor','SymbolsNF';
+   --cart:'CartographCF-RegularItalic', 'CartographCF-LightItalic', 'CartographCF-HeavyItalic', 'SymbolsNFM';
+   --mono:'DankMono-Italic', 'DankMonoNerdFontNerdFontCompleteM-Italic', 'SymbolsNFM';
+   --snserif: 'Parity Sans', 'Parity Sans Extra', 'ParitySansRegular', 'Questrial-Regular', 'Geometrico-Copy', 'TRIALGeometrico-Regular', 'SymbolsNFM', 'Questa Sans', sans-serif;
+   --boxshadow:0px 0px 2px rgba(0,0,0,0.2), 2px -2px 4px rgba(0,0,0,0.4), -2px 2px 5px rgba(0,0,0,0.4), 0px 0px 6x rgba(0,0,0,0.8);
+}
+body {
+   -webkit-text-size-adjust:100%;
+   background-color:var(--bg);
+   border-radius:8px;
+   box-sizing:border-box;
+   clear:left;
+   color:var(--txtalt);
+   display:block;
+   font-family:var(--snserif);
+   padding:5px;
+   vertical-align:baseline;
+}
+span b, b span, span em, em span {
+   font-size:var(--szem);
+}
+a {
+   color:var(--link);
+}
+table {
+   background-color:var(--tablebg);
+   border-collapse:collapse;
+   border-radius: 7px;
+   border:var(--border1);
+   display:block;
+   box-shadow:var(--boxshadow);
+   color:var(--txtalt);
+   font-family:var(--snserif);
+   margin:1em;
+   max-width:90%;
+   overflow:hidden;
+   width:auto;
+}
+table thead tr td,table thead tr,thead,thead tr,th,table > thead > tr > td {
+   background-color:var(--purple);
+   border:var(--border1);
+   color:var(--txt);
+   font-family:var(--snserif);
+   font-size:var(--szthead);
+   letter-spacing:var(--lttrsp);
+   padding:.25em .5em;
+   text-shadow:var(--tshadow);
+}
+td {
+   padding:.25em .5em;
+   border:var(--border1);
+   background-color:var(--tablebg);
+   color:var(--txtalt);
+}
+table > thead > tr > th, thead,
+table > thead > tr > th, thead tr th,
+table thead tr th thead,
+table thead tr th thead tr,
+table thead tr th thead tr th,
+table thead tr th thead th {
+   border:var(--border2);
+   background-color:var(--purple);
+}
+
+td, th {
+   padding:11px;
+}
+table thead tr:hover, thead tr:hover {
+   background-color:var(--coral90);
+   color:#fff;
+}
+table tbody tr:hover,
+tbody tr:hover, tbody tr:hover td,
+tbody tr:hover td a {
+   background-color:#000000E6;
+   color:#fff;
+}
+table tbody tr td:first-child {
+   color:var(--txtalt);
+}
+table tbody tr:last-child td:first-child {
+   border-bottom-left-radius: 1em !important;
+}
+table tbody tr:last-child td:last-child {
+   border-bottom-right-radius: 1em !important;
+}
+table thead tr th:first-child {
+   border-top-left-radius: 0.75em !important;
+}
+table thead tr th:last-child {
+   border-top-right-radius: 0.75em !important;
+}
+img, * img, * img a {
+   width:100px !important;
+}
