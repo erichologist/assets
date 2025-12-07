@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, noarchive">
+    <meta name="format-detection" content="telephone=no">
+    <title>Font-Features Playground</title>
+    <style>
+        body {
+            background: #171717;
+            color: #f0f0f0;
+                        margin-right: .15rem;
+    margin-left: 1.05rem !important;
+    padding-left: 0;    
+        }
+
+@font-face {
+    font-family:"CartographCF Nerd Font";
+    src:local("CartographCF-LightItalic"), local("Cartograph CF Light Italic Nerd Font Complete");
+    font-style:italic;
+    font-weight:300;
+    font-display:swap;
+}
+@font-feature-values "CartographCF-LightItalic" { 
+    @stylistic {
+        alternate1:1;/* Maps "alternate1" to salt 1 */
+        alternate2:2;/* Maps "alternate2" to salt 2 */
+        alternate5:5;/* Maps "alternate5" to salt 5 */
+    }
+}
+
+
+.cs1, div.cs1, pre.cs1, code.cs1, h1.cs1, h2.cs1, h3, h4.cs1, h5.cs1, h6.cs1, p.cs1, span.cs1, a.cs1, table * td.cs1 {
+    font-family:"CartographCF-LightItalic", "CartographCFNerdFontComplete-LightItalic"; /* Applies salt 1 */
+    font-variant-alternates: stylistic(alternate1);
+}
+.cs2, div.cs2, pre.cs2, code.cs2, h1.cs2, h2.cs2, h3, h4.cs2, h5.cs2, h6.cs2, p.cs2, span.cs2, a.cs2, table * td.cs2 {
+    font-family:"CartographCF-LightItalic", "CartographCFNerdFontComplete-LightItalic";/* Applies salt 1 */
+    font-variant-alternates: stylistic(alternate2);
+}
+.cs5, div.cs5, pre.cs5, code.cs5, h1.cs5, h2.cs5, h3, h4.cs5, h5.cs5, h6.cs5, p.cs5, span.cs5, a.cs5, table * td.cs5 {
+    font-family:"CartographCF-LightItalic", "CartographCFNerdFontComplete-LightItalic";
+    font-weight: 300;
+    font-style: italic; /* Applies salt 5 */
+    font-variant-alternates: stylistic(alternate5);
+}
+.csa, div.csa, pre.csa, code.csa, h1.csa, h2.csa, h3, h4.csa, h5.csa, h6.csa, p.csa, span.csa, a.csa, table * td.csa {
+    font-family:"CartographCF-LightItalic", "CartographCFNerdFontComplete-LightItalic";
+    font-weight: 300;
+    font-style: italic;
+    font-variant-alternates: "salt" 2, "salt" 5;
+    font-variant-alternates: stylistic(alternate1), stylistic(alternate5);/* Applies salt 1 */
+    font-feature-settings: "liga";
+   font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+}
+.csb, div.csb, pre.csb, code.csb, h1.csb, h2.csb, h3, h4.csb, h5.csb, h6.csb, p.csb, span.csb, a.csb, table * td.csb {
+    font-family:"CartographCF-LightItalic", "CartographCFNerdFontComplete-LightItalic";
+    font-weight: 300;
+    font-style: italic;
+    font-variant-alternates: stylistic(alternate1), stylistic(alternate5);
+    /* Applies salt 1 */
+    font-feature-settings: "liga";
+   font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+}
+.csc, div.csc, pre.csc, code.csc, h1.csc, h2.csc, h3, h4.csc, h5.csc, h6.csc, p.csc, span.csc, a.csc, table * td.csc {
+    font-family:"CartographCF-LightItalic", "CartographCFNerdFontComplete-LightItalic";
+    font-weight: 300;
+    font-style: italic;
+    -moz-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+    -webkit-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+    font-variant-alternates: "ss05", "ss02";
+   font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+    font-feature-settings: "liga";
+}
+.csd, div.csd, pre.csd, code.csd, h1.csd, h2.csd, h3, h4.csd, h5.csd, h6.csd, p.csd, span.csd, a.csd, table * td.csd {
+            font-family:"CartographCF-LightItalic", "CartographCFNerdFontComplete-LightItalic";
+            font-weight: 300;
+            font-style: italic;
+            -moz-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            -webkit-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            font-variant-alternates: stylistic(alternate1), stylistic(alternate5);
+            /* Applies salt 1 */
+            font-feature-settings: "liga";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+        .cse, div.cse, pre.cse, code.cse, h1.cse, h2.cse, h3, h4.cse, h5.cse, h6.cse, p.cse, span.cse, a.cse, table * td.cse {
+            font-family:"CartographCF-LightItalic", "CartographCFNerdFontComplete-LightItalic";
+            font-weight: 300;
+            font-style: italic;
+            font-feature-settings: "liga";
+            font-variant-alternates: "salt" 2, "salt" 5;
+            -moz-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            -webkit-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+        .csre, div.csre, pre.csre, code.csre, h1.csre, h2.csre, h3, h4.csre, h5.csre, h6.csre, p.csre, span.csre, a.csre, table * td.csre {
+            font-family: "CartographCF Nerd Font";
+            font-style: normal;
+            font-feature-settings: "liga";
+            font-variant-alternates: "salt" 2, "salt" 5;
+            -moz-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            -webkit-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+        div.cart, pre.cart, code.cart, h1.cart, h2.cart, h3, h4.cart, h5.cart, h6.cart, p.cart, span.cart {
+            font-family: "CartographCF Nerd Font";
+        }
+
+        .dk1, div.dk1, pre.dk1, code.dk1, h1.dk1, h2.dk1, h3, h4.dk1, h5.dk1, h6.dk1, p.dk1, span.dk1, a.dk1, table * td.dk1 {
+            font-family: "DankMono-Italic";
+            font-variant-alternates: stylistic(alternate1);
+            /* Applies salt 1 */
+        }
+        .dk2, div.dk2, pre.dk2, code.dk2, h1.dk2, h2.dk2, h3, h4.dk2, h5.dk2, h6.dk2, p.dk2, span.dk2, a.dk2, table * td.dk2 {
+            font-family: "DankMono-Italic";
+            font-variant-alternates: stylistic(alternate2);
+            /* Applies salt 1 */
+        }
+        .dk5, div.dk5, pre.dk5, code.dk5, h1.dk5, h2.dk5, h3, h4.dk5, h5.dk5, h6.dk5, p.dk5, span.dk5, a.dk5, table * td.dk5 {
+            font-family: "DankMono-Italic";
+            font-weight: 300;
+            font-style: italic;
+            font-variant-alternates: stylistic(alternate5);
+            /* Applies salt 5 */
+        }
+        .dka, div.dka, pre.dka, code.dka, h1.dka, h2.dka, h3, h4.dka, h5.dka, h6.dka, p.dka, span.dka, a.dka, table * td.dka {
+            font-family: "DankMono-Italic";
+            font-weight: 300;
+            font-style: italic;
+            font-variant-alternates: "salt" 2, "salt" 5;
+            font-variant-alternates: stylistic(alternate1), stylistic(alternate5);
+            /* Applies salt 1 */
+            font-feature-settings: "liga";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+        .dkb, div.dkb, pre.dkb, code.dkb, h1.dkb, h2.dkb, h3, h4.dkb, h5.dkb, h6.dkb, p.dkb, span.dkb, a.dkb, table * td.dkb {
+            font-family: "DankMono-Italic";
+            font-weight: 300;
+            font-style: italic;
+            font-variant-alternates: stylistic(alternate1), stylistic(alternate5);
+            /* Applies salt 1 */
+            font-feature-settings: "liga";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+        .dkc, div.dkc, pre.dkc, code.dkc, h1.dkc, h2.dkc, h3, h4.dkc, h5.dkc, h6.dkc, p.dkc, span.dkc, a.dkc, table * td.dkc {
+            font-family: "DankMono-Italic";
+            font-weight: 300;
+            font-style: italic;
+            -moz-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            -webkit-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            font-variant-alternates: "ss05", "ss02";
+            font-feature-settings: "liga";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+            font-feature-settings: "liga";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+        .dkd, div.dkd, pre.dkd, code.dkd, h1.dkd, h2.dkd, h3, h4.dkd, h5.dkd, h6.dkd, p.dkd, span.dkd, a.dkd, table * td.dkd {
+            font-family: "DankMono-Italic";
+            font-weight: 300;
+            font-style: italic;
+            -moz-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            -webkit-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            font-variant-alternates: stylistic(alternate1), stylistic(alternate5);
+            /* Applies salt 1 */
+            font-feature-settings: "liga";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+        .dkr1, div.dkr1, pre.dkr1, code.dkr1, h1.dkr1, h2.dkr1, h3, h4.dkr1, h5.dkr1, h6.dkr1, p.dkr1, span.dkr1, a.dkr1, table * td.dkr1 {
+            font-family: "DankMono-Regular", "DankMono";
+            font-variant-alternates: stylistic(alternate1);
+            /* Applies salt 1 */
+        }
+        .dkr2, div.dkr2, pre.dkr2, code.dkr2, h1.dkr2, h2.dkr2, h3, h4.dkr2, h5.dkr2, h6.dkr2, p.dkr2, span.dkr2, a.dkr2, table * td.dkr2 {
+            font-family: "DankMono-Regular", "DankMono";
+            font-variant-alternates: stylistic(alternate2);
+            /* Applies salt 1 */
+        }
+        .dkr5, div.dkr5, pre.dkr5, code.dkr5, h1.dkr5, h2.dkr5, h3, h4.dkr5, h5.dkr5, h6.dkr5, p.dkr5, span.dkr5, a.dkr5, table * td.dkr5 {
+            font-family: "DankMono-Regular", "DankMono";
+            font-weight: 300;
+            font-style: normal;
+            font-variant-alternates: stylistic(alternate5);
+            /* Applies salt 5 */
+        }
+        .dkra, div.dkra, pre.dkra, code.dkra, h1.dkra, h2.dkra, h3, h4.dkra, h5.dkra, h6.dkra, p.dkra, span.dkra, a.dkra, table * td.dkra {
+            font-family: "DankMono-Regular", "DankMono";
+            font-weight: 300;
+            font-style: normal;
+            font-variant-alternates: "salt" 2, "salt" 5;
+            font-variant-alternates: stylistic(alternate1), stylistic(alternate5);
+            /* Applies salt 1 */
+            font-feature-settings: "liga";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+        .dkrb, div.dkrb, pre.dkrb, code.dkrb, h1.dkrb, h2.dkrb, h3, h4.dkrb, h5.dkrb, h6.dkrb, p.dkrb, span.dkrb, a.dkrb, table * td.dkrb {
+            font-family: "DankMono-Regular", "DankMono";
+            font-weight: 300;
+            font-style: normal;
+            font-variant-alternates: stylistic(alternate1), stylistic(alternate5);
+            /* Applies salt 1 */
+            font-feature-settings: "liga";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+        .dkrc, div.dkrc, pre.dkrc, code.dkrc, h1.dkrc, h2.dkrc, h3, h4.dkrc, h5.dkrc, h6.dkrc, p.dkrc, span.dkrc, a.dkrc, table * td.dkrc {
+            font-family: "DankMono-Regular", "DankMono";
+            font-weight: 300;
+            font-style: normal;
+            -moz-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            -webkit-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            font-variant-alternates: "ss05", "ss02";
+            font-feature-settings: "liga";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+            font-feature-settings: "liga";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+        .dkrd, div.dkrd, pre.dkrd, code.dkrd, h1.dkrd, h2.dkrd, h3, h4.dkrd, h5.dkrd, h6.dkrd, p.dkrd, span.dkrd, a.dkrd, table * td.dkrd {
+            font-family: "DankMono-Regular", "DankMono";
+            font-weight: 300;
+            font-style: normal;
+            -moz-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            -webkit-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            font-variant-alternates: stylistic(alternate1), stylistic(alternate5);
+            /* Applies salt 1 */
+            font-feature-settings: "liga";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+        .dkre, div.dkre, pre.dkre, code.dkre, h1.dkre, h2.dkre, h3, h4.dkre, h5.dkre, h6.dkre, p.dkre, span.dkre, a.dkre, table * td.dkre {
+            font-family: "DankMono-Regular", "DankMono";
+            font-weight: 300;
+            font-style: normal;
+            font-feature-settings: "liga";
+            font-variant-alternates: "salt" 2, "salt" 5;
+            -moz-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            -webkit-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+        div.dk, pre.dk, code.dk, h1.dk, h2.dk, h3, h4.dk, h5.dk, h6.dk, p.dk, span.dke {
+            font-family: "DankMono-Italic";
+            font-weight: 300;
+            letter-spacing: .1em;
+        }
+        div.dkr, pre.dkr, code.dkr, h1.dkr, h2.dkr, h3, h4.dkr, h5.dkr, h6.dkr, p.dkr, span.dke {
+            font-family: "DankMono","DankMono-Regular";
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: .1em;
+        }
+        .dke, div.dke, pre.dke, code.dke, h1.dke, h2.dke, h3, h4.dke, h5.dke, h6.dke, p.dke, span.dke, a.dke, table * td.dke {
+            font-family: "DankMono-Italic","CartographCFNerdFontComplete-LightItalic" !important;
+            font-feature-settings: "liga";
+            font-variant-alternates: "salt" 2, "salt" 5;
+            -moz-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            -webkit-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+            font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+           font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+        }
+
+
+div.r1, pre.r1, code.r1, h1.r1, h2.r1, h3, h4.r1, h5.r1, h6.r1, p.r1, span.r1 {
+            font-family: "CartographCF Nerd Font";
+            font-style: normal;
+}
+        div.i1, pre.i1, code.i1, h1.i1, h2.i1, h3, h4.i1, h5.i1, h6.i1, p.i1, span.i1 {
+            font-family: "CartographCF Nerd Font";
+            font-style: italic;
+        }
+        div.i3, pre.i3, code.i3, h1.i3, h2.i3, h3, h4.i3, h5.i3, h6.i3, p.i3, span.i3 {
+            font-family: "CartographCF Nerd Font";
+            font-weight: 300;
+            font-style: italic;
+        }
+        div.r3, pre.r3, code.r3, h1.r3, h2.r3, h3, h4.r3, h5.r3, h6.r3, p.r3, span.r3 {
+            font-family: "CartographCF Nerd Font";
+            font-weight: 300;
+            font-style: normal;
+        }
+        div.r4, pre.r4, code.r4, h1.r4, h2.r4, h3, h4.r4, h5.r4, h6.r4, p.r4, span.r4 {
+            font-family: "CartographCF Nerd Font";
+            font-weight: normal;
+            font-style: normal;
+        }
+        div.i4, pre.i4, code.i4, h1.i4, h2.i4, h3, h4.i4, h5.i4, h6.i4, p.i4, span.i4 {
+            font-family: "CartographCF Nerd Font";
+            font-weight: normal;
+            font-style: italic;
+        }
+        div.r6, pre.r6, code.r6, h1.r6, h2.r6, h3, h4.r6, h5.r6, h6.r6, p.r6, span.r6 {
+            font-family: "CartographCF Nerd Font";
+            font-weight: 600;
+            font-style: normal;
+}
+        div.i6, pre.i6, code.i6, h1.i6, h2.i6, h3, h4.i6, h5.i6, h6.i6, p.i6, span.i6 {
+            font-family: "CartographCF Nerd Font";
+            font-weight: 600;
+            font-style: italic;
+        }
+        div.reg, pre.reg, code.reg, h1.reg, h2.reg, h3, h4.reg, h5.reg, h6.reg, p.reg, span.reg {
+            font-style: normal;
+        }
+        div.ital, pre.ital, code.ital, h1.ital, h2.ital, h3, h4.ital, h5.ital, h6.ital, p.ital, span.ital {
+            font-style: italic;
+            letter-spacing: .1em;
+        }
+        div.c, pre.c, code.c, span.c, p.c, span.c {
+            font-family: CartographCF-RegularItalic, CartographCF-LightItalic;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        div.w0, pre.w0, code.w0, h1.w0, h2.w0, h3, h4.w0, h5.w0, h6.w0, p.w0, span.w0 {
+            font-weight: normal;}
+        div.w2, pre.w2, code.w2, h1.w2, h2.w2, h3, h4.w2, h5.w2, h6.w2, p.w2, span.w2 {
+            font-weight: 200;}
+        div.w3, pre.w3, code.w3, h1.w3, h2.w3, h3, h4.w3, h5.w3, h6.w3, p.w3, span.w3 {
+            font-weight: 300;}
+        div.w4, pre.w4, code.w4, h1.w4, h2.w4, h3, h4.w4, h5.w4, h6.w4, p.w4, span.w4 {font-weight: normal;}
+        div.w5, pre.w5, code.w5, h1.w5, h2.w5, h3, h4.w5, h5.w5, h6.w5, p.w5, span.w5 {
+            font-weight: 500;
+        }
+        div.w6, pre.w6, code.w6, h1.w6, h2.w6, h3, h4.w6, h5.w6, h6.w6, p.w6, span.w6 {
+            font-weight: 600;}
+        div.w7, pre.w7, code.w7, h1.w7, h2.w7, h3, h4.w7, h5.w7, h6.w7, p.w7, span.w7 {
+            font-weight: 700;}
+        div.w8, pre.w8, code.w8, h1.w8, h2.w8, h3, h4.w8, h5.w8, h6.w8, p.w8, span.w8 {
+            font-weight: 800;}
+        .sp11 {
+            font-size: 11em !important;}
+        div.sp9, pre.sp9, code.sp9, h1.sp9, h2.sp9, h3, h4.sp9, h5.sp9, h6.sp9, p.sp9, span.sp9, {
+            font-size: 1.9em !important;}
+        div.sp8, pre.sp8, code.sp8, h1.sp8, h2.sp8, h3, h4.sp8, h5.sp8, h6.sp8, p.sp8, span.sp8, {
+            font-size: 0.8em !important;}
+        div.s1, pre.s1, code.s1, h1.s1, h2.s1, h3, h4.s1, h5.s1, h6.s1, p.s1, span.s1, {
+            font-size: 1em !important;}
+        div.s1, pre.s1, code.s1, h1.s1, h2.s1, h3, h4.s1, h5.s1, h6.s1, p.s1, span.s1, {
+            font-size: 1em !important;}
+div.s1b,pre.s1b, code.s1b, h1.s1b,h2.s1b,h3, h4.s1b,h5.s1b,h6.s1b, p.s1b,span.s1b {
+            font-size: 1.5em !important;}
+div.s2, pre.s2, code.s2, h1.s2, h2.s2, h3, h4.s2, h5.s2, h6.s2, p.s2, span.s2 {font-size: 2em !important;}
+div.s2b,pre.s2b, code.s2b, h1.s2b,h2.s2b,h3, h4.s2b,h5.s2b,h6.s2b, p.s2b,span.s2b {font-size: 2.5em !important;}
+div.s3, pre.s3, code.s3, h1.s3, h2.s3, h3, h4.s3, h5.s3, h6.s3, p.s3, span.s3 {font-size: 3em;}
+div.s3b,pre.s3b, code.s3b, h1.s3b,h2.s3b,h3, h4.s3b,h5.s3b,h6.s3b, p.s3b,span.s3b {
+            font-size: 3.5em;}
+        div.s4, pre.s4, code.s4, h1.s4, h2.s4, h3, h4.s4, h5.s4, h6.s4, p.s4, span.s4 {
+            font-size: 4em;}
+        div.s4b,pre.s4b, code.s4b, h1.s4b,h2.s4b,h3, h4.s4b,h5.s4b,h6.s4b, p.s4b,span.s4b {
+            font-size: 4.5em;}
+        div.s5, pre.s5, code.s5, h1.s5, h2.s5, h3, h4.s5, h5.s5, h6.s5, p.s5, span.s5 {
+            font-size: 5em;}
+        div.s5b,pre.s5b, code.s5b, h1.s5b,h2.s5b,h3, h4.s5b,h5.s5b,h6.s5b, p.s5b,span.s5b {
+            font-size: 5.5em;}
+        div.s6, pre.s6, code.s6, h1.s6, h2.s6, h3, h4.s6, h5.s6, h6.s6, p.s6, span.s6 {
+            font-size: 6em;}
+        div.s6b,pre.s6b, code.s6b, h1.s6b,h2.s6b,h3, h4.s6b,h5.s6b,h6.s6b, p.s6b,span.s6b {
+            font-size: 6.5em;}
+        div.s7, pre.s7, code.s7, h1.s7, h2.s7, h3, h4.s7, h5.s7, h6.s7, p.s7, span.s7 {
+            font-size: 7em;}
+        div.s7b,pre.s7b, code.s7b, h1.s7b,h2.s7b,h3, h4.s7b,h5.s7b,h6.s7b, p.s7b,span.s7b {
+            font-size: 7.5em;}
+        div.srem1a, span.srem1a, pre.srem1a {
+            font-size: 1rem;}
+        div.srem1b, span.srem1b, pre.srem1b {font-size: 1.5rem;}
+.szb8 {font-size:0.5rem !important;}
+.szb9 {font-size:0.7rem !important;}
+div.flxc, pre.flxc, code.flxc, span.flxc, p.flxc, span.flxc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.pflxc, pre.pflxc, code.pflxc, span.pflxc, p.pflxc, span.pflxc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+        }
+        div.alncntr, pre.alncntr, code.alncntr, span.alncntr, p.alncntr, span.alncntr {
+            justify-content: center;
+        }
+        div.jccntr, pre.jccntr, code.jccntr, span.jccntr, p.jccntr, span.jccntr {
+            justify-content: center;
+        }
+        /* responsive */
+        div.flx, div.flx pre, div.flx pre code, p.flx, div.flx code, div.flx span, div.flx p, pre.flx, code.flx, span.flx {
+            display: flex;
+        }
+        div.flxrow, div.flxrow pre, div.flxrow pre code, p.flxrow, div.flxrow code, div.flxrow span, div.flxrow p, pre.flxrow, code.flxrow, span.flxrow {
+            display: flex;
+            flex-direction: row;
+        }
+        div.flxcol, div.flxcol pre, div.flxcol pre code, p.flxcol, div.flxcol code, div.flxcol span, div.flxcol p, pre.flxcol, code.flxcol, span.flxcol {
+            display: flex;
+            flex-direction: column;
+        }
+        div.flxcolcenter {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        div.bottom, code.bottom, div.bottom pre, div.bottom span, p.bottom, pre.bottom code, pre.bottom, div.bottom p, span.bottom {
+            align-items: bottom !important;
+        }
+        div.top, div.top pre, div.top pre code, p.top, div.top code, div.top span, div.top p, pre.top, code.top, span.top {
+            vertical-align: top !important;
+        }
+        div.centr, div.centr pre, div.centr pre code, p.centr, div.centr code, div.centr span, div.centr p, pre.centr, code.centr, span.centr {
+            justify-content: flex-start;
+            align-items: center;
+        }
+        div pre.start, div pre:first-child, div.flxcolcenter pre.start, div.flxcol pre.start {
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        div pre.center, div.flxcolcenter pre.center, div.flxcol pre.center {
+            justify-content: flex-start;
+            align-items: center;
+        }
+        div.stretch, code.stretch, div.stretch pre, div.stretch span, p.stretch, pre.stretch code, pre.stretch, div.stretch p, span.stretch {
+            align-items: stretch !important;
+        }
+        div.alnstretch, code.alnstretch, div.alnstretch pre, div.alnstretch span, p.alnstretch, pre.alnstretch code, pre.alnstretch, div.alnstretch p, span.alnstretch {
+            align-items: stretch !important;
+        }
+
+        div pre.end, div.flxcolcenter code.end, div.flxcolcenter pre.end, div.flxcol pre.end, div.flxcol pre.end, div.end, div.end pre, div.end pre code, p.end, div.end code, div.end span, div.end p, pre.end, code.end, span.end {
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+        .flxrowcenter {
+            display: flex;
+            flex-direction: row;
+                        justify-content: flex-start;
+        }
+        div.pd1, span.pd1, pre.pd1 {
+            padding: 1em !important;
+        }
+        div.pdem1b, div.pdem1b pre, div.pdem1b pre code, div.pdem1b code, div.pdem1b span, div.pdem1b p, pre.pdem1b, code.pdem1b, span.pdem1b, p.pdem1b, span.pdem1b {
+            padding: .9em !important;
+        }
+        div.pdem1, div.pdem1 pre, div.pdem1 pre code, div.pdem1 code, div.pdem1 span, div.pdem1 p, pre.pdem1, code.pdem1, span.pdem1, p.pdem1, span.pdem1 {
+            padding: 1em !important;
+        }
+        div.pflxc, pre.pflxc, code.pflxc, span.pflxc, p.pflxc, span.pflxc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+        }
+        div.flxcpd, pre.flxcpd, code.flxcpd, span.flxcpd, p.flxcpd, span.flxcpd {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+        }
+        .prelnpd {
+            white-space: pre-line;
+            padding: 0.9rem !important;
+            padding-bottom: 1rem !important;
+            padding-left: .5rem !important;
+            padding-right: .3rem !important;
+        }
+        .prelnpds6 {
+            font-size: .6em;
+            white-space: pre-line;
+            padding: 0.9rem !important;
+            padding-bottom: 1rem !important;
+            padding-left: .5rem !important;
+            padding-right: .3rem !important;
+        }
+        .preln {
+            white-space: pre-line;
+        }
+.crt, div.crt, pre.crt, code.crt, h1.crt, h2.crt, h3, h4.crt, h5.crt, h6.crt, p.crt, span.crt, a.crt, table * td.crt {
+    font-family:"CartographCF-LightItalic", "CartographCFNerdFontComplete-LightItalic" !important;
+    font-variant-alternates: "salt" 2, "salt" 5;
+    -moz-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+    -webkit-font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+    font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
+    font-variant-ligatures: common-ligatures discretionary-ligatures !important;    
+}
+@media (max-width:959px) {
+            .page {
+                width: auto;
+                margin: 0;
+            }}
+    </style>
+</head>
+<body>
+<div>
+    <pre class="flxcolcenter end dke prelnpd pd1 szb8">&lt;pre class="flxcolcenter end dke s1 prelnpd pd1"&gt;<br/><br>0 1 2 3 4 5 6 7 8 9 . :, ; &lpar;&rpar; &lbrack;&rbrack; ! ? &apos;&quot; @ &#35;&lt;&gt;$ % &amp;^ + - = &tilde; >=> =:++::=:== ::== <=> <- <-<=<=> != ++ !== <|| ||> /= ->> ≥ <= >= |> <| <== ==> {| |} </ => =+ /* */ [| |] <=> <- -> >>=== <=< www ~~~__ ~~ ~- &lt;-  &lbrack;| &lt;$&gt; |&rbrack; {| &lt;@&gt; |}</pre>
+    <pre class="dkrb prelnpd flxcolcenter pd1 szb8">&lt;pre class="dke s1 prelnpd flxcolcenter pd1"&gt;<br><br>0 1 2 3 4 5 6 7 8 9 . :, ; &lpar;&rpar; &lbrack;&rbrack; ! ? &apos;&quot; @ &#35;&lt;&gt;$ % &amp;^ + - = &tilde; >=> =:++::=:== ::== <=> <- <-<=<=> != ++ !== <|| ||> /= ->> ≥ <= >= |> <| <== ==> {| |} </ => =+ /* */ [| |] <=> <- -> >>=== <=< www ~~~__ ~~ ~- &lt;-  &lbrack;| &lt;$&gt; |&rbrack; {| &lt;@&gt; |}</pre>
+<div>
+    <pre class="flxcolcenter cse prelnpd pd1 szb8">&lt;pre class="cse srem1a pd1"&gt;<br /><br>0 1 2 3 4 5 6 7 8 9 . :, ; &lpar;&rpar; &lbrack;&rbrack; ! ? &apos;&quot; @ &#35;&lt;&gt;$ % &amp;^ + - = &tilde; >=> =:++::=:== ::== <=> <- <-<=<=> != ++ !== <|| ||> /= ->> ≥ <= >= |> <| <== ==> {| |} </ => =+ /* */ [| |] <=> <- -> >>=== <=< www ~~~__ ~~ ~- &lt;-  &lbrack;| &lt;$&gt; |&rbrack; {| &lt;@&gt; |}</pre>
+<div>
+    <pre class="csre prelnpd pd1 szb8">
+    &lt;pre class="csre srem1a pd1"&gt;<br /><br>0 1 2 3 4 5 6 7 8 9 . :, ; &lpar;&rpar; &lbrack;&rbrack; ! ? &apos;&quot; @ &#35;&lt;&gt;$ % &amp;^ + - = &tilde; >=> =:++::=:== ::== <=> <- <-<=<=> != ++ !== <|| ||> /= ->> ≥ <= >= |> <| <== ==> {| |} </ => =+ /* */ [| |] <=> <- -> >>=== <=< www ~~~__ ~~ ~- &lt;-  &lbrack;| &lt;$&gt; |&rbrack; {| &lt;@&gt; |}</pre>
+</div>
+<!--SQUARE START -->
+<div class="flx center">
+   <div class="bottom flxcolcenter dke">
+      <span name="RIGHT SIDE top-to-bottom" class="bottom dke srem1a" style="padding-left:1em !important;font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+   </span>
+</div>
+
+<div class="bottom flxrow dke">
+   <pre name="TOP SIDE left-to-right" class="flxrow dke srem1a" style="margin-top:0.01em !important;font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+</pre>
+        </div>
+
+<div class="bottom flxcolcenter dke">
+   <span name="LEFT SIDE top-to-bottom" class="bottom dke srem1a" style="padding-right:1em !important;font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+     </span>
+    </div>
+</div>
+
+<div class="flx center">
+   <div class="top flxrow dke">
+      <pre name="BOTTOM SIDE left-to-right" class="top dke srem1a" style="padding-left:1.5em !important;padding-top:-1em !important;margin-top:-1.2em !important;font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</pre>
+   </div>
+</div>
+<!--SQUARE END -->
+<!--COLUMNS START -->
+<div class="top flxrow centr crt" >
+  <div class="flxrowcenter crt" >
+    <span name="1st COLUMN top-to-bottom" class="top flxcolcenter crt" style="">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
+  </div>
+
+<div class="flx centr crt">
+  <div class="top flxcolcenter centr crt">
+    <span name="2nd COLUMN top-to-bottom" class="top flxcolcenter centr crt sp8" style="">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
+  </div>
+
+  <div class="top flxrowcenter centr crt">
+    <span name="3rd COLUMN top-to-bottom" class="top flxcolcenter centr crt sp8" style="">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
+  </div>
+
+  <div class="flx top stretch flxrowcenter centr crt" style="align-items: right !important;">
+    <span name="4th COLUMN top-to-bottom" class="flx top stretch flxrowcenter centr crt sp8" >A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
+   </div>
+ </div>
+</div>
+<!--COLUMNS END -->
+<!--COLUMNS2 START -->
+<div class="top flxrow crt">
+  <div class="flxcolcenter crt" style="margin-top:11% !important;">
+    <span name="1st COLUMN top-to-bottom" class="top flxcolcenter crt" style="padding-left:0em !important;">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </span>
+  </div>
+
+<div class="top flxrow crt" style="margin-top:11% !important;">
+  <div class="stretch top flxcolcenter centr crt">
+    <span name="2nd COLUMN top-to-bottom" class="stretch top flxcolcenter centr crt sp8" >
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </span>
+  </div>
+
+  <div class="stretch top flxcolcenter centr crt">
+    <span name="3rd COLUMN top-to-bottom" class="stretch top flxcolcenter centr crt sp8" style="">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </span>
+  </div>
+
+  <div class="stretch top flxcolcenter centr crt">
+    <span name="4th COLUMN top-to-bottom" class="stretch top flxcolcenter centr crt sp8" style="">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </span>
+   </div>
+ </div>
+<!--COLUMNS2 END -->
+<div class="flxcol end crt pd1 szb9">
+   <span class="flxcol crt end szb9" style="">
+dke</span>
+         <pre class="flxcol end crt szb9">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+        </pre>
+   </div>
+</div>
+
+<div class="flx crt pd1 szb9">
+   <div class="end crt pd1 szb9">
+      <span class="crt start pd1 szb9" style="padding-bottom:0 !important; margin-bottom:-3.6% !important;">dke</span><pre class="crt start srem1a pd1 szb9">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z</pre>
+   </div>
+</div>
+<!--hide START
+<pre class="crt prelnpds6 pd1">&lt;div class="stretch flx dke pd1"&gt;
+&lt;div class="stretch flxcolcenter centr dke pd1"&gt;
+&lt;span class="stretch dke srem1a pd1" style="font-feature-settings:"liga";
+font-variant-alternates:"salt" 2, "salt" 5;
+font-variant-ligatures:common-ligatures;"&gt;
+</pre>
+<pre class="cse prelnpds6 pd1">&lt;div class="stretch flxcolcenter centr dke pd1"&lt;pre class="stretch dke srem1a pd1" style="font-feature-settings:"liga";
+font-variant-alternates:"salt" 2, "salt" 5;-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";
+font-feature-settings:"ss05", "ss02";
+font-variant-ligatures:common-ligatures;"&gt;
+</pre>
+hide END -->
+<div class="flx top pd1">
+   <div class="stretch top flxcolcenter centr dke pd1">
+<span class="stretch top dke srem1a pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+dke
+salt" 2, "salt" 5;
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z
+   </span>
+</div>
+
+<div class="top flxcolcenter centr dke pd1">
+   <pre class="stretch top dke srem1a pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02"; font-variant-ligatures: common-ligatures;">
+dke                 salt" 2, salt" 5; ss05", "ss02"
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+      </pre>
+   </div>
+</div>
+<!--hide START
+<pre>&lt;div class="stretch flxcolcenter centr dke pd1"&gt;
+&lt;pre class="stretch dke pd1"&gt;
+</pre>
+hide END -->
+<div class="stretch flxcolcenter centr dke pd1">
+<pre class="stretch dke pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z 
+ </pre>
+</div>
+
+<pre class="cse prelnpds6 pd3">
+<!--hide START <br />&lt;div class="flx pd1"&gt;
+    &lt;div class="flxcolcenter pd1"&gt;
+        &lt;span class="cse stretch sp8 pd1"&gt;cse
+hide END -->
+<br/>A E I J
+O Q S Y<!--hide START &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;div class="flxcolcenter pd1"&gt;
+        &lt;span class="cse stretch sp8 pd1"&gt;cse
+hide END -->
+<br/>A E I J
+O Q S Y<!--hide START &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt; hide END -->
+</pre>
+
+<div class="flx pd1">
+   <div class="flxcolcenter pd1">
+      <span class="cse stretch sp9 pd1">
+cse
+<br/>A E I J
+O Q S Y
+   </span>
+</div>
+
+<div class="flxcolcenter pd1">
+   <span class="cse stretch sp9 pd1">
+cse
+
+
+<br/>A E I J
+O Q S Y
+     </span>
+    </div>
+</div>
+
+<pre class="cse prelnpds6 sp9 pd1">
+<!--hide START &lt;div class="flx pd1"&gt;
+    &lt;div class="centr dke pd1"&gt;
+        &lt;span class="cs1 stretch srem1a pd1"&gt;cs1
+ hide END -->
+<br/>A E I J
+O Q S Y
+<!--hide START         &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="flx centr dke pd1"&gt;
+        &lt;span class="cs1 stretch srem1a pd1"&gt;cs1
+ hide END -->
+<br/>A E I J
+O Q S Y
+<!--hide START         &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+ hide END --></pre>
+
+<div class="flx pd1 sp9">
+   <div class="centr dke pd1 sp9">
+      <span class="cs1 stretch srem1a pd1 sp9">
+cs1
+
+<br/>A E I J
+O Q S Y
+     </span>
+    </div>
+</div>
+
+<div class="flx centr dke pd1 sp9">
+   <span class="cs1 stretch srem1a pd1 sp9">
+cs1
+
+<br/>A E I J
+O Q S Y
+   </span>
+</div>
+
+<div class="flx pd1 sp8">
+   <div class="centr prelnpd pd1 sp8">
+      <span class="csa stretch s1 pd1 sp8">
+csa
+<br/>A E I J
+O Q S Y
+   </span>
+</div>
+
+<div class="flx centr prelnpd pd1 sp8">
+   <span class="cse stretch s1 pd1 sp8">
+cse
+<br/>A E I J
+O Q S Y
+     </span>
+    </div>
+</div>
+
+<pre class="cse prelnpds6 pd1"><!--hide START 
+                                        &lt;div class="flx dke pd1"&gt;
+&lt;div class="centr dke pd1"&gt;
+&lt;span class="cs2 srem1a pd1"&gt;cs2 
+ hide END --><br/>A E I J
+O Q S Y<!--hide START &lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flx dke pd1"&gt;
+&lt;div class="flx centr dke pd1"&gt;
+&lt;span class="cs5 srem1a pd1"&gt;cs5 
+ hide END --><br/>A E I J
+O Q S Y<!--hide START &lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+&lt;div class="flx dke pd1"&gt;
+&lt;div class="centr dke pd1"&gt;
+&lt;span class="csa srem1a pd1"&gt;csa 
+ hide END --><br/>A E I J
+O Q S Y<!--hide START &lt;/span&gt;
+&lt;/div&gt;
+
+
+&lt;div class="flx centr dke pd1"&gt;
+&lt;span class="csb srem1a pd1"&gt;csb 
+ hide END --><br/>A E I J
+O Q S Y<!--hide START &lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+&lt;div class="flx dke pd1"&gt;
+&lt;div class="centr dke pd1"&gt;
+&lt;span class="csc srem1a pd1"&gt;csc 
+ hide END --><br/>A E I J
+O Q S Y<!--hide START &lt;/span&gt;
+&lt;/div&gt;
+
+
+&lt;div class="flx centr dke pd1"&gt;
+&lt;span class="csd srem1a pd1"&gt;csd 
+ hide END --><br/>A E I J
+O Q S Y<!--hide START &lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ hide END --></pre>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="cs2 srem1a pd1">
+cs2 
+<br/>A E I J
+O Q S Y
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="flx centr dke pd1">
+      <span class="cs5 srem1a pd1">
+cs5 
+A E I J<br/>
+O Q S Y
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="csa srem1a pd1">
+csa 
+A E I J<br/>
+O Q S Y
+   </span>
+</div>
+
+<div class="flx centr dke pd1">
+   <span class="csb srem1a pd1">
+csb 
+<br/>A E I J
+O Q S Y
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="csc srem1a pd1">
+csc 
+<br/>A E I J
+O Q S Y
+   </span>
+</div>
+
+<div class="flx centr dke pd1">
+   <span class="csd srem1a pd1">
+csd 
+<br/>A E I J
+O Q S Y
+     </span>
+    </div>
+</div>
+
+<pre class="cse prelnpds6 pd1"><!--hide START &lt;div class="flx dke pd1"&gt;
+&lt;div class="centr dke pd1"&gt;
+&lt;span class="c srem1a pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;"&gt;
+"salt" 2, "salt" 5;
+
+ hide END --><br/>A E I J
+O Q S Y<!--hide START &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="flx centr dke pd1"&gt;
+&lt;span class="c srem1a pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;"&gt;
+"salt" 2, "salt" 5;"ss05", "ss02"
+
+ hide END --><br/>A E I J
+O Q S Y<!--hide START &lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+ hide END --></pre>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="c srem1a pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+salt" 2, "salt" 5;
+<br/>A E I J
+O Q S Y
+   </span>
+</div>
+
+<div class="flx centr dke pd1">
+   <span class="c srem1a pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">
+"salt" 2, "salt" 5;
+"ss05", "ss02"
+<br/>A E I J
+O Q S Y
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="c srem1a pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 5, "salt" 2;font-variant-ligatures:common-ligatures;">
+"salt" 5, 
+"salt" 2;
+<br/>A E I J
+O Q S Y
+   </span>
+</div>
+
+<div class="flx centr dke pd1">
+   <span class="c srem1a pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 5, "salt" 2;-moz-font-feature-settings:"ss02", "ss05";-webkit-font-feature-settings:"ss02", "ss05";font-feature-settings:"ss02", "ss05";font-variant-ligatures:common-ligatures;">
+"salt" 5, 
+"salt" 2;
+"ss02", 
+"ss05"
+<br/>A E I J
+O Q S Y
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="c s1 pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+c s1
+<br/>A E I J
+<br/>O Q S Y Z<br/>
+   </span>
+</div>
+
+<div class="flx preln centr dke pd1">
+   <span class="c preln s1 pd1" style="font-feature-settings:"liga";-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">
+c centr
+<br/>A E I J
+<br/>O Q S Y Z<br/>
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr preln dke pd1">
+      <span class="c preln pd1" style="font-size:.5em !important;font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+   </span>
+</div>
+<span class="c pd1" style="font-size:.5em !important;font-feature-settings:"liga";-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="c pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+<br/>A E I J
+<br/>O Q S Y Z<br/>
+   </span>
+</div>
+<span class="c pd1" style="font-feature-settings:"liga";-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">
+<br/>A E I J
+<br/>O Q S Y Z<br/>
+     </span>
+    </div>
+</div>
+
+<div class="flx pd1">
+   <span class="cse flxcol s1 pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+   </span>
+</div>
+<span class="cse flxcol s1 pd1" style="font-feature-settings:"liga";-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div style="">
+   <span class="preln stretch pd1" style="display:flex;justify-content:center;align-items:center;font-size:1.06em;font-family:CartographCF-RegularItalic, CartographCF-LightItalic;font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+A B C D E F G H I J K L</span>
+<span class="preln stretch pd1" style="display:flex;justify-content:center;align-items:center;font-size:1.06em;font-family:CartographCF-RegularItalic, CartographCF-LightItalic;font-feature-settings:"liga";-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">
+A B C D E F G H I J K L
+   </span>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="c s1 pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+H I J K L
+   </span>
+</div>
+<span class="c s1 pd1" style="font-feature-settings:"liga";-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">
+H I J K L
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="c s1 pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+M N O P Q R S
+   </span>
+</div>
+<span class="c s1 pd1" style="font-feature-settings:"liga";-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">
+M N O P Q R S
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="c s1 pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+M N O P Q R S T U V W X Y Z
+   </span>
+</div>
+<span class="c s1 pd1" style="font-feature-settings:"liga";-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">M N O P Q R S T U V W X Y Z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="c s1 pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+a b c d e f g h i j k l m
+   </span>
+</div>
+<span class="c s1 pd1" style="font-feature-settings:"liga";-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">a b c d e f g h i j k l m
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="c s1 pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+n o p q r s t u v w x y z
+   </span>
+</div>
+<span class="c s1 pd1" style="font-feature-settings:"liga";-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="flxrow s1 pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+     </span>
+    </div>
+</div>
+
+<div class="flx centr dke pd1">
+   <span class="flxrow s1 pd1" style="font-feature-settings:"liga";-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+   </span>
+</div>
+
+<div class="flxcol dke pd1">
+   <div class="flxcol dke pd1">
+      <span class="flxcol s1 pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+     </span>
+    </div>
+</div>
+
+<div class="flxcol start dke pd1">
+   <span class="flxcol start s1 pd1" style="font-feature-settings:"liga";-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02"; font-variant-ligatures:common-ligatures;">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+   </span>
+</div>
+
+<div class="flx dke pd1">
+   <div class="flxcol dke pd1">
+      <span class="flxcol end dke pd1" style="font-size:1.25em;">
+dke flxcol nv
+</span>
+<span class="flxcol dke srem1a pd1">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="flxrow dke pd1">
+      <span class="flxcol end dke pd1" style="font-size:1.25em;">
+dke flxcol mv
+</span>
+<span class="flxcol dke srem1a pd1">A b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flxcol dke pd1">
+   <div class="end dke pd1">
+      <span class="end dke pd1" style="font-size:1.25em;">
+dke end
+</span>
+<span class="end dke srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+     </span>
+    </div>
+</div>
+
+<div class="flxcol dke pd1">
+   <div class="end dke pd1">
+      <span class="end dke pd1" style="font-size:1.25em;">
+dke end2
+</span>
+<span class="end dke srem1a pd1">
+A b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flxcol dke pd1">
+   <div class="end dke pd1">
+      <span class="end dke pd1" style="font-size:1.25em;">
+dke endB1
+</span>
+<span class="end dke srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+     </span>
+    </div>
+</div>
+
+<div class="flxcol dke pd1">
+   <div class="end dke pd1">
+      <span class="end dke pd1" style="font-size:1.25em;">
+dke endB2
+</span>
+<span class="end dke srem1a pd1">
+A b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="dke pd1" style="font-size:1.25em;">
+dk
+</span>
+<span class="dk1 srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="dke pd1" style="font-size:1.25em;">
+dke but
+</span>
+<span class="dke srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+     </span>
+    </div>
+</div>
+
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="dke pd1" style="font-size:1.25em;">
+dke 1
+</span>
+<span class="dke srem1a pd1">
+A b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="dke pd1" style="font-size:1.25em;">
+dke 2
+</span>
+<span class="dke srem1a pd1">
+A b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="dk2 pd1" style="font-size:1.25em;">
+dk2
+</span>
+<span class="dk2 srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx pd1">
+   <div class="flx centr dke pd1">
+      <span class="dk5 pd1" style="font-size:1.25em;">
+dk5
+</span>
+<span class="dk5 srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="dka pd1" style="font-size:1.25em;">
+dka
+</span>
+<span class="dka srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx pd1">
+   <div class="flx centr dke pd1">
+      <span class="dkb pd1" style="font-size:1.25em;">
+dkb
+</span>
+<span class="dkb srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="dkc pd1" style="font-size:1.25em;">
+dkc
+</span>
+<span class="dkc srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx pd1">
+   <div class="flx centr dke pd1">
+      <span class="dkd pd1" style="font-size:1.25em;">
+dkd
+</span>
+<span class="dkd srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx pd1">
+   <div class="centr dke pd1">
+      <span class="dke pd1" style="font-size:1.25em;">
+dke
+</span>
+<span class="dke srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="flx centr dke pd1">
+      <span class="dke pd1" style="font-size:1.25em;">
+dke
+</span>
+<span class="dke srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="dke srem1a pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2, "salt" 5;font-variant-ligatures:common-ligatures;">
+dnk
+ salt" 2, "salt" 5;
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx centr dke pd1">
+   <span class="dke srem1a pd1" style="font-feature-settings:"liga";font-variant-alternates:"salt" 2,"salt" 5;-moz-font-feature-settings:"ss05","ss02";-webkit-font-feature-settings:"ss05","ss02";font-feature-settings:"ss05", "ss02";font-variant-ligatures:common-ligatures;">
+dnk
+    salt" 2, "salt" 5;
+    "ss05", "ss02";
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+   </span>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="dkr1 pd1" style="font-size:1.25em;">
+dkr1
+</span>
+<span class="dkr1 srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+     </span>
+    </div>
+</div>
+
+<div class="flx centr dke pd1">
+   <span class="dkr2 pd1" style="font-size:1.25em;">
+dkr2
+</span>
+<span class="dkr2 srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+   </span>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="dkr1 pd1" style="font-size:1.25em;">
+dkr1
+</span>
+<span class="dkr1 srem1a pd1">
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx pd1">
+   <div class="flx centr dke pd1">
+      <span class="dkr2 pd1" style="font-size:1.25em;">
+dkr2
+</span>
+<span class="dkr2 srem1a pd1">
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flx dke pd1">
+   <div class="centr dke pd1">
+      <span class="dkr2 pd1" style="font-size:1.25em;">
+dkr2
+</span>
+<pre class="dkr2 srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+</pre>
+   </div>
+</div>
+
+<div class="flx pd1">
+   <div class="centr dke pd1">
+      <span class="dkr5 pd1" style="font-size:1.25em;">
+dkr5
+</span>
+<pre class="dkr5 srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+</pre>
+   </div>
+</div>
+
+<div class="flxcolcenter dke pd1">
+   <div class="centr dke pd1">
+      <span class="dkra pd1" style="font-size:1.25em;">
+dkra
+</span>
+<span class="dkra srem1a pd1">
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="centr dke pd1">
+   <span class="dkrb pd1" style="font-size:1.25em;">
+dkrb
+</span>
+<span class="dkrb srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+   </span>
+</div>
+
+<div class="flxcolcenter dke pd1">
+   <div class="centr dke pd1">
+      <span class="dkrc pd1" style="font-size:1.25em;">
+dkrc
+</span>
+<span class="dkrc srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+     </span>
+    </div>
+</div>
+
+<div class="flxcolcenter dke pd1">
+   <div class="centr dke pd1">
+      <span class="dkrd pd1" style="font-size:1.25em;">dkrd</span>
+        <span class="dkrd srem1a pd1">
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="flxcolcenter dke pd1">
+   <div class="centr dke pd1">
+      <span class="dke pd1" style="font-size:1.25em;">dke</span>
+        <span class="dke srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+   </span>
+</div>
+
+<div class="centr dke pd1">
+   <span class="dke pd1" style="font-size:1.25em;">
+dke 
+</span>
+<span class="dke srem1a pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+     </span>
+    </div>
+</div>
+
+<div class="stretch flx dke pd1">
+   <div class="stretch flxcolcenter centr dke pd1">
+      <span class="stretch dke srem1a pd1" style="font-feature-settings:"liga"; font-variant-alternates:"salt" 2, "salt" 5; font-variant-ligatures:common-ligatures;">
+dnk
+      stretch
+          dke
+      salt" 2,
+     "salt" 5;
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+   </span>
+</div>
+
+<div class="stretch flxcolcenter centr dke pd1">
+   <pre class="stretch dke srem1a pd1" style="font-feature-settings:"liga"; font-variant-alternates:"salt" 2, "salt" 5;-moz-font-feature-settings:"ss05", "ss02";-webkit-font-feature-settings:"ss05", "ss02";font-feature-settings:"ss05", "ss02"; font-variant-ligatures:common-ligatures;">
+dnk
+          stretch
+              dke
+salt" 2, "salt" 5;
+    "ss05", "ss02"
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z</pre>
+   </div>
+</div>
+
+<div class="stretch flxcolcenter centr dke pd1">
+   <pre class="stretch dke pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+
+<!--hide START .flex-item-with-centered-text {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+} hide END -->
+</pre>
+            </div>
+
+<div class="stretch flxcolcenter dke pd1">
+   <pre class="stretch dke pd1">
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+
+<!--hide START .flex-item-with-centered-text {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+} hide END -->
+</pre>
+</div>
+<!--hide START 
+<div class="flxcolcenter centr cse pd1">
+   <pre class="preln pd1 stretch cse pd1">stretch cse
+
+    font-family:                                    CartographCFNerdFontComplete-BoldItalic,
+        CartographCF-BoldItalic,
+        monospace;
+    background-color:#062D43;
+    color:#859900;
+    border-radius:4px;
+    border-top-right-radius:8px;
+    border-bottom-right-radius:8px;
+    border-top-right-radius:10px;
+    border-left-color:rgb(40, 44, 52);
+    border-left-width:4px;
+    border-left-style:solid;
+    word-wrap:break-word;
+    padding:8px 12px;
+    padding-right:0px;
+    margin-right:0px !important;
+    margin-bottom:16px !important;
+    margin-top:16px !important;
+    width:auto;
+    float:right;
+</pre>
+           </div>
+
+<div class="flxcolcenter centr dke pd1">
+   <pre class="preln stretch dke pd1">stretch dke
+
+               width:auto;
+               background-color:#062D43;
+               color:#859900 !important;
+               margin-right:0px !important;
+               border-bottom-right-radius:10px;
+               border-top-right-radius:10px;
+               font-family:DankMono-Italic, monospace;
+               width:auto;
+               background-color:#062D43;
+               color:#a5b900;
+               padding:8px 12px;
+               padding-right:0px !important;
+               border-bottom-left-radius:5px;
+               border-top-left-radius:5px;
+               border-left-width:4px;
+               border-left-style:solid;
+               border-left-color:rgb(40, 44, 52);
+               word-wrap:break-word;
+               margin-top:16px !important;
+               margin-bottom:16px !important;
+    </pre>
+</div>
+
+<div class="flxcolcenter centr dke pd1">
+   <pre class="stretch dke pd1">stretch dke
+
+      border-radius:
+                    4px;
+
+      border-top-right-radius:
+                    8px;
+
+      border-bottom-right-radius:
+                    8px;
+
+      border-top-right-radius:
+                    10px;
+
+      border-left-color:
+                    rgb(40, 44, 52);
+
+      border-left-width:
+                    4px;
+
+      border-left-style:
+                    solid;
+
+      word-wrap:
+                    break-word;
+
+      padding:
+                    8px 12px;
+
+      padding-right:
+                    0px;
+
+      margin-right:
+                    0px !important;
+
+      margin-bottom:
+                    16px !important;
+
+      margin-top:
+                    16px !important;
+
+      width:
+                    auto;
+
+      float:
+                    right;
+
+</pre>
+</div>
+
+<div class="flxcolcenter centr dke pd1">
+   <pre class="stretch dke pd1">
+stretch dke
+
+    width:
+                auto;
+    background-color:
+                #062D43;
+    color:
+                #859900 !important;
+    margin-right:
+                0px !important;
+    border-bottom-right-radius:
+                10px;
+    blorder-top-right-radius:
+                10px;
+    font-family: 
+                DankMono-Italic, monospace;</pre>
+</pre>
+</div>
+
+<div class="flxcolcenter stretch centr crt pd1">
+   <pre class="stretch crt pd1" style="letter-spacing:2 !important;">stretch dke
+
+    width:auto;
+    background-color:#062D43;
+    color:#a5b900;
+    padding:8px 12px;
+    padding-right:0px !important;
+    border-bottom-left-radius:5px;
+    border-top-left-radius:5px;
+    border-left-width:4px;
+    border-left-style:solid;
+    border-left-color:rgb(40, 44, 52);
+    word-wrap:break-word;
+    margin-top:16px !important;
+    margin-bottom:16px !important;</pre>
+</pre>
+</div>
+
+<div class="cse stretch flxcolcenter centr pd1">
+   <pre class="stretch cse pd1" style="letter-spacing:2 !important;">CSE
+
+    font-feature-settings: "liga";
+    font-variant-alternates: "salt" 2, "salt" 5;
+    font-variant-ligatures: common-ligatures;
+    font-feature-settings: "ss05", "ss02";
+    -moz-font-feature-settings: "ss05", "ss02";
+    -webkit-font-feature-settings: "ss05", "ss02";
+    font-display: swap;</pre>
+</div>
+
+
+
+
