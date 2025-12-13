@@ -1,0 +1,16 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "## Project Overview This is a static font assets repository that contains a collection of various font families including: - CartographCF (with Nerd Font variants) - Dank Mono - Josefin - Parity Sans - Concourse/Valkyrie fonts",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
