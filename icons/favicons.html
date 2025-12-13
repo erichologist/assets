@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Favicon Icons</title>
+<link rel="icon" href="./favicon.png" type="image/png">
+<link rel="stylesheet" type="text/css" media="all" href="./style.css"/>
+<link rel="stylesheet" type="text/css" media="all" href="../css-scripts/prism.css"/>
+<script type="text/javascript" src="../css-scripts/prism.js"></script>
+</head>
+<body>
+  <main>
+    <a href="./" target="_blank">
+      <img class="logo" src="./favicon.svg" alt="">
+    </a>
+<h1 class="bluemono2"><code class="nbg"><b>favicons</b></code></h1>
+<h2 class="bluemono">erichology assets</h2>
+    <p>Place all files into the <code>/assets/icons/</code> folder of your website. The provided HTML snippet and <code>site.webmanifest</code> already use this path.</p>
+<br />
+    <h2 class="bluemono2">Preview</h2>
+    <div class="grid">
+      <figure><img src="./favicon.png" alt="favicon" width="48" height="48"><figcaption>favicon.ico&nbsp;<br/>favicon.png<br/>(48×48)</figcaption></figure>
+      <figure><img src="./favicon.svg" alt="favicon" width="72" height="72"><figcaption>favicon.svg<br/>(scalable)</figcaption></figure>
+      <figure><img src="./apple-touch-icon.png" alt="apple" width="90" height="90"><figcaption>apple-touch-icon.png<br/>(180×180)</figcaption></figure>
+      <figure><img src="./icon-192.png" alt="192" width="96" height="96"><figcaption>icon-192.png (192×192)&nbsp;&amp;<br/>icon-512.png (512×512)</figcaption></figure>
+    </div>
+    <p id="previewWarning">For full functionality, open this page in a web browser. Due to OS limitations, icons may not display outside the browser — on mobile devices, open them directly from the archive.</p>
+    <p>If you’ve set up a dark theme version of your SVG icon, viewing the dark or light variant depends on your device’s theme settings. To see how the icon looks in each mode, switch your device between light and dark themes as desired.</p>
+
+    <h2>Insert into <code><b>&lt;head&gt;</b></code></h2>
+    <pre id="code"><code ><<i>link</i> <i>rel</i>="<b>icon</b>" <i>type</i>="<b>image/x-icon</b>" <br>&nbsp;&nbsp;&nbsp;&nbsp;<i>href</i>="<b>/assets/icons/favicon.ico</b>"><br><<i>link</i> <i>rel</i>="<b>icon</b>" <i>type</i>="<b>image/png</b>" <br>&nbsp;&nbsp;&nbsp;&nbsp;<i>href</i>="<b>/assets/icons/favicon.png</b>"><br><<i>link</i> <i>rel</i>="<b>icon</b>" <i>type</i>="<b>image/svg+xml</b>" <br>&nbsp;&nbsp;&nbsp;&nbsp;<i>href</i>="<b>/assets/icons/favicon.svg</b>"><br><<i>link</i> <i>rel</i>="<b>apple-touch-icon</b>" <br>&nbsp;&nbsp;&nbsp;&nbsp;<i>href</i>="<b>/assets/icons/apple-touch-icon.png</b>"><br><<i>link</i> <i>rel</i>="<b>manifest</b>" <br>&nbsp;&nbsp;&nbsp;&nbsp;<i>href</i>="<b>/assets/icons/site.webmanifest</b>"><br><<i>meta</i> <i>name</i>="<b>apple-mobile-web-app-title</b>" <br>&nbsp;&nbsp;&nbsp;&nbsp;<i>content</i>="<b>erichology</b>"><br></code>
+    </pre>
+
+    <button id="copy">Copy</button>
+
+    <h2>If you use a different folder for icons</h2>
+    <p>If you decide to use a dedicated folder for icons, move the files there and update the paths in <code>html_code.html</code>, <code>site.webmanifest</code> and in the HTML <code>&lt;head&gt;</code> snippet. Alternatively, set the path prefix in the generator.</p>
+
+    <p><em>Note: If some images are not displayed when viewing this file directly from the ZIP, try extracting the archive first and then open the file again.</em></p>
+    <a class="bl" id="copy" href="./favicon.svg" target="_blank">erichologist-favicon</a>
+    </p>
+    <script>
+      const firstImage = document.querySelector("img");
+      if (firstImage.complete && firstImage.naturalWidth > 0) {
+        removeWarning();
+      } else {
+        firstImage.addEventListener('load', removeWarning);
+      }
+      function removeWarning(){
+        const warningElem = document.querySelector("#previewWarning");
+        warningElem.style.display = "none";
+      }
+      async function copy(event) {
+        const button = event.target;
+        const el = document.querySelector('#code');
+        const text = el.textContent?.replace(/></g, '>\n<');
+        const oldText = button.innerText;
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            ta.remove();
+          }
+          button.innerText = 'Copied ✓';
+          button.classList.add("ok");
+        } catch (e) {
+          button.innerText = 'Copy failed ✕';
+          button.classList.add("bad");
+        } finally {
+          button.disabled = true;
+          setTimeout(()=>{
+            button.innerText = oldText;
+            button.disabled = false;
+            button.classList.remove("ok");
+            button.classList.remove("bad");
+          }, 3500);
+        }
+      }
+      const copyButton = document.querySelector('#copy');
+      copyButton.style.removeProperty("display");
+      copyButton.addEventListener('click', copy);
+    </script>
+  </main>
+</body>
+</html>
