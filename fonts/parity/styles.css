@@ -1,20 +1,26 @@
 @font-face {
     font-family: 'Parity Sans Extra';
-    src:local('Parity Sans Extra Bold'), local('ParitySansExtraBold'),url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/parity/ParitySansExtraBold.woff2') format('woff2'),url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/parity/ParitySansExtraBold.woff') format('woff');
+    src: local('Parity Sans Extra Bold'), local('ParitySansExtraBold'),
+         url('./ParitySansExtraBold.woff2') format('woff2'),
+         url('./ParitySansExtraBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Parity Sans';
-    src:local('Parity Sans Medium'), local('ParitySansMedium'),url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/parity/ParitySansMedium.woff2') format('woff2'),url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/parity/ParitySansMedium.woff') format('woff');
+    src: local('Parity Sans Medium'), local('ParitySansMedium'),
+         url('./ParitySansMedium.woff2') format('woff2'),
+         url('./ParitySansMedium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Parity Sans';
-    src:local('Parity Sans Regular'), local('ParitySansRegular'),url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/parity/ParitySansRegular.woff2') format('woff2'),url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/parity/ParitySansRegular.woff') format('woff');
+    src: local('Parity Sans Regular'), local('ParitySansRegular'),
+         url('./ParitySansRegular.woff2') format('woff2'),
+         url('./ParitySansRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
