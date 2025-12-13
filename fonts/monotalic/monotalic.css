@@ -1,0 +1,61 @@
+/* https://use.typekit.net/bci5qbo.css
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * monotalic:
+ *   - http://typekit.com/eulas/00000000000000007735b6df
+ *   - http://typekit.com/eulas/00000000000000007735b6e7
+ * monotalic-narrow:
+ *   - http://typekit.com/eulas/00000000000000007735b6e1
+ *   - http://typekit.com/eulas/00000000000000007735b6e9
+ * monotalic-wide:
+ *   - http://typekit.com/eulas/00000000000000007735b6e2
+ *   - http://typekit.com/eulas/00000000000000007735b6ea
+ *
+ * © 2009-2025 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2025-10-23 17:05:38 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=bci5qbo&ht=tk&f=41817.41819.41821.41823.41825.41827&a=19693694&app=typekit&e=css");
+
+@font-face {
+font-family:"monotalic";
+src:url("https://use.typekit.net/af/1bffcc/00000000000000007735b6df/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/1bffcc/00000000000000007735b6df/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/1bffcc/00000000000000007735b6df/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:swap;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"monotalic";
+src:url("https://use.typekit.net/af/1cb92c/00000000000000007735b6e7/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/1cb92c/00000000000000007735b6e7/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/1cb92c/00000000000000007735b6e7/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:swap;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"monotalic-narrow";
+src:url("https://use.typekit.net/af/80fdef/00000000000000007735b6e1/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/80fdef/00000000000000007735b6e1/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/80fdef/00000000000000007735b6e1/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:swap;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"monotalic-narrow";
+src:url("https://use.typekit.net/af/4da7b9/00000000000000007735b6e9/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/4da7b9/00000000000000007735b6e9/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/4da7b9/00000000000000007735b6e9/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:swap;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"monotalic-wide";
+src:url("https://use.typekit.net/af/9091b8/00000000000000007735b6e2/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/9091b8/00000000000000007735b6e2/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/9091b8/00000000000000007735b6e2/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:swap;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"monotalic-wide";
+src:url("https://use.typekit.net/af/9f53b5/00000000000000007735b6ea/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/9f53b5/00000000000000007735b6ea/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/9f53b5/00000000000000007735b6ea/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:swap;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+.tk-monotalic { font-family: "monotalic",sans-serif; }
+.tk-monotalic-narrow { font-family: "monotalic-narrow",sans-serif; }
+.tk-monotalic-wide { font-family: "monotalic-wide",sans-serif; }
