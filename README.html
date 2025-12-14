@@ -1,172 +1,86 @@
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    padding: 40px 20px;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color:rgba(255,255,255,.3);
-    box-shadow:inset -3px -3px 8px rgba(0,0,0,0.01), inset 3px 3px 12px rgba(255,255,255,.17), inset 0px 0px 12px rgba(255,255,255,.1),0px 0px 18px rgba(0,0,0,0.09);
-    border-radius: 20px;
-    padding: 40px;
-}
-h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
-    color: #282829CC;
-    text-shadow: -.1px -.1px .25px #BBB4,.1px .1px .25px #BBB4,-.1px .1px .25px #BBB2,.1px -.1px .25px #BBB2;
-}
-.subtitle {
-    color: #383839CC;
-    margin-bottom: 40px;
-    font-size: 1.1em;
-    text-shadow: -.1px -.1px .25px #BBB2, .1px .1px .25px #BBB2, -.1px .1px .25px #BBB1, .1px -.1px .25px #BBB1;
-}
-.font-category {
-    margin-bottom: 40px;
-}
-.font-category h2 {
-    /*color: #6059EB80;*/
-    color: #4C44EB80;
-    text-shadow:
-        -.21px -.21px .1px #6059EB80, .21px .21px .1px #6059EB80, -.21px .21px .1px #E0DEFF20, .21px -.21px .1px #E0DEFF20;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e0e0e080;
-}
-.font-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-.font-link, button.pi {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border: none;
-    box-shadow:
-       -4px -3px 9px #bbbbbb40, 2px 1.5px 9px #aaaaaa40, -2px -1.5px 12px hsla(223, 0%, 98%, .26), 2px 1.5px 12px hsla(223, 0%, 90%, .08);
-    color: #FFFC;
-    border-radius: 10px;
-    padding: 20px;
-    text-decoration: none;
-    transition: transform 1.92s ease-in-out, box-shadow 1.92s ease-in-out;
-    display: block;
-}
-button.pi:hover, button.pi:active {
-    /*transform: translateY(1.5px);*/
-    background-image: linear-gradient(130deg, #667eea 0%, #764ba2 100%);
-    box-shadow:inset -2px -3px -7px rgba(200,200,200,0.2), inset 2px 3px 7px rgba(0,0,0,0.21);
-}
-.font-link:hover, .font-link:active {
-    background-image: linear-gradient(130deg, #5570E8 0%, #6E4597 100%);
-    box-shadow: inset 4px 4px 6px 0 rgba(20, 20, 20, .5), inset 4px -4px 6px 0 rgba(20, 20, 20, .14), inset -4px 4px 16px 0 rgba(0, 0, 0, .2), inset -4px -4px 16px 0 rgba(20, 20, 20, .25);
-    transition: transform 1.92s ease-in-out, box-shadow 1.92s ease-in-out;
-}
-.font-link h3 {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-}
-
-    .font-link p {
-        font-size: 0.9em;
-        opacity: 0.9;
-    }
-
-.info-box {
-    background-color:rgba(255,255,255,.13);
-    box-shadow:-3px -3px 8px rgba(0,0,0,0.01), inset 3px 3px 12px rgba(255,255,255,.17), inset 0px 0px 12px rgba(255,255,255,.11), 0px 0px 18px rgba(0,0,0,0.05);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 30px;
-}
-.info-box h3 {
-    /*color: #333;*/
-    color: #282829CC;
-    text-shadow: -.1px -.1px .25px #BBB4,.1px .1px .25px #BBB4,-.1px .1px .25px #BBB2,.1px -.1px .25px #BBB2;
-    margin-bottom: 10px;
-}
-.info-box p {
-    /*color: #666;*/
-    color: #383839CC;
-    text-shadow: -.1px -.1px .25px #BBB2,.1px .1px .25px #BBB2,-.1px .1px .25px #BBB1,.1px -.1px .25px #BBB1;
-    line-height: 1.6;
-}<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Collection Summary and Table of Contents</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 20px;
-            }
-            h1 {
-                text-align: center;
-            }
-            table {
-                width: 80%;
-                margin: 20px auto;
-                border-collapse: collapse;
-            }
-            th,
-            td {
-                border: 1px solid #ddd;
-                padding: 8px;
-                text-align: left;
-            }
-            th {
-                background-color: #f2f2f2;
-            }
-            a {
-                text-decoration: none;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Collection Summary</h1>
-        <p>
-            This page provides a summary of the contents of this collection and
-            a table of contents for easy navigation.
-        </p>
-
-        <h2>Table of Contents</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>[Title of Item 1]</td>
-                    <td>[Brief description of Item 1]</td>
-                    <td><a href="[Link to Item 1]">View</a></td>
-                </tr>
-                <tr>
-                    <td>[Title of Item 2]</td>
-                    <td>[Brief description of Item 2]</td>
-                    <td><a href="[Link to Item 2]">View</a></td>
-                </tr>
-                <!-- Add more rows for each item in the collection -->
-            </tbody>
-        </table>
-
-        <p>
-            <i
-                >Note: Replace the bracketed placeholders above with the actual
-                titles, descriptions, and links for each item in your
-                collection.</i
-            >
-        </p>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Assets Collection</title>
+		<link rel="stylesheet" href="./index.css" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Font Assets Collection</h1>
+        <p class="subtitle">Browse and preview various font families</p>
+        <div class="info-box">
+            <h3>About This Collection</h3>
+            <p>This repository contains a curated collection of fonts including CartographCF, Dank Mono, Josefin, Parity Sans, and more. Each font includes demo pages showing various weights, styles, and sizes.</p>
+        </div>
+        <div class="font-category">
+            <h2>Fonts &amp; Demos</h2>
+            <div class="font-links">
+                <a href="./fonts/nerdfont/cartographcf/demo-cartograph-cf.html" class="font-link">
+                    <h3>CartographCF Nerd Font Demos v1</h3>
+                    <p>View all weights and styles</p>
+                </a>
+                <a href="./fonts/nerdfont/cartographcf/cartography-font-demo.html" class="font-link">
+                    <h3>Cartograph Font-Features Activated Demo v2</h3>
+                    <p>Interactive preview</p>
+                </a>
+                <a href="./fonts/nerdfont/cartographcf/cartography-font-demo-feat-actv.html" class="font-link">
+                    <h3>Cartograph Font-Features Activated Demo v3</h3>
+                    <p>OpenType features</p>
+                </a>
+                <a href="./fonts/font-demo-feat-actv.html" class="font-link">
+                    <h3>Font-Features Playground pt1</h3>
+                    <p>Advanced features</p>
+                </a>
+                <a href="./fonts/nerdfont/cartographcf/sc.html" class="font-link">
+                    <h3>Font-Features Playground pt2</h3>
+                    <p>Small caps demo</p>
+                </a>
+                <a href="./fonts/nerdfont/cartographcf/s2c.html" class="font-link">
+                    <h3>S2C Demo</h3>
+                    <p>Special features</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="font-category">
+            <h2>Font Files &amp; CSS</h2>
+            <div class="font-links">
+                <a href="./fonts/cartographcf/" class="font-link">
+                    <h3>CartographCF</h3>
+                    <p>Original font files</p>
+                </a>
+                <a href="./fonts/cartographcf/cartograph.css" class="font-link">
+                    <h3>CartographCF CSS - Special</h3>
+                    <p>CSS file with stylistic sets activated</p>
+                </a>
+                <a href="./fonts/dankmono/" class="font-link">
+                    <h3>Dank Mono</h3>
+                    <p>Monospace font files</p>
+                </a>
+                <a href="./fonts/josefin/" class="font-link">
+                    <h3>Josefin</h3>
+                    <p>Sans-serif font files</p>
+                </a>
+                <a href="./fonts/parity/" class="font-link">
+                    <h3>Parity Sans</h3>
+                    <p>Display font files</p>
+                </a>
+                <a href="./fonts/parity/" class="font-link">
+                    <h3>Parity Sans</h3>
+                    <p>Display font files</p>
+                </a>
+                <a href="./fonts/conc-valk/conc-valk-collection.html" class="font-link">
+                    <h3>Conc-Valk Collection</h3>
+                    <p>Collection page for font &amp; css files</p>
+                </a>
+                <a href="./fonts/conc-valk/" class="font-link">
+                    <h3>conc-valk file list</h3>
+                    <p>Publication font files</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
