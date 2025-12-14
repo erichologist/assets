@@ -56,7 +56,7 @@ body { background: #011b2a; color: #ddd;}
    margin: 0 auto;
    padding: 20px 20px 0 20px;
    overflow: hidden;
-	 border-left:1em solid #001F2E;
+    border-left:1em solid #001F2E;
 	 border-right:1em solid #052432;
 }
 
@@ -104,27 +104,27 @@ margin-top: 3%;
    margin-bottom: -2%;
    padding-bottom: -2%;
 }
-.s10:before {content: '10px'; font-size: 10px;}
-.s11:before {content: '11px'; font-size: 11px;}
-.s12:before {content: '12px'; font-size: 12px;}
-.s14:before {content: '14px'; font-size: 14px;}
-.s18:before {content: '18px'; font-size: 18px;}
-.s24:before {content: '24px'; font-size: 24px;}
-.s30:before {content: '30px'; font-size: 30px;}
-.s36:before {content: '36px'; font-size: 36px;}
-.s48:before {content: '48px'; font-size: 48px;}
-.s60:before {content: '60px'; font-size: 60px;}
-.s72:before {content: '72px'; font-size: 72px;}
+.s10:before {content: '10px'; }
+.s11:before {content: '11px'; }
+.s12:before {content: '12px'; }
+.s14:before {content: '14px'; }
+.s18:before {content: '18px'; }
+.s24:before {content: '24px'; }
+.s30:before {content: '30px'; }
+.s36:before {content: '36px'; }
+.s48:before {content: '48px'; }
+.s60:before {content: '60px'; }
+.s72:before {content: '72px'; }
 
-.s10, div.s10, p.s10, span.s10, pre.s10, code.s10:before {content: '10px'; font-size: 10px;}
-.s11, div.s11, p.s11, span.s11, pre.s11, code.s11:before {content: '11px'; font-size: 11px;}
-.s12, div.s12, p.s12, span.s12, pre.s12, code.s12:before {content: '12px'; font-size: 12px;}
-.s14, div.s14, p.s14, span.s14, pre.s14, code.s14:before {content: '14px'; font-size: 14px;}
-.s18, div.s18, p.s18, span.s18, pre.s18, code.s18:before {content: '18px'; font-size: 18px;}
-.s24, div.s24, p.s24, span.s24, pre.s24, code.s24:before {content: '24px'; font-size: 24px;}
-.s30, div.s30, p.s30, span.s30, pre.s30, code.s30:before {content: '30px'; font-size: 30px;}
-.s36, div.s36, p.s36, span.s36, pre.s36, code.s36:before {content: '36px'; font-size: 36px;}
-.s48, div.s48, p.s48, span.s48, pre.s48, code.s48:before {content: '48px'; font-size: 48px;}
+.s10, div.s10, p.s10:before, span.s10, pre.s10, code.s10:before {content: '10px'; font-size: 10px;}
+.s11, div.s11, p.s11:before, span.s11:before, pre.s11, code.s11:before {content: '11px'; font-size: 11px;}
+.s12, div.s12, p.s12:before, span.s12, pre.s12, code.s12:before {content: '12px'; font-size: 12px;}
+.s14, div.s14, p.s14:before, span.s14, pre.s14, code.s14:before {content: '14px'; font-size: 14px;}
+.s18, div.s18, p.s18:before, span.s18, pre.s18, code.s18:before {content: '18px'; font-size: 18px;}
+.s24, div.s24, p.s24:before, span.s24, pre.s24, code.s24:before {content: '24px'; font-size: 24px;}
+.s30, div.s30, p.s30:before, span.s30, pre.s30, code.s30:before {content: '30px'; font-size: 30px;}
+.s36, div.s36, p.s36:before, span.s36, pre.s36, code.s36:before {content: '36px'; }
+.s48, div.s48, p.s48, span.s48, pre.s48, code.s48:before {content: '48px'; }
 .s60, div.s60, p.s60, span.s60, pre.s60, code.s60:before {content: '60px'; font-size: 60px;}
 .s72, div.s72, p.s72, span.s72, pre.s72, code.s72:before {content: '72px'; font-size: 72px;}
 .s10, div.s10, p.s10, span.s10, pre.s10, code.s10 {font-size: 10px;}
@@ -142,7 +142,7 @@ margin-top: 3%;
 .s10:before, .s11:before, .s12:before, .s14:before,
 .s18:before, .s24:before, .s30:before, .s36:before,
 .s48:before, .s60:before, .s72:before {
-   font-family:  'CartographCF Nerd Font', Arial, sans-serif;
+   font-family: sans-serif;
    font-size: 10px;
    font-weight: normal;
    font-style: normal;
@@ -163,7 +163,7 @@ pre {
    display: block;
    padding: 9px;
    margin: 0 0 12px;
-            font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+            /*font-family: Monaco, Menlo, Consolas, "Courier New", monospace;*/
    font-size: 13px;
    line-height: 1.43;
    color: #00efff;
@@ -180,6 +180,7 @@ pre {
    .page {
        width: auto;
        margin: 0;
+       padding: 20px 20px 0 20px;
    }
 }
 </style>
@@ -194,6 +195,9 @@ pre {
     font-family: 'Cartograph CF';
     font-weight: normal;
     font-style: normal;
+m&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates:"salt" 2, "salt" 5;
+&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures:common-ligatures discretionary-ligatures;
+&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
 }</pre>
 
         <pre title="Preload (optional)">
@@ -221,9 +225,12 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
     <div class="demo">
         <h1 style="font-family: 'Cartograph CF'; font-weight: 300; font-style: normal;">Cartograph CF<br />Light</h1>
         <pre title="Usage">.your-style {
-    font-family: 'Cartograph CF';
-    font-weight: 300;
-    font-style: normal;
+&nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Cartograph CF';
+&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300;
+&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;
+&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates:"salt" 2, "salt" 5;
+&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures:common-ligatures discretionary-ligatures;
+&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
 }</pre>
         <pre title="Preload (optional)">
 &lt;link rel=&quot;preload&quot; href=&quot;CartographCF-Light.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
@@ -252,7 +259,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
         <pre title="Usage">.your-style {
     font-family: 'Cartograph CF';
     font-weight: normal;
-    font-style: italic;
+    font-style: italic;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates:"salt" 2, "salt" 5;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures:common-ligatures discretionary-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
 }</pre>
         <pre title="Preload (optional)">
 &lt;link rel=&quot;preload&quot; href=&quot;CartographCF-RegularItalic.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
@@ -283,7 +290,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
         <pre title="Usage">.your-style {
     font-family: 'Cartograph CF Demi';
     font-weight: 600;
-    font-style: italic;
+    font-style: italic;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates:"salt" 2, "salt" 5;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures:common-ligatures discretionary-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
 }</pre>
         <pre title="Preload (optional)">
 &lt;link rel=&quot;preload&quot; href=&quot;CartographCF-DemiBoldItalic.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
@@ -314,7 +321,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
         <pre title="Usage">.your-style {
     font-family: 'Cartograph CF Demi';
     font-weight: 600;
-    font-style: normal;
+    font-style: normal;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates:"salt" 2, "salt" 5;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures:common-ligatures discretionary-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
 }</pre>
         <pre title="Preload (optional)">
 &lt;link rel=&quot;preload&quot; href=&quot;CartographCF-DemiBold.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
@@ -343,7 +350,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
         <pre title="Usage">.your-style {
     font-family: 'Cartograph CF';
     font-weight: 300;
-    font-style: italic;
+    font-style: italic;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates:"salt" 2, "salt" 5;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures:common-ligatures discretionary-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings:"liga", "clig", "dlig", "ss05", "ss02";
 }</pre>
         <pre title="Preload (optional)">
 &lt;link rel=&quot;preload&quot; href=&quot;CartographCF-LightItalic.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
