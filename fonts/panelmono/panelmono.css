@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Panel Mono';
-  src: url('fonts/panelmono/panelmono-italic.eot');
+  src: url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-italic.eot');
   src: local('PanelMono-Italic'), local('Panel Mono Italic'),
-    url('fonts/panelmono/panelmono-italic.eot?#iefix') format('embedded-opentype'),
-    url('fonts/panelmono/panelmono-italic.woff2') format('woff2'),
-    url('fonts/panelmono/panelmono-italic.woff') format('woff'),
-    url('fonts/panelmono/panelmono-italic.svg#panelmono-italic') format('svg');
+    url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-italic.eot?#iefix') format('embedded-opentype'),
+    url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-italic.woff2') format('woff2'),
+    url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-italic.woff') format('woff'),
+    url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-italic.svg#panelmono-italic') format('svg');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -13,14 +13,24 @@
 
 @font-face {
   font-family: 'Panel Mono';
-  src:url('fonts/panelmono/panelmono-lightitalic.eot');
+  src:url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-lightitalic.eot');
   src:local('PanelMono-LightItalic'), local('Panel Mono Light Italic'),
-    url('fonts/panelmono/panelmono-lightitalic.eot?#iefix') format('embedded-opentype'),
-    url('fonts/panelmono/panelmono-lightitalic.woff2') format('woff2'),
-    url('fonts/panelmono/panelmono-lightitalic.woff') format('woff'),
-    url('fonts/panelmono/panelmono-lightitalic.svg#panelmono-lightitalic') format('svg');
+    url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-lightitalic.eot?#iefix') format('embedded-opentype'),
+    url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-lightitalic.woff2') format('woff2'),
+    url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-lightitalic.woff') format('woff'),
+    url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-lightitalic.svg#panelmono-lightitalic') format('svg');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 
+.panelmonolightitalic {
+    font-family: 'Panel Mono';
+    font-weight: 300;
+    font-style: italic;
+}
+.panelmonoitalic {
+    font-family: 'Panel Mono';
+    font-weight: normal;
+    font-style: italic;
+}
