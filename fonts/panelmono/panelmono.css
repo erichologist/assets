@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'PanelMono-Italic';
+  font-family: 'Panel Mono';
   src: url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-italic.eot');
   src: local('PanelMono-Italic'), local('Panel Mono Italic'),
     url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-italic.eot?#iefix') format('embedded-opentype'),
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-  font-family: 'PanelMono-LightItalic';
+  font-family: 'Panel Mono';
   src:url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-lightitalic.eot');
   src:local('PanelMono-LightItalic'), local('Panel Mono Light Italic'),
     url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/panelmono/panelmono-lightitalic.eot?#iefix') format('embedded-opentype'),
