@@ -1,0 +1,815 @@
+/*
+ * Synthwave '84 Theme originally by Robb Owen [@Robb0wen] for Visual Studio Code
+ * Demo:https://marc.dev/demo/prism-synthwave84
+ *
+ * Ported for PrismJS by Marc Backes [@themarcba]
+
+
+[="lang] atr value
+fiunction (hsla)
+token.variable (--variable)
+token.pseudo-class (root)
+token.pseudo-class
+token.function (lineargradient)
+puntuation.attr-equals link="
+attr-equals
+attr-name (media)="
+code.language-md
+ .language-md
+ .token.list.punctuation
+ attr-name
+ token unit
+ 
+ */
+:root {
+	--cart:'CartographCF-LightItalic', 'CartographCFNerdFontComplete-LightItalic', 'CartographCF-RegularItalic', 'CartographCFNerdFontComplete-RegularItalic', monospace;
+	--cartreg:'CartographCF-RegularItalic', 'CartographCFNerdFontComplete-RegularItalic', 'CartographCF-LightItalic', 'CartographCFNerdFontComplete-LightItalic', monospace;
+	--cartdemi:'CartographCF-DemiBoldItalic','CartographCFNerdFontComplete-DemiBoldItalic', 'CartographCF-RegularItalic', 'CartographCFNerdFontComplete-RegularItalic', 'CartographCF-LightItalic', monospace;
+	--mnflw:'Monotalic-Narrow', 'Monotalic-NarrowLight', 'NovaMono', 'Monoflow', 'CartographCF-BoldItalic', 'CartographCFNerdFontComplete-BoldItalic', 'CartographCF-DemoBoldItalic',  'CartographCF-RegularItalic', 'LogicMonoscript-Regular', 'LogicMonoscript-Light', 'DicoMono-BoldScript', 'DicoMono-Script', 'SymbolsNFM', monospace;
+	--cart:'CartographCF-LightItalic', 'CartographCFNerdFontComplete-LightItalic', 'CartographCF-RegularItalic', 'CartographCFNerdFontComplete-RegularItalic', monospace;
+	--cartreg:'CartographCF-RegularItalic', 'CartographCFNerdFontComplete-RegularItalic', 'CartographCF-LightItalic', 'CartographCFNerdFontComplete-LightItalic', monospace;
+	--cartdemi:'CartographCF-DemiBoldItalic','CartographCFNerdFontComplete-DemiBoldItalic', 'CartographCF-RegularItalic', 'CartographCFNerdFontComplete-RegularItalic', 'CartographCF-LightItalic', monospace;
+	--mnflw:'Monotalic-Narrow', 'Monotalic-NarrowLight', 'NovaMono', 'Monoflow', 'CartographCF-BoldItalic', 'CartographCFNerdFontComplete-BoldItalic', 'CartographCF-DemoBoldItalic',  'CartographCF-RegularItalic', 'LogicMonoscript-Regular', 'LogicMonoscript-Light', 'DicoMono-BoldScript', 'DicoMono-Script', 'SymbolsNFM', monospace;
+	--fnt3: 'DicoMono-Script', 'DicoMono-BoldScript', 'Monotalic-NarrowLight','Monotalic-Narrow', 'SymbolsNFM', 'LogicMonoscript-Regular', 'LogicMonoscript-Medium', 'LogicMonoscript-Light', 'SymbolsNFM', monospace;
+	--fnt2:'Monotalic-NarrowLight', 'Monotalic-Narrow', 'LogicMonoscript-Light', 'LogicMonoscript-Regular', 'LogicMonoscript-Medium', 'DicoMono-Script', 'DicoMono-BoldScript', 'DicoTypewriter-Script', 'SymbolsNFM', 'SF Mono', 'Monaco', monospace;
+	--monoflow:'Monoflow','Monotalic-NarrowLight','Monotalic-Narrow','SymbolsNFM','DicoMono-Script','DicoMono-BoldScript','LogicMonoscript-Regular','LogicMonoscript-Medium','LogicMonoscript-Light','DicoTypewriter-Script','SF Mono','CartographCF Nerd Font',monospace;
+	--fnt:'Monoflow','Monotalic-NarrowLight','Monotalic-Narrow','SymbolsNFM','DicoMono-Script','DicoMono-BoldScript','LogicMonoscript-Regular','LogicMonoscript-Medium','LogicMonoscript-Light','DicoTypewriter-Script','SF Mono','CartographCF Nerd Font',monospace;
+	--b1-sh:0 0 0 #FFF, 0 0 5px #0F07FF66, 0 -0.1px 3.5px #00E95266, 0 0 8px #5E60CE66, 0 -1px 9px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066;
+	--cyn1-sh:0 0 0 #00D9F0, 0 0 3.5px #3D4DFFCC, 0 -0.1px 4px #00E95266, 0 0 4.5px #5E60CE66, 0 -1px 5px #0F07FF66, 0 1px 5.5px #3457D566, 0 0 6px #00D9E066;
+	--cyn2-sh:0 0 0 #00D9FF, 0 0 2px #00D9E044, 0 0 2.5px #3D4DFFCC, 0 -0.1px 3px #00E95266, 0 0 3.5px #5E60CE66, 0 -1px 4px #0F07FF66, 0 1px 4.5px #3457D566, 0 0 5px #00D9E066, 0 0 0.2em #FFF4;
+	--cyn3-sh:0 0 0 #3DFDFF, 0 0 2px #00D9E044, 0 0 2.5px #3D4DFFCC, 0 -0.1px 3px #00E95266, 0 0 3.5px #5E60CE66, 0 -1px 4px #0F07FF66, 0 1px 4.5px #3457D566, 0 0 5px #00D9E066;
+	--cyn4-sh:0 0 0 #3D4DFF, 0 0 2px #00D9E044, 0 0 2.5px #3D4DFFCC, 0 -0.1px 3px #00E95266, 0 0 3.5px #5E60CE66, 0 -1px 4px #0F07FF66, 0 1px 4.5px #3457D566, 0 0 5px #00D9E066;
+	--grn1-sh:0 0 0 #00CCFF, 0 0 3.5px #358AFF66, 0 -0.1px 3.5px #0F07FF44, 0 0 4px #5E60CE22, 0 -1px 5px #0F07FF44, 0 1px 5px #3457D522, 0 0 4px #00D9E044, 0 0 0 #FFF2, 0 0 5px #009EFD22, 0 -0.1px 3.5px #00E95244, 0 0 4px #5E60CE22, 0 -1px 5px #0F07FF44, 0 1px 4px #3457D522, 0 0 4px #00D9E044;
+	--grn2-sh:0 0 0 #FFF, 0 0 5px #0F07FF66, 0 -0.1px 3.5px #00E95266, 0 0 6px #5E60CE66, 0 -1px 5px #0F07FF66, 0 1px 7px #3457D566, 0 0 11px #00D9E066;
+	--grn3-sh:0 0 5px #358AFF66, 0 -0.1px 3.5px #0F07FF66, 0 0 8px #5E60CE66, 0 -1px 9px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066, 0 0 0 #FFF2, 0 0 5px #009EFD66, 0 -0.1px 3.5px #00E95266, 0 0 8px #5E60CE66, 0 -1px 9px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066;
+
+	--pw1-sh:0 0 0.1em #FF005E80, 0 0 2px #0F07FF66, 0 -0.1px 3px #DC078E66, 0 0 4px #FF057B66, 0 -1px 4px #FF214E66, 0 1px 14px #FF005E66, 0 0 4px #72F1B875, 0 0 18px #FF058B44;
+	--w1-sh:0 0 0.5em #FEFCFC66, 0 0 2px #FFF4, 0 -1px 2px #FFF4, 0 1px 2px #FFF4;
+	--wb1-sh:0 0 0 #0EF, 0 0 5px #0F07FF66, 0 -0.1px 3.5px #00E95266, 0 0 8px #5E60CE66, 0 -1px 9px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066;
+	--wb2-sh:0 0 0 #FFF, 0 0 5px #0F07FF66, 0 -0.1px 3.5px #00E95266, 0 0 8px #5E60CE66, 0 -1px 9px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066;
+	--whtblu3-sh:0 0 0 #0EF, 0 0 5px #0F07FF66, 0 -0.1px 3.5px #00E95266, 0 0 8px #5E60CE66, 0 -1px 9px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066;
+	--wb4-sh:0 0 0 #0EF, 0 0 5px #358AFF66, 0 -0.1px 3.5px #0F07FF66, 0 0 8px #5E60CE66, 0 -1px 9px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066, 0 0 0 #FFF2, 0 0 5px #009EFD66, 0 -0.1px 3.5px #00E95266, 0 0 8px #5E60CE66, 0 -1px 9px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066, 0 0 5px #0F07FF66, 0 -0.1px 3.5px #00E95266, 0 0 5px #5E60CE66, 0 -1px 5px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066;
+	--b1c:#00D9E0CC;
+	--b1sh:0 0 0 #FFF, 0 0 5px #0F07FF66, 0 -0.1px 3.5px #00E95266, 0 0 8px #5E60CE66, 0 -1px 9px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066;
+	--pu1c:#5546DB;
+	--pu1sh:0 0 1px #FFF4, 0 0 0.5em #5546DB66, 0 0 2px #5546DB44, 0 -1px 2px #5546DB44, 0 1px 2px #5546DB44;
+	--pu2c:#5546DBCC;
+	--pu2sh:0 0 0 #FFFFFFCC, 0 0 0.26em #0F07FF80, 0 0 0.45em #4530FF66, 0 -0.1px 0.3em #DC078E66, 0 0 0.26em #5546DB44, 0 0 0.36em #DE00FF66, 0 0 0.2em #DE00FF66;
+	--pnk1cc:#FF02BECC;
+	--p1sh:0 0 0 #FFF8, 0 2px #0F07FF22, 0 -0.1px 3px #DC078E22, 0 0 4px #FF057B22, 0 -1px 4px #FF214E22, 0 1px 4px #FF005E22;
+	--wht3:#EEE;
+	--w1sh:0 0 0.5em #FEFCFC66, 0 0 0.56em #FFF4, 0 -1px 0.56em #FFF4, 0 1px 0.6em #FFF4;
+	--whtblu5:#EEEC;
+	--wb4sh:0 0 0 #0EF, 0 0 5px #358AFF66, 0 -0.1px 3.5px #0F07FF66, 0 0 8px #5E60CE66, 0 -1px 9px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066, 0 0 0 #FFF2, 0 0 5px #009EFD66, 0 -0.1px 3.5px #00E95266, 0 0 8px #5E60CE66, 0 -1px 9px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066, 0 0 5px #0F07FF66, 0 -0.1px 3.5px #00E95266, 0 0 5px #5E60CE66, 0 -1px 5px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066;
+	--y11:#B5E108CC;
+	--y1-sh:0 0 0 #FFF, 0 0 5px #FFBF0066, 0 -0.1px 3.5px #C5D02566, 0 0 6px #E62E2E66, 0 -1px 5px #e0cb5266, 0 1px 7px #DDFF0566, 0 0 11px #00D9E066;
+	--y2-sh:0 0 0 #FFF, 0 0 5px #FFBF0044, 0 -0.1px 3.5px #C5D02544, 0 0 6px #E62E2E44, 0 -1px 5px #e0cb5244, 0 1px 4px #f98455CC, 0 0 8px #00D9E044;
+	--y3-sh:0 0 0 #FFF, 0 0 5px #FFBF0066, 0 -0.1px 3.5px #C5D02566, 0 0 6px #E62E2E66, 0 -1px 5px #e0cb5266, 0 1px 7px #DDFF0566, 0 0 11px #00D9E066;
+	--y13-sh:0 0 0 #FFF, 0 0 5px #FFBF0022, 0 -0.1px 3.5px #C5D02522, 0 0 6px #FFBF0044, 0 -1px 5px #e0cb5222, 0 1px 7px #DDFF0522, 0 0 8px #00D9E022;
+	--y2sh:0 0 0 #FFF, 0 0 5px #FFBF0044, 0 -0.1px 3.5px #C5D02544, 0 0 5px #FFBF0044, 0 -0.1px 3.5px #C5D02544, 0 0 6px #E62E2E44, 0 -1px 5px #e0cb5244, 0 1px 4px #f9845566, 0 0 8px #00D9E044;
+	--hlft:Monoflow;
+
+	--p2sh:0 0 2px #DC078E22, 0 0 1.5px #0F07FF33, 0 -0.1px 2px #DC078E22, 0 0 3px #FF057B33, 0 -1px 3px #FF214E22, 0 1px 3px #FF005E22;
+	--wht2-c:#FFF;
+	--w2sh:0 0 0.75em #FFF6, 0 0.05em 2px #FFF6, 0 -0.05em 2px #FFF6, 0 -1px 2px #FFF4, 0 1px 2px #FFF4, 0 0 2.4px #00D9E044, 0 0 3px #0F07FF66, 0 -0.1px 3.5px #00E95244, 0 0 1.5px #5E60CE44, 0 -1px 3px #0F07FF44, 0 1px 3px #3457D544, 0 0 2.4px #00D9E044;
+	--wb2-sh:0 0 0 #FFF, 0 0 5px #0F07FF66, 0 -0.1px 3.5px #00E95266, 0 0 8px #5E60CE66, 0 -1px 9px #0F07FF66, 0 1px 8px #3457D566, 0 0 4px #00D9E066;
+	--blue:#0F07FF;
+	--blue60:#0F07FF66;
+	--p90:E6;
+	--g1:#00A7AA;
+	--g2:#37E5E7;
+	--gy:#98E342;
+	--lp:#FFB1F2;
+	--pk:#FC4384;
+	--pp:#8059a2;
+	--y:#E6DB74;
+	--o:#F39B35;
+
+	--y4-c:#FE0C;
+	--y4-sh:0 0 0 #FFF, 0 0 4.5px #FFBF0066, 0 1px 3px #EEEE0066, 0 0 3.1px #FFBF0066, 0 -1px 3.5px #e0cb5266, 0 0 2.7px #EEEE0066, 0 0 5px #E62E2E66;
+	--y5-c:#FFFFFFA1;
+	--y5-sh:0 0 0 #e0cb52, 0 0 4.5px #FFBF0066, 0 1px 3px #EEEE0066, 0 0 3.1px #FFBF0066, 0 -1px 3.5px #e0cb5266, 0 0 2.7px #EEEE0066, 0 0 5px #E62E2E66;
+	--y6-c:#e0cb52CC;
+	--y6-sh:0 0 0 #FFFc, 0 0 0.018em #e0cb5280, 0 0 0.02em #FFBF0066, 0 1px 3px #EEEE0066, 0 0 3.1px #FFBF0066, 0 -1px 3.5px #e0cb5266, 0 0 2.7px #EEEE0066, 0 0 5px #E62E2E66;
+
+		--sh-btn-txt1a:0 0 0 #FFF,0 -1.2px 3.15px #3457D566,0 1.2px 3.15px #3457D544,0 0 3.2px #00fc,0 0 3.2px #0DF,0 0 3.2px #FFF8;
+		--sh-btn-txt1b:0 0 0 #FFFC, 0 0 3.2px #00fc, 0 0 .3em #FFFC, 0 0 4.2px #FFF8, 0 0 0 #FFF;
+		--sh-btn1a:hsla(223,20%,5%,0.23),-1.2px 0.6px 4px hsla(223,20%,5%,0.23),0 -1px 4px hsla(223,20%,5%,0.20),inset 0 0 16px hsla(223,20%,26%,0.1),0 1px 10px hsla(223,20%,1%,0.28);
+		--sh-btn1b:inset 2px 1.5px 12px hsla(223,10%,35%,0.21), inset -2px -1.5px 12px hsla(223,10%,1%,0.21), inset 3px 2px 12px hsla(223,10%,1%,0.21), inset -3px -2px 12px hsla(223,10%,1%,0.21), inset -2px 2px 14px hsla(223,10%,0%,0.11), inset 2px 2px 14px hsla(223,10%,0%,0.11);
+  --trns:transparent;
+  --cl:common-ligatures;
+	--lss25:'liga', 'ss05', 'ss02';
+	--ss25:'ss05', 'ss02';
+	--slt25:'salt' 2,'salt' 5;
+
+	--b10p:#0000001a;
+	--b20p:#00000033;
+	--sh-btn-txt1a:0 0 0 #FFF,0 -1.2px 3.15px #3457D566,0 1.2px 3.15px #3457D544,0 0 3.2px #00fc,0 0 3.2px #0DF,0 0 3.2px #FFF8;
+	--sh-btn-txt1b:0 0 0 #FFFC,0 0 3.2px #00fc,0 0 .3em #FFFC,0 0 4.2px #FFF8,0 0 0 #FFF;
+	--sh-btn1a:0 0 3px hsla(223,20%,5%,0.23),-1.2px 0.6px 4px hsla(223,20%,5%,0.23),0 -1px 4px hsla(223,20%,5%,0.20),inset 0 0 16px hsla(223,20%,26%,0.1),0 1px 10px hsla(223,20%,1%,0.28);
+	--sh-btn1b:inset 2px 1.5px 12px hsla(223,10%,35%,0.21),inset -2px -1.5px 12px hsla(223,10%,1%,0.21),inset 3px 2px 12px hsla(223,10%,1%,0.21),inset -3px -2px 12px hsla(223,10%,1%,0.21),inset -2px 2px 14px hsla(223,10%,0%,0.11),inset 2px 2px 14px hsla(223,10%,0%,0.11);
+	--sh-pr:inset -2px -3px 10px var(--b20p),0 0 4px var(--b20p),1.5px 1px 7px var(--b10p),0 0 8px var(--b20p),0 0 10px var(--b10p),0 0 14px var(--b10p);
+	--lss25:'liga','ss05','ss02';
+	--slt25:'salt' 2,'salt' 5;
+	--ss25:'ss05','ss02';
+  --prebg:linear-gradient(to bottom, #1D1630, #1E152C);
+  --presh:inset 0 0 5em rgba(0,0,0,0.1), 1.5px 1px 7px rgba(0,0,0,0.1), 0 0 8px rgba(0,0,0,0.1), 0 0 10px rgba(0,0,0,0.1), 0 0 14px rgba(0,0,0,0.1);
+  --c-y1:#FE0C;
+  --sh-y1:0 0 0 #FFF, 0 0 5px #FFBF0066, 0 -0.1px 3.5px #C5D02566, 0 0 6px #E62E2E66, 0 -1px 5px #e0cb5266, 0 1px 7px #DDFF0566, 0 0 11px #00D9E066;
+  --c-white:#AAA;
+  --sh-white:0 0 0 #FFF, 0 0 1px #FFF4, 0 -1px 2px #FFF4, 0 1px 2px #FFF4;
+  --c-pink:#FF005E;
+  --sh-pink:0 0 1px #FFF4, 0 0 2px #0F07FF60, 0 -.1px 3px #dc078e60, 0 0 4px #FF057B60, 0 -1px 4px #FF214E60, 0 1px 4px #FF005E60;
+  --c-blue:#00D9E0CC;
+  --sh-blue:0 0 0 #FFF, 0 0 5px #0F07FF60, 0 -.1px 3.5px #00E95260, 0 0 8px #5E60CE60, 0 -1px 9px #0F07ff60, 0 1px 8px #3457D560, 0 0 4px #00D9E060;
+  
+  --cy1:color-mix(in oklab, #00ff00 49%, #0000FF 51%);
+  --cy2:color-mix(in srgb, #00ff00 48%, #0000FF 50%);
+  --cy2:color-mix(in srgb,#00ff00 48%,#0000FF 50%);
+  --cy1:color-mix(in oklab,#00ff00 45%,#0000FF 55%);
+  --cy1:color-mix(in oklab,#00ff00 49%,#0000FF 51%);
+  
+  --cyan:color-mix(in srgb, var(--cy1) 60%, transparent 40%);
+  --cyn1:#00FF8944;
+  --cyn2:#00FF89CC;
+  --cyn3:#00F3A9CC;
+  
+  --grn1:#0F8C;
+  --grn2:#0CFC;
+  --grn3:#00D9E0;
+  --pnk1:#FF02BE;
+  --pnk2:#FF005E;
+  --pnk3:#FF005ECC;
+  --pnk4:#FF02BE;
+  --pnk5:#FF33A0F2;
+  --pnk6:#FF33A0CC;
+  --pnk9:#FF33A0;
+  
+  --purple1:#5546DB;
+  --purple2:#5546DBCC;
+  --purple1-sh:0 0 1px #FFF4, 0 0 0.5em #5546DB66, 0 0 2px #5546DB44, 0 -1px 2px #5546DB44, 0 1px 2px #5546DB44;
+  --purple2-sh:0 0 0 #FFFFFFCC, 0 0 0.26em #0F07FF80, 0 0 0.45em #4530FF66, 0 -0.1px 0.3em #DC078E66, 0 0 0.26em #5546DB44, 0 0 0.36em #DE00FF66, 0 0 0.2em #DE00FF66;
+  
+  --pnk1-sh:0 0 3px #FFF3, 0 0 2px #0F07FF66, 0 -0.1px 3px #DC078E30, 0 0 4px #FF057B30, 0 -1px 4px #FF214E22, 0 1px 4px #FF005E22;
+  --pink2-sh:0 0 0.1em #FFF4, 0 0 2px #0F07FF66, 0 -0.1px 3px #DC078E66, 0 0 4px #FF057B66, 0 -1px 4px #FF214E66, 0 1px 4px #FF005E66;
+  --pink3-sh:0 0 0 #FFF8, 0 0 0.2em #FF058B66, 0 0 2px #4300FC44, 0 -0.1px 3px #DC078E44, 0 0 4px #FF057B44, 0 -1px 4px #FF214E66, 0 1px 4px #FF005E22, 0 0 4px #0002;
+  --pink4-sh:0 0 0 #FFF4, 0 0 0.1em #FF058B, 0 0 2px #4300FC44, 0 -0.1px 3px #DC078E44, 0 0 4px #FF057B44, 0 -1px 3px #FF214E66, 0 1px 4px #FF005E22, 0 0 4px #0002;
+  --pink5-sh:0 0 0.2em #FF058B66, 0 0 2px #4300FC44, 0 -0.1px 3px #DC078E44, 0 0 4px #FF057B44, 0 -1px 4px #FF214E66, 0 1px 4px #FF005E22, 0 0 4px #0002;
+  --pink6-sh:0 0 0 #FF058B, 0 0 2px #4300FC44, 0 -0.1px 3px #DC078E44, 0 0 4px #FF057B44, 0 -1px 4px #FF214E66, 0 1px 4px #FF005E22, 0 0 4px #FF058B22;
+  --p1sh:0 0 2px #0F07FF22, 0 -0.1px 3px #DC078E22, 0 0 4px #FF057B22, 0 -1px 4px #FF214E22, 0 1px 4px #FF005E22;
+  --pnk11-sh:0 0 2.2px #FF058B, 0 0 2.2px #FFF4, 0 0 3.2px #FF058B66, 0 0 2.4px #0F07FF66, 0 0 2.5px #DC078E44, 0 0 3.5px #FF057B44, 0 -1px 3.2px #FF214E22, 0 1px 3.2px #FF005E44, 0 0 2.2px #FFF4;
+
+
+  --atrule:#F4EEE4;
+  --sh-atrule:0 0 2px #393A33, 0 0 8px #AE81FF75, 0 0 2px #AE81FF75;
+  --attr-name:#e2777a;
+  --attr-value:#F87C32;
+  --boolean:#FDFDFD;
+  --sh-boolean:0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975;
+  --builtin:#0F0;
+  --sh-builtin:0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
+  --cdata:#999999;
+  --char:#f87c32;
+  --block-comment:#999999;
+  --bg-block-comment:#0006;
+  --comment:#999999;
+  --string-css:#EBD567;
+  --constant:#F92AAD;
+  --sh-constant:0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 8px #FFF3;
+  --deleted:#e2777a;
+  --doctype:#999999;
+  --entity:#B5E108;
+  --entity:#67cdcc;
+  --function:#FDFDFD;
+  --sh-function:0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975;
+  --function-name:#6196cc;
+  --hexcode:#00FBD0;
+  --important:var(--c-y1);
+  --sh-important:var(--sh-y1);
+  --inserted:#B5E108;
+  --string-js:#00FFAA;
+  --string-json:#00D1C9;
+  --keyword:#00FBD0;
+  --keyword:#0F0;
+  --sh-keyword:0 0 2px #393A33, 0 0 8px #F39F0575, 0 0 2px #F39F0575;
+  --namespace:#92577EB3;
+  --number:#0EDDFF;
+  --operator:#67CDCC;
+  --prolog:#999999;
+  --property:#CDCDCDCC;
+  --sh-property:0 0 0 #FFF, 0 0 0.14081em #FFF4, 0 0 0.24121em #FFF6, 0 1px 0.362em #FFF4;
+  --punctuation:#DDFF05;
+  --regex:#B5E108;
+
+  --selector-class:#FF02BE;
+	--sh-selector-class:0 0 1px #FFF3, 0 0 1px #0F07FF60, 0 -0.1px 1px #dc078e30, 0 0 2px #FF057B20, 0 -1px 2px #FF214E10, 0 1px 3px #FF005E10;
+
+  
+  
+  
+  
+  
+  
+  --selector-class:#FF005EA1;
+	--sh-selector-class:
+    0 0 0 #FF058BA1, 
+    0 0 1.3px #FF005E66, 
+    0 0 1.5px #00197A, 
+    0 0 1.7px #FF057B, 
+    0 0 2px #000000;
+
+  
+  
+  
+  
+  
+  
+  
+
+  --tag:#FF0080;
+  --sh-tag:0 -2px 2px #C408BB22, 0 1px 2px #FF008044;
+
+  --selector-id:#FF02BE;
+	--sh-selector-id:0 0 1px #FFF3, 0 0 1px #0F07FF60, 0 -0.1px 1px #dc078e30, 0 0 2px #FF057B20, 0 -1px 2px #FF214E10, 0 1px 3px #FF005E10;
+  --selector:var(--cyan);
+	--sh-selector:0 0 0 #FFF4, 0 0 0.4px #00C9FF, 0 0 0.8px #37E5E780, 0 0 1.3px #FFF2;
+
+  --selector:#FF005ECC;
+  --sh-selector:0 0 0 #FFF4, 0 0 0.1em #FF058B, 0 0 2px #4300FC44, 0 -0.1px 3px #DC078E44, 0 0 4px #FF057;
+
+  --string:#F7CE46;
+  --string:#F87C32;
+  --symbol:#F92AAD;
+  --sh-symbol:0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 8px #FFF3;
+  --tag:#FF0080;
+  --sh-tag:0 -2px 2px #C408BB22, 0 1px 2px #FF008044;
+  --unit:#E2777A;
+  --url:#00CCFF;
+  --variable:#B5E108;
+
+
+
+  
+}
+  
+code[class*="lang-"],
+pre[class*="lang-"],
+code[class*="language-"],
+pre[class*="language-"] {
+	color:#f92aad;
+	background:none;
+	font-family:'CartographCF-LightItalic','CartographCF-RegularItalic',monospace;
+	font-variant-alternates:var(--ss25);
+	font-feature-settings:var(--lss25);
+	font-variant-ligatures:var(--cl);
+	font-weight:300;
+	-moz-font-feature-settings:var(--ss25);
+	-webkit-font-feature-settings:var(--ss25);
+	/*font-size:1em;
+	font-size:90%;*/
+	text-align:left;
+	white-space:pre;
+	word-spacing:normal;
+	word-break:normal;
+	word-wrap:normal;
+	line-height:1.5;
+	-moz-tab-size:/*4*/2;
+	/*font-family:'CartographCF-DemiBold','CartographCF-Regular',monospace;*/
+	-o-tab-size:/*4*/2;
+	tab-size:/*4*/2;
+	-webkit-hyphens:none;
+	-moz-hyphens:none;
+	-ms-hyphens:none;
+	hyphens:none;
+}
+.purple3 {color:var(--pnk9); text-shadow:var(--purple1-sh);}
+.purple4 {color:var(--pnk9); text-shadow:var(--purple2-sh);}
+.purple5 {text-shadow:var(--purple2-sh);}
+
+/* Code blocks */
+pre[class*="lang-"], pre[class*="language-"] {
+	background-color: transparent !important;
+	background-color: #58006C66 !important;
+	background-image:linear-gradient(to top, #2a2139 75%, #34294f);
+	background-image:linear-gradient(to bottom, #221937, #231933);
+	background-image:linear-gradient(to bottom, #22193780, #23193380);
+	background-image:var(--prebg);
+	background-image:linear-gradient(170deg, #221937DD, #231933DD);
+
+	border-bottom:1px solid #1E152C;
+	border-bottom:1px solid #231933;
+	border-radius:10px;
+	box-shadow:
+      inset 0 0 5em rgba(0,0,0,0.1),
+	    1.5px 1px 7px rgba(0,0,0,0.1),
+	    0 0 8px rgba(0,0,0,0.1),
+	    0 0 10px rgba(0,0,0,0.1),
+	    0 0 14px rgba(0,0,0,0.1);
+  box-shadow:var(--presh);
+	box-shadow:
+		  inset 0 0 34px rgba(0,0,0,0.2),
+	    1.5px 1px 7px rgba(0,0,0,0.1),
+	    0 0 8px rgba(0,0,0,0.1),
+	    0 0 10px rgba(0,0,0,0.1),
+	    0 0 14px rgba(0,0,0,0.1);
+	box-shadow:
+      inset 0 0 25px rgba(0, 0, 0, 0.12),
+      0 0 8px rgba(0, 0, 0, 0.2),
+      1.5px 1px 7px rgba(0, 0, 0, 0.18);
+	font-family:var(--cart);
+	font-variant-alternates:var(--slt25);
+	-moz-font-feature-settings:var(--ss25);
+	-webkit-font-feature-settings:var(--ss25);
+	font-feature-settings:var(--lss25);
+	font-variant-ligatures:var(--cl);
+	font-weight:300;
+	font-size:70%;
+	padding:1em;
+	padding:0.9em 0.8em 0.9em 1em;
+	padding:1.24em 1.18em 1.24em 1.05em;
+	padding:2.4em 1em 2.4em 2em;
+	margin:0.5em 0;
+	margin:1em;
+	margin-bottom:1.63em;
+	margin-bottom:1.63em;
+	overflow:auto;
+}
+/* Inline code */
+:not(pre) > code[class*="lang-"],
+:not(pre) > code[class*="language-"] {
+	background:var(--trns);
+	/*padding:.1em;*/
+	/*border-radius:.3em;*/
+	font-family:var(--cart);
+	font-variant-alternates:var(--slt25);
+	-moz-font-feature-settings:var(--ss25);
+	-webkit-font-feature-settings:var(--ss25);
+	font-feature-settings:var(--lss25);
+	font-variant-ligatures:var(--cl);
+	font-weight:300;
+	/* white-space:normal; */
+}
+code[class*="language-"], code[class*="lang-"]  {
+	background:var(--trns);
+	/*color:#00FBD0;*/
+	/*color:var(--cy1);*/
+	font-family:var(--cart);
+	font-variant-alternates:var(--slt25);
+	-moz-font-feature-settings:var(--ss25);
+	-webkit-font-feature-settings:var(--ss25);
+	font-feature-settings:var(--lss25);
+	font-variant-ligatures:var(--cl);
+	font-weight:300;
+}
+/*	color:#999;*/
+.token.important,
+.token.bold {
+  font-family:var(--cartdemi);
+	font-variant-alternates:var(--ss25) !important;
+	font-feature-settings:var(--lss25) !important;
+	-moz-font-feature-settings:var(--ss25) !important;
+	-webkit-font-feature-settings:var(--ss25) !important;
+}
+.token.italic {
+	/*color:#EE2E6F;*/
+  font-family:var(--cartreg);
+	font-variant-alternates:var(--slt25);
+	-moz-font-feature-settings:var(--ss25);
+	-webkit-font-feature-settings:var(--ss25);
+	font-feature-settings:var(--lss25);
+	font-variant-ligatures:var(--cl);
+	font-weight:normal !important;
+}
+/*	color:#00ccff;*/
+/*	color:yellow;*/
+.token.atrule {color:#F4EEE4;text-shadow:0 0 2px #393A33,0 0 8px #AE81FF75,0 0 2px #AE81FF75;color:var(--atrule);text-shadow:var(--sh-atrule);}
+.token.atrule {color:var(--atrule);text-shadow:var(--sh-atrule);}
+.token.attr-name {color:var(--attr-name);}
+.token.attr-value {color:#837CFF;color:var(--attr-value);}
+.token.attr-value {color:#F87C32;color:var(--attr-value);}
+.token.block-comment {color:var(--block-comment);
+  background-color:var(--bg-block-comment);padding-top:2px;padding-bottom:2px;border-radius:7px;}
+.token.boolean {color:var(--boolean);text-shadow:var(--sh-boolean);}
+.token.builtin {color:#D5005F;color:#A34EED;color:#F4EEE4;color:#0F0;text-shadow:0 0 2px #393A33, 0 0 8px #F39F0575, 0 0 2px #F39F0575;color:var(--builtin);text-shadow:var(--sh-builtin);}
+.token.cdata {color:#999;color:#8E8E8E;color:var(--cdata);}
+.token.char {color:#F87C32;color:var(--char);}
+.token.comment {color:var(--comment);}
+.token.constant {color:#CDCDCD;color:var(--constant);text-shadow:var(--sh-constant);}
+.token.deleted {color:red;color:#E2777A;color:var(--deleted);font-family:var(--cartdemi);}
+.token.doctype {color:var(--doctype);}
+.token.entity {color:#B5E108;cursor:help;}
+.token.entity {color:#67CDCC;cursor:help;color:var(--entity);}
+.token.function {color:#FDFDFD;text-shadow:0 0 2px #001716, 0 0 3px #03EDF975, 0 0 5px #03EDF975, 0 0 8px #03EDF975;color:var(--function);text-shadow:var(--sh-function);}
+.token.function-name {color:#6196CC;color:var(--function-name);}
+.token.hexcode{color:var(--hexcode);}
+.token.important {color:#FF3853;color:#F4EEE4;text-shadow:0 0 2px #393a33, 0 0 8px #FF385375, 0 0 2px #FF385375;color:var(--important);text-shadow:var(--sh-important);}
+.token.inserted {/*	color:yellowgreen;*/color:#B5E108;}
+.token.inserted {color:green;color:var(--inserted);}
+.token.keyword {color:#00FBD0;}
+.token.keyword {color:var(--keyword);text-shadow:var(--sh-keyword);}
+.token.namespace {opacity:.7;color:#92577E;}
+.token.namespace {color:var(--namespace);}
+.token.number {color:var(--number);}
+.token.operator {color:#67CDCC;color:var(--operator);}
+.token.punctuation {color:#DDFF05;}
+.token.punctuation {color:#CCC;color:var(--punctuation);}
+.token.prolog {color:#999;}
+.token.prolog {color:var(--prolog);}
+.token.property {color:#CDCDCD;text-shadow:0 0 2px #100C0F, 0 0 4px #72F1B875, 0 0 8px #257c55;color:#CDCDCDCC;text-shadow:0 0 0 #FFF, 0 0 .14081em #FFF4, 0 0 .24121em #FFF6, 0 1px .362em #FFF4;color:var(--property);text-shadow:var(--sh-property);}
+.token.regex {color:#B5E108;}
+.token.regex {color:var(--regex);}
+.token.selector {color:#00A7AA;color:var(--cyan);text-shadow:0 0 0 #FFF4, 0 0 0.4px #00c9ff, 0 0 0.8px #37E5E780, 0 0 1.3px #FFF2;color:var(--selector);text-shadow:var(--sh-selector);}
+.token.selector .token.id {color:#FF02BE;text-shadow:0 0 1px #FFF3, 0 0 1px #0F07ff60, 0 -.1px 1px #dc078e30, 0 0 2px #FF057B20, 0 -1px 2px #FF214E10, 0 1px 3px#FF005E10;color:var(--selector-id);text-shadow:var(--sh-selector-id);}
+.token.selector>.token.class, .token.selector .token.class {color:#FF02BE;text-shadow:0 0 1px #FFF3, 0 0 1px #0F07ff60, 0 -.1px 1px #dc078e30, 0 0 2px #FF057B20, 0 -1px 2px #FF214E10, 0 1px 3px#FF005E10;color:var(--selector-class);text-shadow:var(--sh-selector-class);}
+.token.string {color:#FDDA9A;color:#F7CE46;color:var(--string);}
+.token.string {color:var(--string);}
+.token.symbol {color:#C14BFF;color:#F92AAD;text-shadow:0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 8px #FFF3;color:var(--symbol);text-shadow:var(--sh-symbol);}
+.token.tag {color:#A4079C;color:var(--tag);text-shadow:var(--sh-tag);}
+.token.unit {color:var(--unit);}
+.token.url {color:#00CCFF;}
+.token.url {color:#67CDCC;color:var(--url);}
+.token.variable {color:#B5E108;}
+.token.variable {color:#F87C32;color:var(--variable);}
+.lang-css .token.string, .language-css .token.string {color:#EBD567;}
+.lang-css .token.string, .language-css .token.string, .lang-css .token.string .language-css .token.string {color:#EBD567;color:var(--string-css);}
+.lang-json .token.string, .language-json .token.string, .lang-JSON .token.string, .language-JSON .token.string {color:#00D1C9;color:var(--string-json);}
+.lang-JS .token.string, .language-JS .token.string, .lang-js .token.string, .language-js .token.string, .lang-javascript .token.string, .language-javascript .token.string, .lang-JavaScript .token.string, .language-JavaScript .token.string {color:#00FFAA;color:var(--string-js);}
+/*	color:#00ccff;*/
+.token.bold {color:#5972FF;}
+.white {color:#AAAC;text-shadow:0 0 0 #FFF, 0 0 1px #FFF2, 0 -2px 2px #FFF2, 0 1px 2px #FFF2;}
+.white {color:#AAA;text-shadow:0 0 0 #FFF, 0 0 1px #FFF4, 0 -1px 2px #FFF4, 0 1px 2px #FFF4;color:var(--c-white);text-shadow:var(--sh-white);}
+.pink {color:#FF005E;text-shadow:0 0 1px #FFF4, 0 0 2px #0F07ff60, 0 -.1px 3px #dc078e60, 0 0 4px #FF057B60, 0 -1px 4px #FF214E60, 0 1px 4px #FF005E60;color:var(--c-pink);text-shadow:var(--sh-pink);}
+.blue {color:#00D9E0CC;text-shadow:0 0 0 #FFF, 0 0 5px #0F07ff60, 0 -.1px 3.5px #00E95260, 0 0 8px #5E60CE60, 0 -1px 9px #0F07ff60, 0 1px 8px #3457D560, 0 0 4px #00D9E060;color:var(--c-blue);text-shadow:var(--sh-blue);}
+.pink1, .pnk1, .p1 {color:var(--pnk1);text-shadow:0 0 3px #FFF3, 0 0 2px #0F07FF66, 0 -0.1px 3px #DC078E30, 0 0 4px #FF057B30, 0 -1px 4px #FF214E22, 0 1px 4px #FF005E22;}
+.pink1, .p1 {color:var(--pnk1);text-shadow:var(--pnk1-sh);}
+.pink2, .pnk2, .p2 {color:var(--pnk5);text-shadow:var(--pnk11-sh);}
+.pink2, .pnk2, .p2 {color:#FF33A0F2;text-shadow:0 0 0 #FF058B44, 0 0 1.2px #FF058B44, 0 0 2.2px #0F07FF44, 0 0 3.2px #DC078E44, 0 0 4.2px #FF057B44, 0 -1px 5.2px #FF214E22, 0 1px 3.7px #FF005E44, 0 0 1.2px #F6FC;}
+.pink3, .p3 {color:#FF005ECC;text-shadow:0 0 0 #FFF8, 0 0 0.2em #FF058B66, 0 0 2px #4300FC44, 0 -0.1px 3px #DC078E44, 0 0 4px #FF057B44, 0 -1px 4px #FF214E66, 0 1px 4px #FF005E22, 0 0 4px #0002;}
+
+.pink4, .pnk4, .p4 {color:#FF005ECC;text-shadow:0 0 0 #FFF4, 0 0 0.1em #FF058B, 0 0 2px #4300FC44, 0 -0.1px 3px #DC078E44, 0 0 4px #FF057B44, 0 -1px 3px #FF214E66, 0 1px 4px #FF005E22, 0 0 4px #0002;}
+
+.pink7, .p7 {color:#FF33A0CC;text-shadow:0 0 0.2em #FF058B66, 0 0 2px #4300FC44, 0 -0.1px 3px #DC078E44, 0 0 4px #FF057B44, 0 -1px 4px #FF214E66, 0 1px 4px #FF005E22, 0 0 4px #0002;}
+.pink6, .p6 {color:#FFF8;text-shadow:0 0 0 #FF058B, 0 0 2px #4300FC44, 0 -0.1px 3px #DC078E44, 0 0 4px #FF057B44, 0 -1px 4px #FF214E66, 0 1px 4px #FF005E22, 0 0 4px #FF058B22;}
+.pink8, .pnk8,  .p8 {color:#FF005E;text-shadow:0 0 0.1em #FFF4, 0 0 2px #0F07FF66, 0 -0.1px 3px #DC078E66, 0 0 4px #FF057B66, 0 -1px 4px #FF214E66, 0 1px 4px #FF005E66;}
+.pink12, .pnk12, .p12 {color:#FF005ECC;text-shadow:0 0 0 #FF058B44, 0 0 1.2px #FF058B44, 0 0 2.2px #0F07FF44, 0 0 3.2px #DC078E44, 0 0 4.2px #FF057B44, 0 -1px 5.2px #FF214E22, 0 1px 3.7px #FF005E44, 0 0 1.2px #F6FC;}
+
+
+
+
+
+
+
+
+
+pre.c {font-family:var(--fnt);background-color:transparent !important;background-image:linear-gradient(to right, #161616, #1a1a1a);box-shadow:0 0 12px rgba(0, 0, 0, 0.08), 0 0 10px rgba(0, 0, 0, 0.04), 1.5px 1px 8px rgba(0, 0, 0, 0.04);border-radius:10px;margin:0.5em 0.1em;padding:0.1em 0.5em;}
+.xy {font-family:var(--fnt);background-color:transparent;background-image:linear-gradient(0deg,#181818, #000);box-shadow:0 0 14px rgba(0, 0, 0, 0.24), 0 0 10px rgba(0, 0, 0, 0.04), 0 0 24px rgba(0, 0, 0, 0.25);border-radius:10px;margin:0.5em 0.1em;padding:0.1em 0.5em;}
+.vw {font-family:var(--fnt3);background-color:transparent;background-image:linear-gradient(-90deg,#101010, #000);background-image:linear-gradient(0deg,#181818, #000);box-shadow:0 0 14px rgba(0, 0, 0, 0.24), 0 0 10px rgba(0, 0, 0, 0.04), 0 0 24px rgba(0, 0, 0, 0.25);border-radius:10px;margin:0.5em 0.1em;padding:0.1em 0.5em;}
+.tu {font-family:var(--fnt3);box-shadow:0 0 14px rgba(0, 0, 0, 0.24), 0 0 10px rgba(0, 0, 0, 0.04), 0 0 24px rgba(0, 0, 0, 0.25);border-radius:10px;margin:0.5em 0.1em;padding:0.1em 0.5em;}
+
+pre.ab {font-family:var(--fnt);background-color:transparent;margin:0.5em 0.1em;padding:0.1em 0.5em;}
+.cd {font-family:var(--fnt3);background-color:transparent;padding:0.1em 0.5em;padding-left:0;text-align: left;}
+/* pre.ab>code, pre.ab code, pre.ab>pre, pre.ab pre */
+.lft,.left,left {/*font-family:var(--fnt);*/background-color:transparent;background-image:transparent;text-align:left;}
+
+.just, pre.ab code code, pre.ab>code>code, pre.ab>code>pre{font-family:var(--fnt);margin:0.5em 0.1em;padding:0.1em 0.5em;text-align:justify !important;-ms-text-justify: auto;text-justify: auto;-ms-text-justify: distribute;text-justify: distribute;-ms-text-justify: inter-word;text-justify: inter-word;}
+/* pre.ab > code > code > code, pre.ab>code>code>code, pre.ab>pre>pre */
+.center, .cntr {/*font-family:var(--fnt);*/background-color:transparent;background-image:transparent;margin:0.5em 0.1em;padding:0.1em 0.5em;text-align:center !important;}
+.wsp {white-space: pre-line;}
+.j, justify {text-align: justify;-ms-text-justify: inter-word;text-justify: inter-word;-ms-text-justify: distribute;text-justify: distribute;}
+.dico {font-family:var(--fnt3);}
+.grnsh{text-shaddow:0 0 2px #06D6A0}
+.tchig {font-family:var(--fnt3);font-family: 'Tchig Mono';font-weight: normal;font-style: normal;font-display: swap;font-variant-alternates: 'salt' 2, 'salt' 3, 'salt' 6;-moz-font-feature-settings: 'liga', 'ss02', 'ss03', 'ss06';-webkit-font-feature-setting: 'liga', 'ss02', 'ss03', 'ss06';font-feature-settings: 'liga', 'ss02', 'ss03', 'ss06';font-variant-ligatures: common-ligatures;}
+.monoflow, .mflow, .mf {font-family:var(--monoflow);}
+/* pre.a {display:block;padding:9px;mar
+
+
+
+
+
+
+.token.tab:not(:empty),
+.token.cr,.token.lf,.token.space {position:relative;}
+.token.tab:not(:empty):before, .token.cr:before, .token.lf:before, .token.space:before {color:#808080;position:absolute;}
+.token.cr:before {opacity:0.646;font-size:104%;}
+.token.lf:before {opacity:0.3;font-size:104%;}
+.token.space:before {opacity:0.39;/*font-size:104%;*/}
+.token.tab:not(:empty):before {content:'\25B9';opacity:0.25;font-size:88%;padding-inline-start:-60%;/*padding-left:-50%;*//*padding-right:-50%;*/ /*margin-left:-20%;*//*margin-right:-20%;*/}
+.token.tab:not(:empty):after {padding-left:-50%;padding-right:-50%;/*margin-left:-20%;*/ /*margin-right:-20%;*/}
+.token.cr:before {content:'\240D';}
+.token.crlf:before {content:'\240D\240A';}
+.token.lf:before {content:'\00AC';padding-left:.5%;}
+.token.space:before {content:'\00B7';}
+/*.token.selector .token.class,mtoken.class-name {color:#FFF5f6;text-shadow:0 0 2px #000, 0 0 8px #fc1f2c75, 0 0 5px #fc1f2c75, 0 0 10px #fc1f2c75;} .token.selector {color:#ff02be;color:#72f1b8;text-shadow:0 0 2px #100c0f, 0 0 5px #257c5575, 0 0 8px #21272475;}*/ /*.token.tab:not(:empty), .token.cr, .token.lf, .token.space {position:relative;} .token.tab:not(:empty):before, .token.cr:before, .token.lf:before, .token.space:before {color:#808080;opacity:0.46;position:absolute;} .token.tab:not(:empty):before {content:'\21E5';} .token.cr:before {content:'\240D';} .token.crlf:before {content:'\240D\240A';} .token.lf:before {content:'\240A';} .token.space:before {content:'\00B7';} */ /* return 23CE ⏎ tria 23F5 ⏵ tria 25B9 ▹ ▷ 25B7 ▶ 25B6 ¬ 00AC */
+
+.code-toolbar > .toolbar > .toolbar-item > span {color:#0000;}
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+	color:#bbb;
+	font-size:.8em;
+	padding:0 .5em;
+	background:#f5f2f0;
+	background:rgba(224,224,224,0.2);
+	box-shadow:0 2px 0 0 rgba(0,0,0,0.2);
+	border-radius:.5em;
+}
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus {color:inherit;text-decoration:none;}
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button{
+	color:#bbb;
+	font-size:.8em;
+	padding:0 .5em;
+	background:#f5f2f0;
+	background:rgba(224,224,224,0.2);
+	box-shadow:0 2px 0 0 rgba(0,0,0,0.2);
+	border-radius:.5em;
+}
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus {color:inherit;text-decoration:none;}
+div.code-toolbar > .toolbar > .toolbar-item > span,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus,
+div.code-toolbar>.toolbar>.toolbar-item>span:focus,
+div.code-toolbar>.toolbar>.toolbar-item>span:focus:hover,
+div.code-toolbar>.toolbar>.toolbar-item>span:focus:focus {visibility:hidden;}
+.token.punctuation.brace-hover, .token.punctuation.brace-selected {outline:solid 1px;}
+.rainbow-braces .token.punctuation.brace-level-1, .rainbow-braces .token.punctuation.brace-level-5, .rainbow-braces .token.punctuation.brace-level-9 {color:#E50;opacity:1;}
+.rainbow-braces .token.punctuation.brace-level-2, .rainbow-braces .token.punctuation.brace-level-6, .rainbow-braces .token.punctuation.brace-level-10 {color:#0B3;opacity:1;}
+.rainbow-braces .token.punctuation.brace-level-3, .rainbow-braces .token.punctuation.brace-level-7, .rainbow-braces .token.punctuation.brace-level-11 {color:#26F;opacity:1;}
+.rainbow-braces .token.punctuation.brace-level-4, .rainbow-braces .token.punctuation.brace-level-8, .rainbow-braces .token.punctuation.brace-level-12 {color:#E0E;opacity:1;}
+
+.code-toolbar > .toolbar > .toolbar-item > span {color:#0000;}
+/*=====================*/
+div.code-toolbar:hover > .toolbar {opacity:1;}
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {opacity:1;}
+span.inline-color-wrapper {
+	 background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyIDIiPjxwYXRoIGZpbGw9ImdyYXkiIGQ9Ik0wIDBoMnYySDB6Ii8+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMXYxSDB6TTEgMWgxdjFIMXoiLz48L3N2Zz4=");
+/* This is to prevent visual glitches where one pixel from the repeating pattern could be seen. */
+	background-position:center;
+	background-size:110%;
+	display:inline-block;
+	height:1.666ch;
+	width:1.666ch;
+	margin:0 .666ch;
+	box-sizing:border-box;
+	border-radius:4px;
+	border:.1px solid #44444d;
+	border:1px solid #111114;
+	outline:1px solid rgba(17, 17, 20, 1);
+	overflow:hidden;
+}
+span.inline-color {display:block;height:120%;width:120%;height:220%;width:220%;}
+.prism-previewer,
+.prism-previewer:before,
+.prism-previewer:after {
+	position:absolute;
+	pointer-events:none;
+}
+.prism-previewer,
+.prism-previewer:after {left:50%;}
+.prism-previewer {
+	margin-top:-48px;
+	width:32px;
+	height:32px;
+	margin-left:-16px;
+	z-index:10;
+	opacity:0;
+	-webkit-transition:opacity .25s;
+	-o-transition:opacity .25s;
+	transition:opacity .25s;
+}
+.prism-previewer.flipped {margin-top:0;margin-bottom:-48px;}
+.prism-previewer:before,
+.prism-previewer:after {content:'';position:absolute;pointer-events:none;}
+.prism-previewer:before {
+	top:-5px;
+	right:-5px;
+	left:-5px;
+	bottom:-5px;
+	border-radius:10px;
+	border:5px solid #FFF;
+	box-shadow:0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+}
+.prism-previewer:after {
+	top:100%;
+	width:0;
+	height:0;
+	margin:5px 0 0 -7px;
+	border:7px solid transparent;
+	border-color:rgba(255, 0, 0, 0);
+	border-top-color:#FFF;
+}
+.prism-previewer.flipped:after {
+	top:auto;
+	bottom:100%;
+	margin-top:0;
+	margin-bottom:5px;
+	border-color:rgba(255, 0, 0, 0);
+	border-bottom-color:#FFF;
+}
+.prism-previewer.active {opacity:1;}
+.prism-previewer-angle:before {border-radius:50%;background:#FFF;}
+.prism-previewer-angle:after {margin-top:4px;}
+.prism-previewer-angle svg {
+	width:32px;
+	height:32px;
+	-webkit-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg);
+	transform:rotate(-90deg);
+}
+.prism-previewer-angle[data-negative] svg {
+	-webkit-transform:scaleX(-1) rotate(-90deg);
+	-moz-transform:scaleX(-1) rotate(-90deg);
+	-ms-transform:scaleX(-1) rotate(-90deg);
+	-o-transform:scaleX(-1) rotate(-90deg);
+	transform:scaleX(-1) rotate(-90deg);
+}
+.prism-previewer-angle circle {
+	fill:var(--trns);
+	stroke:hsl(200, 10%, 20%);
+	stroke-opacity:0.9;
+	stroke-width:32;
+	stroke-dasharray:0,500;
+}
+.prism-previewer-gradient {
+	background-image:linear-gradient(45deg, #BBB 25%, transparent 25%, transparent 75%, #BBB 75%, #BBB), linear-gradient(45deg, #BBB 25%, #eee 25%, #EEE 75%, #BBB 75%, #BBB);
+	background-size:10px 10px;
+	background-position:0 0,5px 5px;
+	width:64px;
+	margin-left:-32px;
+}
+.prism-previewer-gradient:before {content:none;}
+.prism-previewer-gradient div {
+	position:absolute;
+	top:-5px;
+	left:-5px;
+	right:-5px;
+	bottom:-5px;
+	border-radius:10px;
+	border:5px solid #FFF;
+	box-shadow:0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+}
+.prism-previewer-color {
+	background-image:linear-gradient(45deg, #BBB 25%, transparent 25%, transparent 75%, #BBB 75%, #BBB), linear-gradient(45deg, #BBB 25%, #EEE 25%, #EEE 75%, #BBB 75%, #bbb);
+	background-size:10px 10px;
+	background-position:0 0,5px 5px;
+}
+.prism-previewer-color:before {background-color:inherit;background-clip:padding-box;}
+.prism-previewer-easing {
+	margin-top:-76px;
+	margin-left:-30px;
+	width:60px;
+	height:60px;
+	background:#333;
+}
+.prism-previewer-easing.flipped {margin-bottom:-116px;}
+.prism-previewer-easing svg {width:60px;height:60px;}
+.prism-previewer-easing circle {fill:hsl(200, 10%, 20%);stroke:white;}
+.prism-previewer-easing path {fill:none;stroke:white;stroke-linecap:round;stroke-width:4;}
+.prism-previewer-easing line {stroke:white;stroke-opacity:0.5;stroke-width:2;}
+
+@-webkit-keyframes prism-previewer-time {0% {stroke-dasharray:0, 500;stroke-dashoffset:0;} 50% {stroke-dasharray:100, 500;stroke-dashoffset:0;} 100% {stroke-dasharray:0, 500;stroke-dashoffset:-100;}} @-o-keyframes prism-previewer-time {0% {stroke-dasharray:0, 500;stroke-dashoffset:0;} 50% {stroke-dasharray:100, 500;stroke-dashoffset:0;} 100% {stroke-dasharray:0, 500;stroke-dashoffset:-100;}} @-moz-keyframes prism-previewer-time {0% {stroke-dasharray:0, 500;stroke-dashoffset:0;} 50% {stroke-dasharray:100, 500;stroke-dashoffset:0;} 100% {stroke-dasharray:0, 500;stroke-dashoffset:-100;}} @keyframes prism-previewer-time {0% {stroke-dasharray:0, 500;stroke-dashoffset:0;} 50% {stroke-dasharray:100, 500;stroke-dashoffset:0;} 100% {stroke-dasharray:0, 500;stroke-dashoffset:-100;}}
+
+.prism-previewer-time:before {border-radius:50%;background:#FFF;}
+.prism-previewer-time:after {margin-top:4px;}
+.prism-previewer-time svg {
+	width:32px;
+	height:32px;
+	-webkit-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg);
+	transform:rotate(-90deg);
+}
+.prism-previewer-time circle {
+	fill:var(--trns);
+	stroke:hsl(200, 10%, 20%);
+	stroke-opacity:0.9;
+	stroke-width:32;
+	stroke-dasharray:0, 500;
+	stroke-dashoffset:0;
+	-webkit-animation:prism-previewer-time linear infinite 3s;
+	-moz-animation:prism-previewer-time linear infinite 3s;
+	-o-animation:prism-previewer-time linear infinite 3s;
+	animation:prism-previewer-time linear infinite 3s;
+}
+
+div.code-toolbar {position:relative;margin-bottom:-.91em;margin-bottom:-.71em;}
+
+div.code-toolbar > .toolbar {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:flex-end;
+	margin-left:auto;
+	opacity:0;
+	position:relative;
+	right:.2em;
+	top:-1.3em;
+	transition:opacity 0.3s ease-in-out;
+	z-index:10;
+}
+div.code-toolbar:hover > .toolbar {opacity:1;}
+div.code-toolbar:focus-within > .toolbar {opacity:1;}
+div.code-toolbar > .toolbar > .toolbar-item {display:inline-block;}
+div.code-toolbar > .toolbar > .toolbar-item > a {cursor:pointer;}
+/*div.code-toolbar > .toolbar > .toolbar-item > button*/
+div.code-toolbar > .toolbar > .toolbar-item > button {
+	overflow:visible;
+	-webkit-user-select:none;/* for button */
+	-moz-user-select:none;
+	-ms-user-select:none;
+	float:right;
+}
+div.code-toolbar > .toolbar > .toolbar-item > a {
+	color:#bbb;
+	font-size:.8em;
+	padding:0 .5em;
+	background:#0000;
+	background:rgba(224, 224, 224, 0);
+	box-shadow:0 2px 0 0 rgba(0,0,0,0);
+	border-radius:.5em;
+}
+/*div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,*/
+div.code-toolbar > .toolbar > .toolbar-item > button:hover, div.code-toolbar > .toolbar > .toolbar-item > button:focus {color:inherit;text-decoration:none;}
+div.code-toolbar > .toolbar > .toolbar-item > span, div.code-toolbar > .toolbar > .toolbar-item > span:hover, div.code-toolbar > .toolbar > .toolbar-item > span:focus {visibility:hidden;}
+
+
+.copy-to-clipboard,
+.copy-to-clipboard-button,
+button.copy-to-clipboard,
+button.copy-to-clipboard-button {
+  /*margin-bottom:1em !important;*/
+	color:#00D9E0CC;
+	margin-left:1.4em !important;
+	margin-top:1em !important;
+	background:#202027 !important;
+	border:1px solid #0000 !important;
+	border-color:#0000 !important;
+	border-radius:.5em !important;
+	box-shadow:var(--sh-btn1a) !important;
+	color:#00D9FFCC !important;
+	cursor:pointer;
+	font-family:var(--mnflw) !important;
+	font-size:.8em !important;
+	line-height:.81 !important;
+	padding:.43em .26em .43em .26em !important;
+	text-shadow:var(--sh-btn-txt1a) !important;
+	margin-right:.85em !important;
+	min-width:9ch !important;
+}
+
+
+
+
+
+
+
+
+.copy-to-clipboard:focus,
+.copy-to-clipboard:hover,
+.copy-to-clipboard:active,
+.copy-to-clipboard-button:focus,
+.copy-to-clipboard-button:hover,
+.copy-to-clipboard-button:active,
+button.copy-to-clipboard:focus,
+button.copy-to-clipboard:hover,
+button.copy-to-clipboard:active,
+button.copy-to-clipboard-button:focus,
+button.copy-to-clipboard-button:hover,
+button.copy-to-clipboard-button:active {
+	background-color:#161618 !important;
+	color:#BBB8 !important;
+	box-shadow:var(--sh-btn1b)	!important;
+	box-shadow:
+    inset 2px 1.5px 7px hsla(223, 10%, 45%, 0.28),
+    inset -2px -1.5px 12px hsla(223, 10%, 1%, 0.21),
+    inset 3px 2px 12px hsla(223, 10%, 1%, 0.21),
+    inset -3px -2px 12px hsla(223, 10%, 1%, 0.21),
+    inset -2px 2px 14px hsla(223, 10%, 0%, 0.11),
+    inset 2px 2px 14px hsla(223, 10%, 0%, 0.11) !important;
+	border:1px solid #0000 !important;
+  outline:none !important;
+  border-left:1px solid #0000 !important;
+  border-bottom:1px solid #0000 !important;
+  border-left:1px solid #0000 !important;
+  border-top:1px solid #0000 !important;
+  border-right:1px solid #0000 !important;
+	border-color:#0000 !important;
+	text-shadow:var(--sh-btn-txt1b) !important;
+	font-family:var(--mnflw) !important;
+	font-size:.79em !important;
+	margin-right:.86em !important;
+}
+.code-toolbar > .toolbar > .toolbar-item > span {color:#0000;}
