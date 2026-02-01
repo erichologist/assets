@@ -1,0 +1,5 @@
+[pragmatapro-regular.ttf](https://github.com/erichologist/assets/raw/refs/heads/main/fonts/pragmata/pragmatapro-regular.ttf)
+[pragmatapro-mono-w20-regular.ttf](https://github.com/erichologist/assets/raw/refs/heads/main/fonts/pragmata/pragmatapro-mono-w20-regular.ttf)
+[pragmatapro-mono-w20-regular.woff2](https://github.com/erichologist/assets/raw/refs/heads/main/fonts/pragmata/pragmatapro-mono-w20-regular.woff2)
+[pragmatapro-fraktur.ttf](https://github.com/erichologist/assets/raw/refs/heads/main/fonts/pragmata/pragmatapro-fraktur.ttf)
+[pragmatapro-fraktur-bold.ttf](https://github.com/erichologist/assets/raw/refs/heads/main/fonts/pragmata/pragmatapro-fraktur-bold.ttf)
