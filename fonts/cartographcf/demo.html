@@ -1,0 +1,1109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+<link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../assets/icons/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="erichology">
+<title>CartograpgCF | Demo</title>
+<link rel="stylesheet" type="text/css" media="all" href="../assets/prism.css"/>
+<script type="text/javascript" src="../assets/prism.js"></script>
+<style>html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article,aside, details,figcaption, figure, footer, header, hgroup, menu,nav, section {display:block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote: before, blockquote: after, q: before, q: after {content: "";content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+/*·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•
+·•·•·•·•·•·•·•·•·•·• font-style:italic;·•·•·•·•
+ CartographCF-ThinItalic */
+@font-face {
+	font-family:"Cartograph CF";
+	src:local("CartographCF-ThinItalic"), local("Cartograph CF Thin Italic"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ThinItalic.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ThinItalic.woff") format("woff");
+	font-style:italic;
+	font-weight:100;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-variant-ligatures:common-ligatures;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
+/* CartographCF-ThinItalic */
+@font-face {
+	font-family:"Cartograph CF";
+	src:local("Cartograph CF Thin Italic"), local("CartographCF-ThinItalic"),
+		url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thinitalic.woff2") format("woff2"),
+		url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thinitalic.woff2") format("woff"), url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thinitalic.otf") format("otf");
+	font-style: italic;
+	font-weight:100;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-variant-ligatures:common-ligatures;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
+
+/* CartographCF-ExtraLightItalic */
+@font-face {
+	/*font-family:"Cartograph CF Extra";*/
+	font-family:"Cartograph CF";
+	src:local("CartographCF-ExtraLightItalic"), local("Cartograph CF Extra Light Italic"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraLightItalic.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraLightItalic.woff") format("woff");
+	font-style:italic;
+	font-weight:200;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-variant-ligatures:common-ligatures;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
+/* CartographCF-LightItalic */
+@font-face {
+	font-family:"Cartograph CF";
+	src:local("CartographCF-LightItalic"), local("Cartograph CF Light Italic"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-LightItalic.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-LightItalic.woff") format("woff");
+	font-style:italic;
+	font-weight:300;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-variant-ligatures:common-ligatures;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
+/* CartographCF-RegularItalic */
+@font-face {
+	font-family:"Cartograph CF";
+	src:local("CartographCF-RegularItalic"), local("Cartograph CF Regular Italic"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-RegularItalic.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-RegularItalic.woff") format("woff");
+	font-style:italic;
+	font-weight:normal;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-variant-ligatures:common-ligatures;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
+/* CartographCF-DemiBoldItalic */
+@font-face {
+	/*font-family:"Cartograph CF Demi";*/
+	font-family:"Cartograph CF";
+	src:local("CartographCF-DemiBoldItalic"), local("Cartograph CF Demi Bold Italic"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-DemiBoldItalic.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-DemiBoldItalic.woff") format("woff");
+	font-style:italic;
+	font-weight:600;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-variant-ligatures:common-ligatures;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
+/* CartographCF-BoldItalic */
+@font-face {
+	font-family:"Cartograph CF";
+	src:local("CartographCF-BoldItalic"), local("Cartograph CF Bold Italic"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-BoldItalic.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-BoldItalic.woff") format("woff");
+	font-style:italic;
+	font-weight:bold;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-variant-ligatures:common-ligatures;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
+/* CartographCF-ExtraBoldItalic */
+@font-face {
+	font-family:"Cartograph CF Extra";
+	src:local("CartographCF-ExtraBoldItalic"), local("Cartograph CF Extra Bold Italic"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraBoldItalic.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraBoldItalic.woff") format("woff");
+	font-style:italic;
+	font-weight:800;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-variant-ligatures:common-ligatures;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
+/* CartographCF-HeavyItalic */
+@font-face {
+	font-family:"Cartograph CF";
+	src:local("CartographCF-HeavyItalic"), local("Cartograph CF Heavy Italic"),url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-heavyitalic.woff2") format("woff2"),url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-heavyitalic.woff") format("woff"), url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-heavyitalic.otf") format("otf");
+	font-style:italic;
+	font-weight:900;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-variant-ligatures:common-ligatures;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
+/* CartographCF-Thin */
+@font-face {
+	font-family:"Cartograph CF";
+	src:local("Cartograph CF Thin"),
+		local("CartographCF-Thin"),	
+		url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thin.woff2") format("woff2"),
+		url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thin.woff") format("woff"), url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartograph-cf-thin.otf") format("otf");
+	font-style:normal;
+	font-weight:100;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-variant-ligatures:common-ligatures;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
+@font-face { 
+	font-family:"Cartograph CF";
+	src:url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraLight.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraLight.woff") format("woff"); 
+	font-style:normal; 
+	font-weight:200; 
+	font-variant-alternates:"liga", "ss05", "ss02";  
+	font-feature-settings:"liga", "ss05", "ss02"; 
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02"; 
+	font-display:swap; 
+}
+@font-face { 
+	font-family:"Cartograph CF";
+	src:url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Light.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Light.woff") format("woff");
+	font-style:normal; 
+	font-weight:300; 
+	font-variant-alternates:"liga", "ss05", "ss02"; 
+	font-feature-settings:"liga", "ss05", "ss02"; 
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02"; 
+	font-display:swap; 
+}
+@font-face {
+	font-family:"Cartograph CF";
+	src:url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Regular.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Regular.woff") format("woff");
+	font-style:normal; 
+	font-weight:400; 
+	font-variant-alternates:"liga", "ss05", "ss02";  
+	font-feature-settings:"liga", "ss05", "ss02"; 
+	-moz-font-feature-settings:"liga", "ss05", "ss02"; 
+	-webkit-font-feature-settings:"liga", "ss05", "ss02"; 
+	font-display:swap; 
+}
+@font-face { 
+	font-family:"Cartograph CF";
+	src:url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-DemiBold.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-DemiBold.woff") format("woff"); 
+	font-style:normal; 
+	font-weight:600; 
+	font-variant-alternates:"liga", "ss05", "ss02"; 
+	font-feature-settings:"liga", "ss05", "ss02"; 
+	-moz-font-feature-settings:"liga", "ss05", "ss02"; 
+	-webkit-font-feature-settings:"liga", "ss05", "ss02"; 
+	font-display:swap; 
+}
+@font-face {
+	font-family:"Cartograph CF";
+	src:url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Bold.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Bold.woff") format("woff"); 
+	font-style:normal;
+	font-weight:700; 
+	font-variant-alternates:"liga", "ss05", "ss02";  
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02"; 
+	-webkit-font-feature-settings:"liga", "ss05", "ss02"; 
+	font-display:swap; 
+}
+@font-face {
+	font-family:"Cartograph CF";
+	src:url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraBold.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-ExtraBold.woff") format("woff");
+	font-style:normal;
+	font-weight:800;
+	font-variant-alternates:"liga", "ss05", "ss02";  
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
+@font-face {
+	font-family:"Cartograph CF";
+	src:url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Heavy.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Heavy.woff") format("woff");
+	font-style:normal;
+	font-weight:800; 
+	font-variant-alternates:"liga", "ss05", "ss02";  
+	font-feature-settings:"liga", "ss05", "ss02"; 
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
+/* ==========================================
+ === page ================================= */
+html {
+	background: #011b2a;
+	width:100%;
+}
+body {
+	background: #011b2a;
+	color: #ddd;
+	max-width: 75ch;
+}
+.page {
+	display: box;
+	background: #1A1A1C;
+	background: #1D1D1D;
+	margin: 0 auto;
+	margin:0 2rem;
+	padding: 20px;
+	overflow: hidden;
+	/*overflow: auto;*/
+	border-radius: 8px;
+}
+.font-container {
+	overflow-x: auto;
+	overflow-y: hidden;
+	margin-bottom: 40px;
+	line-height: 1.3;
+	white-space: nowrap;
+	padding-bottom: 5px;
+}
+.font-container1 {
+	overflow-x: auto;
+	overflow-y: hidden;
+	line-height: 1.3;
+	white-space: nowrap;
+	padding-bottom: 5px;
+	margin-bottom: -.01%;
+}
+.h1 {
+	display: flex;
+	justify-content: flex-end;
+	background: #011b2a;
+	box-shadow: 0 0 14px #0003, 0 0 7px #0002;
+	margin-right:-2rem;
+	margin-bottom:1em;
+	border-radius: 5px;
+	background-image: linear-gradient(to right, #001F2E00, #001F2E);
+}
+h1, h1.h1 {
+	padding-left: 20px;
+	padding-right: 6px;
+	font-size: 24px;
+	color:#FFEDD0;
+	border-radius:9px;
+	text-align: right;
+	font-size: 32px;
+	color: #ddd;
+	margin-right:.5em;
+	margin-left: auto;
+	margin-bottom: auto;
+	padding-top:10px;
+	padding-bottom: 20px;
+	vertical-align: bottom;
+	font-size: 220%;
+}
+pre {
+	display: block;
+	padding:20px 9px;
+	padding-top: 20px;
+	margin:0 0 12px;
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-size: 13px;
+	line-height: 1.43;
+	color: #00efff;
+	font-weight: normal;
+	font-style: normal;
+	background-color: #121212;
+	border:none;
+	box-shadow:0 0 14px #0004,0 0 7px #0002;
+	overflow-x: auto;
+	border-radius: 8px;
+}
+.letters, .letters1 {font-size: 23px;}
+.letters  {
+	margin-top: -4%;
+	margin-top:-1rem;
+	padding-top: 1rem;
+}
+.letters1{
+	margin-top: 3%;
+	margin-bottom: -.005%;
+	padding-top: .1em;
+}
+div.font-container1>p.letters1 {
+	font-size:25px;
+	margin-top:0;
+	margin-bottom: -.005%;
+	margin-left:auto;
+	margin-right:auto;
+
+	padding-top:.1em;
+	padding-left:auto;
+	padding-right:auto;
+	text-align:center;
+}
+div.font-container>:is(p.s10,p.s11,p.s12,p.s14),
+div.font-container>:is(p.s18,p.s24,p.s30){
+	margin-top:.08em;
+	margin-bottom:.08em;
+}
+div.font-container>:is(p.s36,p.s48,p.s60,p.s72){
+	margin-top:0;
+	margin-bottom:0;
+	padding-top:0;
+	padding-bottom:0;
+	line-height: 1.1;
+}
+@media (max-width: 959px) {
+	.page {
+		max-width:820px;
+		margin: 0;
+		margin:0 2rem;
+		margin:0 8%;
+	}
+}
+@media (max-width: 500px) {
+	.page {
+		margin: 0;
+		margin:0 1.2rem;
+		max-width: 360px;
+	}
+	div.font-container1>p.letters1 {
+		font-size: 22px;
+		margin-top:0;
+		margin-bottom: -.005%;
+		padding-top: .1em;
+		margin-left:auto;
+		margin-right:auto;
+		padding-left:auto;
+		padding-right:auto;
+		text-align: center;
+	}
+}
+
+div.font-container>p.s10{font-size:10px;}
+div.font-container>p.s11{font-size:11px;}
+div.font-container>p.s12{font-size:12px;}
+div.font-container>p.s14{font-size:14px;}
+div.font-container>p.s18{font-size:18px;}
+div.font-container>p.s24{font-size:24px;}
+div.font-container>p.s30{font-size:30px;}
+div.font-container>p.s36{font-size:36px;}
+div.font-container>p.s48{font-size:48px;}
+div.font-container>p.s60{font-size:60px;}
+div.font-container>p.s72{font-size:72px;}
+div.font-container>p.s10:before,
+div.font-container>p.s11:before,
+div.font-container>p.s12:before,
+div.font-container>p.s14:before,
+div.font-container>p.s18:before,
+div.font-container>p.s24:before,
+div.font-container>p.s30:before,
+div.font-container>p.s36:before,
+div.font-container>p.s48:before,
+div.font-container>p.s60:before,
+div.font-container>p.s72:before{
+	font-family:'Arial', sans-serif;
+	font-weight:normal;
+	font-style:normal;
+	color:#f5f5f5;
+	padding-right:6px;
+}
+div.font-container>p.s10:before{
+	content:'10px';
+	font-size:6.49px;
+}
+div.font-container>p.s11:before{
+	content:'11px';
+	font-size:6.5px;
+}
+div.font-container>p.s12:before{
+	content:'12px';
+	font-size:7px;
+}
+div.font-container>p.s14:before{
+	content:'14px';
+	font-size:8px;
+}
+div.font-container>p.s18:before{
+	content:'18px';
+	font-size:8.25px;
+}
+div.font-container>p.s24:before{
+	content:'24px';
+	font-size:8.5px;
+}
+div.font-container>p.s30:before{
+	content:'30px';
+	font-size:9.6px;
+}
+div.font-container>p.s36:before{
+	content:'36px';
+	font-size:10px;
+}
+div.font-container>p.s48:before{
+	content:'48px';
+	font-size:10.5px;
+}
+div.font-container>p.s60:before{
+	content:'60px';
+	font-size:12px;
+}
+div.font-container>p.s72:before{
+	content:'72px';
+	font-size:12px;
+}
+/* ==========================================
+ === fonts ================================= */
+.cartreg {
+	font-family:"Cartograph CF"; 
+	font-style:normal; 
+	font-variant-alternates:"liga", "ss05", "ss02";
+	font-feature-settings: "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+}
+.carti { 
+	font-family:"Cartograph CF"; 
+	font-style:italic; 
+	font-variant-alternates:"liga", "ss05", "ss02";
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02"; 
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+}
+.clig{font-variant-ligatures: common-ligatures;}
+.w0 {font-weight:normal;}
+.w2 {font-weight:200;}
+.w3 {font-weight:300;}
+.w4 {font-weight:400;}
+.w5 {font-weight:500;}
+.w6 {font-weight:600;}
+.w7 {font-weight:700;}
+.w8 {font-weight:800;}
+.w9 {font-weight:900;}
+.crtrw1{
+	font-family:"Cartograph CF";
+	font-style:normal;
+	font-variant-alternates:"ss05", "ss02";
+	font-feature-settings:"ss05", "ss02";
+	-moz-font-feature-settings:"ss05", "ss02";
+	-webkit-font-feature-settings:"ss05", "ss02";
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:100;
+}
+.crtrw2{
+	font-family:"Cartograph CF";
+	font-style:normal;
+	font-variant-alternates:"ss05", "ss02";
+	font-feature-settings:"ss05", "ss02";
+	-moz-font-feature-settings:"ss05", "ss02";
+	-webkit-font-feature-settings:"ss05", "ss02";
+/*	font-variant-ligatures: common-ligatures;*/
+	font-weight:200;
+}
+.crtrw3{
+	font-family:"Cartograph CF";
+	font-style:normal;
+	font-variant-alternates:"ss05", "ss02";
+	font-feature-settings:"ss05", "ss02";
+	-moz-font-feature-settings:"ss05", "ss02";
+	-webkit-font-feature-settings:"ss05", "ss02";
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:300;
+}
+.crtrw4{
+	font-family:"CartographCF-RegularItalic", "Cartograph CF";
+	font-style:normal;
+	font-variant-alternates:"ss05", "ss02";
+	font-feature-settings:"ss05", "ss02";
+	-moz-font-feature-settings:"ss05", "ss02";
+	-webkit-font-feature-settings:"ss05", "ss02";
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:400;
+}
+.crtrw5{
+	font-family:"Cartograph CF";
+	font-style:normal;
+	font-variant-alternates:"ss05", "ss02";
+	font-feature-settings:"ss05", "ss02";
+	-moz-font-feature-settings:"ss05", "ss02";
+	-webkit-font-feature-settings:"ss05", "ss02";
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:600;
+}
+.crtrw6{
+	font-family:"Cartograph CF";
+	font-style:normal;
+	font-variant-alternates:"ss05", "ss02";
+	font-feature-settings:"ss05", "ss02";
+	-moz-font-feature-settings:"ss05", "ss02";
+	-webkit-font-feature-settings:"ss05", "ss02";
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:700;
+}
+.crtrw7{
+	font-family:"Cartograph CF";
+	font-style:normal;
+	font-variant-alternates:"ss05", "ss02";
+	font-feature-settings:"ss05", "ss02";
+	-moz-font-feature-settings:"ss05", "ss02";
+	-webkit-font-feature-settings:"ss05", "ss02";
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:800;
+}
+.crtrw8{
+	font-family:"Cartograph CF";
+	font-style:normal;
+	font-variant-alternates:"ss05", "ss02";
+	font-feature-settings:"ss05", "ss02";
+	-moz-font-feature-settings:"ss05", "ss02";
+	-webkit-font-feature-settings:"ss05", "ss02";
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:900;
+}
+.crtrw9{
+	font-family:"Cartograph CF";
+	font-style:normal;
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:900;
+}
+.crtiw1{
+	font-family:"Cartograph CF";
+	font-style:italic;
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:100;
+}
+.crtiw2{
+	font-family:"Cartograph CF";
+	font-style:italic;
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:200;
+}
+.crtiw3{
+	font-family:"Cartograph CF";
+	font-style:italic;
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:300;
+}
+.crtiw4{
+	font-family:"Cartograph CF";
+	font-style:italic;
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:400;
+}
+.crtiw5{
+	font-family:"Cartograph CF";
+	font-style:italic;
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:600;
+}
+.crtiw6{
+	font-family:"Cartograph CF";
+	font-style:italic;
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:700;
+}
+.crtiw7{
+	font-family:"Cartograph CF";
+	font-style:italic;
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:700;
+}
+.crtiw8{
+	font-family:"Cartograph CF";
+	font-style:italic;
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-weight:800;
+}
+.crtiw9{
+	font-family:"Cartograph CF";
+	font-style:italic;
+	font-variant-alternates:"liga", "ss05", "ss02";
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-variant-ligatures: common-ligatures;
+	font-weight:900;
+}
+.cartr {
+	font-family: "Cartograph CF";
+	font-style: normal;
+	font-variant-ligatures: common-ligatures;
+}
+.carti {
+	font-family: "Cartograph CF";
+	font-style: italic;
+	font-variant-ligatures:common-ligatures;
+	font-variant-alternates: "salt" 2, "salt" 5;
+	font-feature-settings: "liga", "ss05", "ss02";
+	-moz-font-feature-settings: "liga", "ss05", "ss02";
+	-webkit-font-feature-settings: "liga", "ss05", "ss02";
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+<!--CartographCF-Thin Italic-->
+<div class="demo">
+	<div class="h1">
+<h1 class="crtiw1">Cartograph&nbsp;CF<br>Thin&nbsp;Italic</h1></div>
+		<pre title="Usage" class="crtiw1">.CartographCF-Thin-Italic {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 100;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtiw1">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-LightItalic.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 crtiw1">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+	</div>
+<div class="font-container crtiw1">
+	<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!--Extra Light Italic-->
+<!--Light Italic-->
+<div class="demo">
+	<div class="h1"><h1 class="carti w3">Cartograph&nbsp;CF<br>Light&nbsp;Italic</h1></div>
+		<pre title="Usage" class="crtiw3">.CartographCF-Light-Italic {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtiw3">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-LightItalic.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 carti w3">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+	</div>
+	<div class="font-container carti w3">
+		<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!--Regular Italic-->
+<div class="demo">
+	<div class="h1"><h1 class="carti w4">Cartograph&nbsp;CF<br>Regular&nbsp;Italic</h1></div>
+		<pre title="Usage" class="crtiw4">.CartographCF-Regular-Italic {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 400;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtiw4">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-RegularItalic.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 carti w4">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+	</div>
+	<div class="font-container carti w4">
+		<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!--Demi Bold Italic-->
+<div class="demo">
+	<div class="h1"><h1 class="carti w5">Cartograph&nbsp;CF<br />DemiBold&nbsp;Italic</h1></div>
+		<pre title="Usage" class="crtiw5">.CartographCF-Demi-Italic {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF Demi";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 600;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtiw5">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-DemiBoldItalic.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 carti w5">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+</div>
+	<div class="font-container carti w5">
+	<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!--Bold Italic-->
+<div class="demo">
+	<div class="h1"><h1 class="carti w6">Cartograph&nbsp;CF<br />Bold&nbsp;Italic</h1></div>
+		<pre title="Usage" class="crtiw6">.CartographCF-Demi-Italic {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF Demi";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 600;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtiw6">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-BoldItalic.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 carti w6">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+</div>
+	<div class="font-container carti w6">
+	<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!--Extra Bold Italic-->
+<div class="demo">
+	<div class="h1"><h1 class="carti w7">Cartograph&nbsp;CF<br>Extra Bold&nbsp;Italic</h1></div>
+	<pre title="Usage" class="crtiw7">.CartographCF-Bold-Italic {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 700;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtiw7">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-ExtraBoldItalic.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 carti w7">
+	<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+</div>
+	<div class="font-container carti w7">
+	<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!--Heavy Italic-->
+<div class="demo">
+	<div class="h1"><h1 class="carti w8">Cartograph&nbsp;CF<br>Heavy&nbsp;Italic</h1></div>
+		<pre title="Usage" class="crtiw8">.CartographCF-Heavy-Italic {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 800;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtiw8">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-HeavyItalic.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 carti w8">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+	</div>
+	<div class="font-container carti w8">
+		<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!-- <== ==> -->
+<!--CartographCF-Thin Regular -->
+<div class="demo">
+	<div class="h1">
+<h1 class="crtrw1">Cartograph&nbsp;CF<br>Thin</h1></div>
+		<pre title="Usage" class="crtrw1">.CartographCF-Thin {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 100;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtrw1">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-Light.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 crtrw1">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+	</div>
+	<div class="font-container crtrw1">
+		<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!--Extra Light Regular -->
+<!--Light Regular -->
+<div class="demo">
+	<div class="h1"><h1 class="cartr w3">Cartograph&nbsp;CF<br>Light</h1></div>
+		<pre title="Usage" class="crtrw3">.CartographCF-Light {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtrw3">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-Light.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 cartr w3">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+	</div>
+	<div class="font-container cartr w3">
+		<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+
+<!--Regular-->
+<div class="demo">
+	<div class="h1"><h1 class="cartr w4">Cartograph&nbsp;CF<br>Regular</h1></div>
+		<pre title="Usage" class="crtiw4">.CartographCF-Regular {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: normal;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtiw4">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-Regular.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 cartr w4">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+	</div>
+	<div class="font-container cartr w4">
+		<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!--Demi Bold Regular -->
+<div class="demo">
+	<div class="h1"><h1 class="cartr w5">Cartograph&nbsp;CF<br />DemiBold</h1></div>
+		<pre title="Usage" class="crtrw5">.CartographCF-Demi {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF Demi";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 600;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtrw5">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-DemiBold.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 cartr w5">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+</div>
+<div class="font-container cartr w5">
+	<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!--Bold Regular -->
+<div class="demo">
+	<div class="h1"><h1 class="cartr w6">Cartograph&nbsp;CF<br />Bold</h1></div>
+		<pre title="Usage" class="crtrw6">.CartographCF-Demi {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF Demi";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 600;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtrw6">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-Bold.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 cartr w6">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+	</div>
+	<div class="font-container cartr w6">
+	<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!--Extra Bold Regular -->
+<div class="demo">
+	<div class="h1"><h1 class="cartr w7">Cartograph&nbsp;CF<br>Extra Bold</h1></div>
+	<pre title="Usage" class="crtrw7">.CartographCF-Bold {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 700;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtrw7">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-ExtraBold.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 cartr w7">
+	<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+</div>
+	<div class="font-container cartr w7">
+	<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!--Heavy Regular -->
+<div class="demo">
+	<div class="h1"><h1 class="cartr w8">Cartograph&nbsp;CF<br>Heavy</h1></div>
+		<pre title="Usage" class="crtrw8">.CartographCF-Heavy {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 800;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)" class="crtrw8">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-Heavy.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 cartr w8">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+	</div>
+	<div class="font-container cartr w8">
+		<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+<!--Light-->
+<br><div class="demo"><div class="h1"><h1 class="cartr w3">Cartograph&nbsp;CF<br />Light</h1></div>
+	<pre title="Usage">.CartographCF-Light {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-Light.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 cartr w3">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+	</div>
+	<div class="font-container cartr w3">
+	<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<!--DemiBold-->
+<div class="demo">
+	<div class="h1"><h1 class="cartr w6">Cartograph&nbsp;CF<br>DemiBold</h1></div>
+	<pre title="Usage">.CartographCF-Demi {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: "Cartograph CF Demi";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 600;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-alternates: "ss05", "ss02";<br>&nbsp;&nbsp;&nbsp;&nbsp;font-variant-ligatures: common-ligatures;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-feature-settings: "ss05", "ss02";<br>}</pre>
+	<pre title="Preload (optional)">&lt;link rel=&quot;preload&quot; href=&quot;CartographCF-DemiBold.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+	<div class="font-container1 cartr w6">
+		<p class="letters1">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789<br>.:,;()*!?'@#&lt;&gt;$%&amp;<br>^+-==&gt;[|{ |}]~@•"</p>
+	</div>
+	<div class="font-container cartr w6">
+		<p class="letters">
+		<p class="s10">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s11">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s12">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s14">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s18">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s24">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s30">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s36">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s48">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s60">The quick brown fox jumps over the lazy dog.</p>
+		<p class="s72">The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+</div>
+</body>
+</html>
+
+
+
+<!-- 4AC9AFBC-D1EC-4DB6-A9AC-676771CDECC8 -->
