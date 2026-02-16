@@ -9,6 +9,16 @@
 	font-variant-ligatures:common-ligatures;
 	font-display:swap;
 }
+@font-face {
+    font-family: "Cartograph CF";
+    src:local("Cartograph CF Thin Italic"), local("CartographCF-ThinItalic"),
+        url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thinitalic.woff2") format("woff2"),
+        url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thinitalic.woff2") format("woff"), url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thinitalic.otf") format("otf");
+	font-style: italic;
+	font-weight:100;
+	font-variant-ligatures:common-ligatures;
+	font-display:swap;
+}
 /* CartographCF-ExtraLightItalic */
 @font-face {
 	/*font-family:"Cartograph CF Extra";*/
@@ -79,7 +89,10 @@
 /* CartographCF-Thin */
 @font-face {
 	font-family:"Cartograph CF";
-	src:local("CartographCF-Thin"), local("Cartograph CF Thin"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Thin.woff2") format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-Thin.woff") format("woff");
+	src:local("Cartograph CF Thin"),
+		local("CartographCF-Thin"),	
+		url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thin.woff2") format("woff2"),
+		url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thin.woff") format("woff"), url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartograph-cf-thin.otf") format("otf");
 	font-style:normal;
 	font-weight:100;
 	font-variant-ligatures:common-ligatures;
