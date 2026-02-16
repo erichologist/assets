@@ -87,3 +87,16 @@
 	-webkit-font-feature-settings:"liga", "ss05", "ss02";
 	font-display:swap;
 }
+/* CartographCF-HeavyItalic */
+@font-face {
+	font-family:"Cartograph CF";
+	src:local("CartographCF-HeavyItalic"), local("Cartograph CF Heavy Italic"),url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-heavyitalic.woff2") format("woff2"),url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-heavyitalic.woff") format("woff"), url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-heavyitalic.otf") format("otf");
+	font-style:italic;
+	font-weight:900;
+	font-variant-alternates:"salt" 2, "salt" 5;
+	font-variant-ligatures:common-ligatures;
+	font-feature-settings:"liga", "ss05", "ss02";
+	-moz-font-feature-settings:"liga", "ss05", "ss02";
+	-webkit-font-feature-settings:"liga", "ss05", "ss02";
+	font-display:swap;
+}
