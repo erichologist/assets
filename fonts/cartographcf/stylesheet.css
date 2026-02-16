@@ -30,7 +30,9 @@
 
 @font-face {
     font-family: 'Cartograph CF';
-    src: local('CartographCF-DemiBoldItalic'), local('Cartograph CF Demi Bold Italic'), url('CartographCF-DemiBoldItalic.woff2') format('woff2'), url('CartographCF-DemiBoldItalic.woff') format('woff');
+    src: local('CartographCF-DemiBoldItalic'), local('Cartograph CF Demi Bold Italic'),
+        url('CartographCF-DemiBoldItalic.woff2') format('woff2'),
+        url('CartographCF-DemiBoldItalic.woff') format('woff');
     font-weight: 600;
     font-style: italic;
     font-display: swap;
@@ -53,6 +55,26 @@
         url('CartographCF-LightItalic.woff') format('woff');
     font-weight: 300;
     font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cartograph CF';
+    src: local('Cartograph CF Thin Italic'), local('CartographCF-ThinItalic'),
+        url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thinitalic.woff2') format('woff2'),
+        url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thinitalic.woff2') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cartograph CF';
+    src: local('Cartograph CF Thin'), local('CartographCF-Thin'),
+        url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thin.woff2') format('woff2'),
+        url('https://github.com/erichologist/assets/raw/refs/heads/main/fonts/cartographcf/cartographcf-thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
     font-display: swap;
 }
 
