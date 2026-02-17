@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'PragmataProMonoW01';
+    src: local('PragmataPro Mono W01 Bold'), local('PragmataProMonoW01-Bold'),
+        url('fonts/pragmata/pragma/PragmataProMonoW01-Bold.woff2') format('woff2'),
+        url('fonts/pragmata/pragma/PragmataProMonoW01-Bold.woff') format('woff'),
+        url('fonts/pragmata/pragma/PragmataProMonoW01-Bold.svg#PragmataProMonoW01-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PragmataPro Mono Liga';
+    src: local('PragmataPro Mono Liga Regular'), local('PragmataProMonoLiga-Regular'),
+        url('fonts/pragmata/pragma/PragmataProMonoLiga-Regular.woff2') format('woff2'),
+        url('fonts/pragmata/pragma/PragmataProMonoLiga-Regular.woff') format('woff'),
+        url('fonts/pragmata/pragma/PragmataProMonoLiga-Regular.svg#PragmataProMonoLiga-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PragmataPro Liga';
+    src: local('PragmataPro Liga Regular'), local('PragmataProLiga-Regular'),
+        url('fonts/pragmata/pragma/PragmataProLiga-Regular.woff2') format('woff2'),
+        url('fonts/pragmata/pragma/PragmataProLiga-Regular.woff') format('woff'),
+        url('fonts/pragmata/pragma/PragmataProLiga-Regular.svg#PragmataProLiga-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PragmataProMonoLiga Nerd Font';
+    src: local('PragmataPro Mono Liga Bold Italic Nerd Font Complete'), local('PragmataProMonoLigaNerdFontComplete-BoldItalic'),
+        url('fonts/pragmata/pragma/PragmataProMonoLigaNerdFontComplete-BoldItalic.woff2') format('woff2'),
+        url('fonts/pragmata/pragma/PragmataProMonoLigaNerdFontComplete-BoldItalic.woff') format('woff'),
+        url('fonts/pragmata/pragma/PragmataProMonoLigaNerdFontComplete-BoldItalic.svg#PragmataProMonoLigaNerdFontComplete-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PragmataProMonoLiga Nerd Font';
+    src: local('PragmataPro Mono Liga Regular Nerd Font Complete'), local('PragmataProMonoLigaNerdFontComplete-Regular'),
+        url('fonts/pragmata/pragma/PragmataProMonoLigaNerdFontComplete-Regular.woff2') format('woff2'),
+        url('fonts/pragmata/pragma/PragmataProMonoLigaNerdFontComplete-Regular.woff') format('woff'),
+        url('fonts/pragmata/pragma/PragmataProMonoLigaNerdFontComplete-Regular.svg#PragmataProMonoLigaNerdFontComplete-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PragmataProMonoW01';
+    src: local('PragmataPro Mono W01 Italic'), local('PragmataProMonoW01-Italic'),
+        url('fonts/pragmata/pragma/PragmataProMonoW01-Italic.woff2') format('woff2'),
+        url('fonts/pragmata/pragma/PragmataProMonoW01-Italic.woff') format('woff'),
+        url('fonts/pragmata/pragma/PragmataProMonoW01-Italic.svg#PragmataProMonoW01-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PragmataPro Fraktur';
+    src: local('PragmataPro Fraktur'), local('PragmataProFraktur-Bold'),
+        url('fonts/pragmata/pragma/PragmataProFraktur-Bold.woff2') format('woff2'),
+        url('fonts/pragmata/pragma/PragmataProFraktur-Bold.woff') format('woff'),
+        url('fonts/pragmata/pragma/PragmataProFraktur-Bold.svg#PragmataProFraktur-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PragmataProMonoLiga Nerd Font';
+    src: local('PragmataPro Mono Liga Italic Nerd Font Complete'), local('PragmataProMonoLigaNerdFontComplete-Italic'),
+        url('fonts/pragmata/pragma/PragmataProMonoLigaNerdFontComplete-Italic.woff2') format('woff2'),
+        url('fonts/pragmata/pragma/PragmataProMonoLigaNerdFontComplete-Italic.woff') format('woff'),
+        url('fonts/pragmata/pragma/PragmataProMonoLigaNerdFontComplete-Italic.svg#PragmataProMonoLigaNerdFontComplete-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PragmataProMonoLiga Nerd Font';
+    src: local('PragmataPro Mono Liga Regular Nerd Font Complete'), local('PragmataProMonoLigaNerdFontComplete-Regular'),
+        url('fonts/pragmata/pragma/PragmataProMonoLigaNerdFontComplete-Regular.woff2') format('woff2'),
+        url('fonts/pragmata/pragma/PragmataProMonoLigaNerdFontComplete-Regular.woff') format('woff'),
+        url('fonts/pragmata/pragma/PragmataProMonoLigaNerdFontComplete-Regular.svg#PragmataProMonoLigaNerdFontComplete-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
